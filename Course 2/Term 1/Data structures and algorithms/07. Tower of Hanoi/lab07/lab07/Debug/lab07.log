@@ -1,0 +1,20 @@
+﻿Сборка начата 9/9/2022 6:33:32 PM.
+Уровень детализации журнала: Normal.     1>Проект "D:\Labs\Course 2\Term 1\Data structures and algorithms\07. Tower of Hanoi\lab07\lab07\lab07.vcxproj" в узле 2 (целевые объекты Build).
+     1>InitializeBuildStatus:
+         Создание "Debug\lab07.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x86\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /permissive- /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc142.pdb" /external:W3 /Gd /TP /analyze- /FC /errorReport:prompt Source.cpp
+         Source.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x86\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Labs\Course 2\Term 1\Data structures and algorithms\07. Tower of Hanoi\lab07\Debug\lab07.exe" /INCREMENTAL /ILK:"Debug\lab07.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Labs\Course 2\Term 1\Data structures and algorithms\07. Tower of Hanoi\lab07\Debug\lab07.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Labs\Course 2\Term 1\Data structures and algorithms\07. Tower of Hanoi\lab07\Debug\lab07.lib" /MACHINE:X86 Debug\Source.obj
+         lab07.vcxproj -> D:\Labs\Course 2\Term 1\Data structures and algorithms\07. Tower of Hanoi\lab07\Debug\lab07.exe
+       FinalizeBuildStatus:
+         Файл "Debug\lab07.tlog\unsuccessfulbuild" удаляется.
+         Обращение к "Debug\lab07.tlog\lab07.lastbuildstate".
+     1>Сборка проекта "D:\Labs\Course 2\Term 1\Data structures and algorithms\07. Tower of Hanoi\lab07\lab07\lab07.vcxproj" завершена (целевые объекты Build).
+
+Сборка успешно завершена.
+    Предупреждений: 0
+    Ошибок: 0
+
+Прошло времени 00:00:02.25
