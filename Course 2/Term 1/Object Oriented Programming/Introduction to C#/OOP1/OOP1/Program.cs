@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using System.Globalization;
 
 namespace OOP1
@@ -115,20 +116,35 @@ namespace OOP1
         }
         static void Task2()
         {
-            bool flag = false;
             string str1 = "I";
             string str2 = "L";
             string str3 = "OOP";
 
-            if (str1 == str2)
-            {
-                flag = true;
-            }
-            Console.WriteLine(flag);
+            int result = string.Compare(str1, str2);
 
             string str4 = str1 + " " + str2 + " " + str3;
             str4 = string.Concat(str4, "!!!");
-            Console.Write(str4);
+
+            string str5 = string.Copy(str4);
+            string str6 = str5.Substring(4, 3);
+            Console.WriteLine(str6);
+            Console.WriteLine($"{str1} {str2} {str3}");
+
+            string str7 = null;
+            string str8 = "";
+
+            Console.WriteLine($"str7 = {string.IsNullOrEmpty(str7)} \nstr8 = {string.IsNullOrEmpty(str8)} \nstr7 == str8 = {str7 == str8}");
+            StringBuilder strbl = new StringBuilder("123", 50);
+            strbl.Append(new char[] { '4', '5', '6', '7' });
+            strbl.AppendFormat("{0}{1}", '8', '9');
+
+            char test = '0';
+            strbl.AppendFormat($"{test}");
+
+            Console.WriteLine($"Строка с помощью билдера: {strbl}");
+            Console.WriteLine($"Удаляем 4, 5, 6: {strbl.Remove(3, 3)}");
+            Console.WriteLine($"Вставляем '-' в начало строки: {strbl.Insert(0, '-')}");
+
 
         }
         static void Main(string[] args)
