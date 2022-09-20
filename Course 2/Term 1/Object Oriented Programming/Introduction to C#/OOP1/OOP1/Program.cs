@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Text;
 using System.Globalization;
+using System.Linq;
 
 namespace OOP1
 {
@@ -144,13 +145,140 @@ namespace OOP1
             Console.WriteLine($"Строка с помощью билдера: {strbl}");
             Console.WriteLine($"Удаляем 4, 5, 6: {strbl.Remove(3, 3)}");
             Console.WriteLine($"Вставляем '-' в начало строки: {strbl.Insert(0, '-')}");
+        }
+        static void Task3()
+        {
+            int[,] arr1 = new int[2, 3] {{1, 2, 3}, {4, 5, 6 }};
+            for (int i = 0; i < arr1.GetLength(0); i++)
+            {
+                for (int j = 0; j < arr1.GetLength(1); j++)
+                {
+                    Console.Write($"{arr1[i, j]} \t");
+                }
+                Console.WriteLine();
+            }
+
+            //----------------------------------------------------------------
+
+            string[] arr = { "Nikita", "Kovkel", "2", "course"};
+            for (int i = 0; i < arr.GetLength(0); i++)
+            {
+                Console.Write($"{arr[i]} ");
+            }
+            Console.WriteLine($"\nДлина массива - {arr.GetLength(0)}");
+
+            //----------------------------------------------------------------
+
+            int choose;
+
+            do {
+                Console.Write($"Выберите произвольный элемент массива (от 1 до {arr.GetLength(0)}): ");
+                choose = Convert.ToInt32(Console.ReadLine());
+            } while (choose > arr.GetLength(0));
+
+            Console.Write($"Замена {choose} элемента на: ");
+            string str = Console.ReadLine();
+            char spaceOrDot;
+
+            for (int i = 0; i < arr.GetLength(0); i++)
+            {
+                if (i + 1 != choose) {
+                    Console.Write($"{arr[i]}{(spaceOrDot  = i + 1 == arr.GetLength(0) ? '.': ' ')}");
+                }
+                else { Console.Write($"{str}{(spaceOrDot = i + 1 == arr.GetLength(0) ? '.' : ' ')}"); }
+            }
+            Console.WriteLine();
+            //----------------------------------------------------------------
+
+            double[][] a = new double[3][];
+            a[0] = new double[2];
+            a[1] = new double[3];
+            a[2] = new double[4];
 
 
+            for (int i = 0; i < a.Length; i++)
+            {
+                for (int j = 0; j < a[i].Length; j++)
+                {
+                    a[i][j] = Convert.ToDouble(Console.ReadLine());
+                }
+            }
+
+            for (int i = 0; i < a.Length; i++)
+            {
+                for (int j = 0; j < a[i].Length; j++)
+                {
+                    Console.Write(a[i][j] + "\t");
+                }
+                Console.WriteLine();
+            }
+            Console.ReadLine();
+
+            //----------------------------------------------------------------
+            var array = new[] { 1, 2, 3, 4, 5 };
+            var strNotType = "Hello";
+
+        }
+        static void Task4() {
+            (int, string, char, string, ulong) t = (3, "Привет", 'p', "Пока", 1231333333333333);
+            Console.WriteLine(t);
+            Console.WriteLine($"Кортеж с элементами {t.Item1} и {t.Item2}.");
+
+            var (a, b, c, d, e) = t;
+            var (f, _, _, _, g) = t;
+
+            Console.WriteLine($"{a} {b} {c} {d} {e} {f} {g}");
+
+            (bool, bool, bool, bool) test1 = (true, false, true, true);
+            (bool, bool, bool, bool) test2 = (true, true, true, true);
+
+            Console.WriteLine(test1 == test2);
+            Console.WriteLine(test1 != test2);
+        }
+        static void Task5()
+        {
+            (int, int, int, char) local1(int[] arr, string str)
+            {
+                int maxArr = arr.Max();
+                int minArr = arr.Min();
+                int arrSum = arr.Sum();
+                char firstStringChar = str[0];
+                return (maxArr, minArr, arrSum, firstStringChar);
+            }
+            int[] a1 = { 1, 2, 3 };
+            Console.WriteLine(local1(a1, "kot"));
+        }
+        static void Task6()
+        {
+            void FirstFunc()
+            {
+/*              checked
+                {
+                    int Max = int.MaxValue + 1;
+                    Console.WriteLine(Max);
+                }*/
+            }
+
+            void SecondFunc()
+            {
+                unchecked
+                {
+                    int Max = int.MaxValue + 1;
+                    Console.WriteLine(Max);
+                }
+            }
+
+            FirstFunc();
+            SecondFunc();
         }
         static void Main(string[] args)
         {
             /*Task1();*/
-            Task2();
+            /*Task2();*/
+            /*Task3();*/
+            /*Task4();*/
+            /*Task5();*/
+            Task6();
             Console.ReadLine();
         }
     }
