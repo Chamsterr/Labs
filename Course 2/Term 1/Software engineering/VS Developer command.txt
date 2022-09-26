@@ -1,0 +1,5 @@
+ml /c Source.asm
+
+link /out:SE_Lab02.exe /DYNAMICBASE "user32.lib" "kernel32.lib" Source.obj /SUBSYSTEM:CONSOLE
+
+link /SUBSYSTEM:WINDOWS Source.obj user32.lib

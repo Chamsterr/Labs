@@ -1,34 +1,36 @@
-.586													;
+	.586													;система команд(процессор Pentium)
 
-.MODEL FLAT, STDCALL									;
+	.MODEL FLAT, STDCALL									;модель памяти, соглашение о вызовах
 
-includelib kernel32.lib									;
+	includelib kernel32.lib									; компановщику: компановать с kernel32.lib
 
-ExitProcess PROTO : DWORD								;
-MessageBoxA PROTO : DWORD, : DWORD, : DWORD, : DWORD	;
+	ExitProcess PROTO : DWORD								; прототип функции ExitProcess
+	MessageBoxA PROTO : DWORD, : DWORD, : DWORD, : DWORD	; прототип функции MessageBox
 
-.STACK 4096												;
+	.STACK 4096												; cегмент стека объемом 4096
+																																
+	.CONST													; сегмент констант
 
-.CONST													;
+	.DATA													; сегмент данных 
+	MB_OK		EQU 1										; EQU определяет константу 
+	STR1		DB "Моя первая программа", 0				; строка + нулевой байт
+	STR2		DB "Привет всем!", 0						; строка + нулевой байт
+	HW			DD ?										; двойное слово длинной 4 байта, неинициализирована
 
-.DATA													;
-MB_OK		EQU 0										;
-STR1		DB "Моя первая программа", 0				;
-STR2		DB "Привет всем!", 0						;
-HW			DD ?										;
+	.CODE													; сегмент кода
 
-.CODE													;
+	main PROC												; точка входа, начало процедуры main
+	START :													; метка
+	
+		INVOKE  MessageBoxA, HW, OFFSET STR2, OFFSET STR1, MB_OK			
+	;		PUSH	MB_OK									
+	;		PUSH	OFFSET STR1								
+	;		PUSH	OFFSET STR2								
+	;		PUSH	HW										
+	;		CALL	MessageBoxA								; вызов функции
 
-main PROC												;
-START :
-		PUSH	MB_OK									;
-		PUSH	OFFSET STR1								;
-		PUSH	OFFSET STR2								;
-		PUSH	HW										;
-		CALL	MessageBoxA								;
+		push -1												; код возврата процесса Windows(параметр ExitProcess)
+		call ExitProcess									; так завершается любой процесс Windows
+	main ENDP												; конец процедуры
 
-	push -1												;
-	call ExitProcess									;
-main ENDP												;
-
-end main		
+	end main												; конец модуля main		
