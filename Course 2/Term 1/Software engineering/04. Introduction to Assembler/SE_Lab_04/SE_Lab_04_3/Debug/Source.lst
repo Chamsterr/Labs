@@ -1,0 +1,62 @@
+Microsoft (R) Macro Assembler Version 14.33.31629.0	    09/29/22 21:21:08
+Source.asm						     Page 1 - 1
+
+
+				.586P 
+				.MODEL FLAT, STDCALL 
+				includelib kernel32.lib 
+				ExitProcess PROTO : DWORD 
+				.STACK 586 
+ 00000000			.DATA 
+ 00000000 4E 00			   char_ BYTE "N", 0
+ 00000002 50 00			   literal BYTE "P", 0
+ 00000000			.CODE 
+ 00000000			main PROC 
+ 00000000			START: 
+				    invoke ExitProcess, 0
+				    
+ 00000007			main ENDP 
+				end main
+Microsoft (R) Macro Assembler Version 14.33.31629.0	    09/29/22 21:21:08
+Source.asm						     Symbols 2 - 1
+
+
+
+
+Segments and Groups:
+
+                N a m e                 Size     Length   Align   Combine Class
+
+FLAT . . . . . . . . . . . . . .	GROUP
+STACK  . . . . . . . . . . . . .	32 Bit	 0000024A Para	  Stack	  'STACK'	 
+_DATA  . . . . . . . . . . . . .	32 Bit	 00000004 Para	  Public  'DATA'	
+_TEXT  . . . . . . . . . . . . .	32 Bit	 00000007 Para	  Public  'CODE'	
+
+
+Procedures, parameters, and locals:
+
+                N a m e                 Type     Value    Attr
+
+ExitProcess  . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+main . . . . . . . . . . . . . .	P Near	 00000000 _TEXT	Length= 00000007 Public STDCALL
+  START  . . . . . . . . . . . .	L Near	 00000000 _TEXT	
+
+
+Symbols:
+
+                N a m e                 Type     Value    Attr
+
+@CodeSize  . . . . . . . . . . .	Number	 00000000h   
+@DataSize  . . . . . . . . . . .	Number	 00000000h   
+@Interface . . . . . . . . . . .	Number	 00000003h   
+@Model . . . . . . . . . . . . .	Number	 00000007h   
+@code  . . . . . . . . . . . . .	Text   	 _TEXT
+@data  . . . . . . . . . . . . .	Text   	 FLAT
+@fardata?  . . . . . . . . . . .	Text   	 FLAT
+@fardata . . . . . . . . . . . .	Text   	 FLAT
+@stack . . . . . . . . . . . . .	Text   	 FLAT
+char_  . . . . . . . . . . . . .	Byte	 00000000 _DATA	
+literal  . . . . . . . . . . . .	Byte	 00000002 _DATA	
+
+	   0 Warnings
+	   0 Errors
