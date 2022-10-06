@@ -1,2 +1,6 @@
 ﻿  Source2.cpp
-  SE_Lab_04_2.vcxproj -> D:\Labs\Course 2\Term 1\Software engineering\04. Introduction to Assembler\SE_Lab_04\Debug\SE_Lab_04_2.exe
+D:\Labs\Course 2\Term 1\Software engineering\04. Introduction to Assembler\SE_Lab_04\SE_Lab_04_2\Source2.cpp(4,5): error C2065: string: необъявленный идентификатор
+D:\Labs\Course 2\Term 1\Software engineering\04. Introduction to Assembler\SE_Lab_04\SE_Lab_04_2\Source2.cpp(4,12): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "text"
+D:\Labs\Course 2\Term 1\Software engineering\04. Introduction to Assembler\SE_Lab_04\SE_Lab_04_2\Source2.cpp(4,12): error C2065: text: необъявленный идентификатор
+D:\Labs\Course 2\Term 1\Software engineering\04. Introduction to Assembler\SE_Lab_04\SE_Lab_04_2\Source2.cpp(5,9): error C2065: text: необъявленный идентификатор
+D:\Labs\Course 2\Term 1\Software engineering\04. Introduction to Assembler\SE_Lab_04\SE_Lab_04_2\Source2.cpp(6,22): error C2065: text: необъявленный идентификатор

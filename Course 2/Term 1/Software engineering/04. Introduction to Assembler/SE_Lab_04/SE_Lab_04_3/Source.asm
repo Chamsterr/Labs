@@ -1,15 +1,19 @@
-.586P 
-.MODEL FLAT, STDCALL 
-includelib kernel32.lib 
+.586
+.MODEL FLAT, STDCALL
+INCLUDELIB kernel32.lib
 ExitProcess PROTO : DWORD 
-.STACK 586 
-.DATA 
-   char_ BYTE "N", 0
-   literal BYTE "P", 0
+.STACK 1024
+.CONST
+   literal1 BYTE "N", 0
+   literal2 BYTE "N", 0
+
+.DATA
+   char1 BYTE "N", 0
+   char2 BYTE "N", 0
+
 .CODE 
 main PROC 
 START: 
-    invoke ExitProcess, 0
-    
+    INVOKE ExitProcess, 0
 main ENDP 
 end main

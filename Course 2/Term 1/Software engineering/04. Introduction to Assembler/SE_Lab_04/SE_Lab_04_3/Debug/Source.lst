@@ -1,23 +1,27 @@
-Microsoft (R) Macro Assembler Version 14.33.31629.0	    09/29/22 21:21:08
+Microsoft (R) Macro Assembler Version 14.33.31629.0	    10/06/22 19:10:09
 Source.asm						     Page 1 - 1
 
 
-				.586P 
-				.MODEL FLAT, STDCALL 
-				includelib kernel32.lib 
+				.586
+				.MODEL FLAT, STDCALL
+				INCLUDELIB kernel32.lib
 				ExitProcess PROTO : DWORD 
-				.STACK 586 
- 00000000			.DATA 
- 00000000 4E 00			   char_ BYTE "N", 0
- 00000002 50 00			   literal BYTE "P", 0
+				.STACK 1024
+ 00000000			.CONST
+ 00000000 4C 00			   literal1 BYTE "L", 0
+ 00000002 4E 00			   literal2 BYTE "N", 0
+
+ 00000000			.DATA
+ 00000000 4F 00			   char1 BYTE "O", 0
+ 00000002 50 00			   char2 BYTE "P", 0
+
  00000000			.CODE 
  00000000			main PROC 
  00000000			START: 
-				    invoke ExitProcess, 0
-				    
+				    INVOKE ExitProcess, 0
  00000007			main ENDP 
 				end main
-Microsoft (R) Macro Assembler Version 14.33.31629.0	    09/29/22 21:21:08
+Microsoft (R) Macro Assembler Version 14.33.31629.0	    10/06/22 19:10:09
 Source.asm						     Symbols 2 - 1
 
 
@@ -27,8 +31,9 @@ Segments and Groups:
 
                 N a m e                 Size     Length   Align   Combine Class
 
+CONST  . . . . . . . . . . . . .	32 Bit	 00000004 Para	  Public  'CONST'	 ReadOnly
 FLAT . . . . . . . . . . . . . .	GROUP
-STACK  . . . . . . . . . . . . .	32 Bit	 0000024A Para	  Stack	  'STACK'	 
+STACK  . . . . . . . . . . . . .	32 Bit	 00000400 Para	  Stack	  'STACK'	 
 _DATA  . . . . . . . . . . . . .	32 Bit	 00000004 Para	  Public  'DATA'	
 _TEXT  . . . . . . . . . . . . .	32 Bit	 00000007 Para	  Public  'CODE'	
 
@@ -55,8 +60,10 @@ Symbols:
 @fardata?  . . . . . . . . . . .	Text   	 FLAT
 @fardata . . . . . . . . . . . .	Text   	 FLAT
 @stack . . . . . . . . . . . . .	Text   	 FLAT
-char_  . . . . . . . . . . . . .	Byte	 00000000 _DATA	
-literal  . . . . . . . . . . . .	Byte	 00000002 _DATA	
+char1  . . . . . . . . . . . . .	Byte	 00000000 _DATA	
+char2  . . . . . . . . . . . . .	Byte	 00000002 _DATA	
+literal1 . . . . . . . . . . . .	Byte	 00000000 CONST	
+literal2 . . . . . . . . . . . .	Byte	 00000002 CONST	
 
 	   0 Warnings
 	   0 Errors
