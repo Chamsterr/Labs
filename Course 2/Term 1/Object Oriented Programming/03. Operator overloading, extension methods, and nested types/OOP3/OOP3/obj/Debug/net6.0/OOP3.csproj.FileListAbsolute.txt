@@ -1,0 +1,15 @@
+D:\Labs\Course 2\Term 1\Object Oriented Programming\03. Operator overloading, extension methods, and nested types\OOP3\OOP3\obj\Debug\net6.0\OOP3.csproj.AssemblyReference.cache
+D:\Labs\Course 2\Term 1\Object Oriented Programming\03. Operator overloading, extension methods, and nested types\OOP3\OOP3\obj\Debug\net6.0\OOP3.GeneratedMSBuildEditorConfig.editorconfig
+D:\Labs\Course 2\Term 1\Object Oriented Programming\03. Operator overloading, extension methods, and nested types\OOP3\OOP3\obj\Debug\net6.0\OOP3.AssemblyInfoInputs.cache
+D:\Labs\Course 2\Term 1\Object Oriented Programming\03. Operator overloading, extension methods, and nested types\OOP3\OOP3\obj\Debug\net6.0\OOP3.AssemblyInfo.cs
+D:\Labs\Course 2\Term 1\Object Oriented Programming\03. Operator overloading, extension methods, and nested types\OOP3\OOP3\obj\Debug\net6.0\OOP3.csproj.CoreCompileInputs.cache
+D:\Labs\Course 2\Term 1\Object Oriented Programming\03. Operator overloading, extension methods, and nested types\OOP3\OOP3\bin\Debug\net6.0\OOP3.exe
+D:\Labs\Course 2\Term 1\Object Oriented Programming\03. Operator overloading, extension methods, and nested types\OOP3\OOP3\bin\Debug\net6.0\OOP3.deps.json
+D:\Labs\Course 2\Term 1\Object Oriented Programming\03. Operator overloading, extension methods, and nested types\OOP3\OOP3\bin\Debug\net6.0\OOP3.runtimeconfig.json
+D:\Labs\Course 2\Term 1\Object Oriented Programming\03. Operator overloading, extension methods, and nested types\OOP3\OOP3\bin\Debug\net6.0\OOP3.dll
+D:\Labs\Course 2\Term 1\Object Oriented Programming\03. Operator overloading, extension methods, and nested types\OOP3\OOP3\bin\Debug\net6.0\OOP3.pdb
+D:\Labs\Course 2\Term 1\Object Oriented Programming\03. Operator overloading, extension methods, and nested types\OOP3\OOP3\obj\Debug\net6.0\OOP3.dll
+D:\Labs\Course 2\Term 1\Object Oriented Programming\03. Operator overloading, extension methods, and nested types\OOP3\OOP3\obj\Debug\net6.0\refint\OOP3.dll
+D:\Labs\Course 2\Term 1\Object Oriented Programming\03. Operator overloading, extension methods, and nested types\OOP3\OOP3\obj\Debug\net6.0\OOP3.pdb
+D:\Labs\Course 2\Term 1\Object Oriented Programming\03. Operator overloading, extension methods, and nested types\OOP3\OOP3\obj\Debug\net6.0\OOP3.genruntimeconfig.cache
+D:\Labs\Course 2\Term 1\Object Oriented Programming\03. Operator overloading, extension methods, and nested types\OOP3\OOP3\obj\Debug\net6.0\ref\OOP3.dll

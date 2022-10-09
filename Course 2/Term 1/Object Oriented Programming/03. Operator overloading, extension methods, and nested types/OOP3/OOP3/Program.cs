@@ -6,11 +6,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using static Set;
 using static System.Net.Mime.MediaTypeNames;
 
 
-class Set
+public class Set
 {
+    public class Production
+    {
+        public int Id { get; set; }
+        public string? OrganizationName { get; set; }
+    }
+
+    public class Developer
+    {
+        public string? FullName { get; set; }
+        public int? Id { get; set; }
+        public string? Department { get; set; }
+
+    }
+
     public List<int> numbers = new List<int>();
 
     public Set()
@@ -73,17 +88,25 @@ class Set
         }
         Console.WriteLine();
     }
-    public object Clone()
-    {
-        return this.MemberwiseClone();
-    }
 }
 
-class SetExtension
+static class StatisticOperation
 {
+    public static Set SetSubtraction(Set set, Set set2)
+    {
+        for (int i = 0; i < set2.numbers.Count; i++)
+        {
+            if (set.numbers.Contains(set2.numbers[i]))
+            {
+                set.numbers.Remove(set2.numbers[i]);
+            }
+        }
+        return set;
+    }
+
     public static bool CheckingForTheOrderOfaSet(Set set)
     {
-        for(int i = 0; i < set.numbers.Count - 1; i++)
+        for (int i = 0; i < set.numbers.Count; i++)
         {
             if (set.numbers[i] > set.numbers[i + 1])
             {
@@ -93,7 +116,7 @@ class SetExtension
         return true;
     }
 
-    public static StringBuilder EncryptionStr(String str) 
+    public static StringBuilder EncryptionStr(String str)
     {
         StringBuilder sb = new StringBuilder();
         for (int x = 0; x < str.Length; x++)
@@ -138,5 +161,24 @@ class Program
         string str = "test";
 
         Console.WriteLine(SetExtension.EncryptionStr(str));
+
+        Set.Production production = new Set.Production();
+        production.Id = 1;
+        production.OrganizationName = "Norm";
+        Console.WriteLine($"{production.Id}. {production.OrganizationName}");
+
+        Set.Developer developer = new Set.Developer();
+        developer.Id = 1;
+        developer.FullName = "Mikita Koukel Viktaravich";
+        developer.Department = "Dom";
+        Console.WriteLine($"{developer.Id}. {developer.FullName} {developer.Department}");
+
+        List<int> numbers_1 = new List<int>() { 1, 2, 3, 4 };
+        Set set4 = new Set(numbers_1);
+
+        List<int> numbers_2 = new List<int>() { 3, 4, 5, 6, 7 };
+        Set set5 = new Set(numbers_2);
+
+        StatisticOperation.SetSubtraction(set4, set5).PrintSet();
     }
 }
