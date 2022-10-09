@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Labs\\Course 2\\Term 1\\Object Oriented Programming\\02\\OOP2\\OOP2\\OOP2.csproj": {}
+    "D:\\Labs\\Course 2\\Term 1\\Object Oriented Programming\\02. Typing project. Classes\\OOP2\\OOP2\\OOP2.csproj": {}
   },
   "projects": {
-    "D:\\Labs\\Course 2\\Term 1\\Object Oriented Programming\\02\\OOP2\\OOP2\\OOP2.csproj": {
+    "D:\\Labs\\Course 2\\Term 1\\Object Oriented Programming\\02. Typing project. Classes\\OOP2\\OOP2\\OOP2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Labs\\Course 2\\Term 1\\Object Oriented Programming\\02\\OOP2\\OOP2\\OOP2.csproj",
+        "projectUniqueName": "D:\\Labs\\Course 2\\Term 1\\Object Oriented Programming\\02. Typing project. Classes\\OOP2\\OOP2\\OOP2.csproj",
         "projectName": "OOP2",
-        "projectPath": "D:\\Labs\\Course 2\\Term 1\\Object Oriented Programming\\02\\OOP2\\OOP2\\OOP2.csproj",
+        "projectPath": "D:\\Labs\\Course 2\\Term 1\\Object Oriented Programming\\02. Typing project. Classes\\OOP2\\OOP2\\OOP2.csproj",
         "packagesPath": "C:\\Users\\Chamster\\.nuget\\packages\\",
-        "outputPath": "D:\\Labs\\Course 2\\Term 1\\Object Oriented Programming\\02\\OOP2\\OOP2\\obj\\",
+        "outputPath": "D:\\Labs\\Course 2\\Term 1\\Object Oriented Programming\\02. Typing project. Classes\\OOP2\\OOP2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Chamster\\AppData\\Roaming\\NuGet\\NuGet.Config",
