@@ -6,9 +6,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
-using static Set;
-using static System.Net.Mime.MediaTypeNames;
-
 
 public class Set
 {
@@ -103,10 +100,9 @@ static class StatisticOperation
         }
         return set;
     }
-
-    public static bool CheckingForTheOrderOfaSet(Set set)
+    public static bool CheckingForTheOrderOfaSet(this Set set)
     {
-        for (int i = 0; i < set.numbers.Count; i++)
+        for (int i = 0; i < set.numbers.Count - 1; i++)
         {
             if (set.numbers[i] > set.numbers[i + 1])
             {
@@ -116,12 +112,12 @@ static class StatisticOperation
         return true;
     }
 
-    public static StringBuilder EncryptionStr(String str)
+    public static StringBuilder EncryptionStr(this string str, int k)
     {
         StringBuilder sb = new StringBuilder();
         for (int x = 0; x < str.Length; x++)
         {
-            sb.Append((char)(str[x] + 1));
+            sb.Append((char)(str[x] + k));
         }
         return sb;
     }
@@ -154,13 +150,13 @@ class Program
         Console.WriteLine($"Элемент множества - {set%1}");
 
 
-        List<int> numbers_ = new List<int>() { 1, 2, 4, 3, 4};
+        List<int> numbers_ = new List<int>() { 1, 2, 3, 3, 4};
         Set set3 = new Set(numbers_);
-        Console.WriteLine(SetExtension.CheckingForTheOrderOfaSet(set3));
+        Console.WriteLine(set3.CheckingForTheOrderOfaSet());
 
         string str = "test";
 
-        Console.WriteLine(SetExtension.EncryptionStr(str));
+        Console.WriteLine(str.EncryptionStr(2));
 
         Set.Production production = new Set.Production();
         production.Id = 1;
