@@ -1,0 +1,4 @@
+﻿  Source.cpp
+D:\Labs\Course 2\Term 1\Software engineering\06. Polish Notation\SE_Lab_06\SE_Lab_06\Source.cpp(25,20): warning C4018: <: несоответствие типов со знаком и без знака
+D:\Labs\Course 2\Term 1\Software engineering\06. Polish Notation\SE_Lab_06\SE_Lab_06\Source.cpp(52,1): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+  SE_Lab_06.vcxproj -> D:\Labs\Course 2\Term 1\Software engineering\06. Polish Notation\SE_Lab_06\Debug\SE_Lab_06.exe
