@@ -187,7 +187,7 @@ class Exam : Challenge, ICheckable
     }
 }
 
-class FinalExam : Exam
+sealed class FinalExam : Exam
 {
     public FinalExam(Question question1, Question question2, Task task)
     {
