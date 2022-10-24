@@ -1,17 +1,35 @@
-﻿using System.Diagnostics.Metrics;
+﻿using System;
+using System.Diagnostics.Metrics;
 using System.Text;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+using static System.Net.Mime.MediaTypeNames;
 
 interface ICheckable
 {
     StringBuilder PrintAllChallenge();
     void Check();
 }
-abstract class Challenge
+interface ICloneable
+{
+    object DoClone();
+}
+abstract class Challenge: ICloneable
 {
     public bool passOrNo;
     public abstract bool tryToPass();
+    public abstract object DoClone();
+
 }
 
+class Printer
+{
+    public virtual void iIAmPrinting(Challenge obj)
+    {
+        Console.WriteLine(obj.GetType());
+        Console.WriteLine(obj.ToString());
+    }
+}
 class Question : Challenge
 {
     public string? question { get; set; }
@@ -37,6 +55,16 @@ class Question : Challenge
         }
         passOrNo = false;
         return passOrNo;
+    }
+
+    public override object DoClone()
+    {
+        return new Question(question, questionAnswer);
+    }
+
+    public override string ToString()
+    {
+        return question;
     }
 }
 
@@ -66,6 +94,16 @@ class Task : Challenge
         passOrNo = false;
         return passOrNo;
     }
+
+    public override Task DoClone()
+    {
+        return new Task(task, taskAnswer);
+    }
+
+    public override string ToString()
+    {
+        return task;
+    }
 }
 
 class Test : Challenge, ICheckable
@@ -84,6 +122,10 @@ class Test : Challenge, ICheckable
     {
         numberOfQuestions = 0;
         numberOfCorrectQuestions = 0;
+    }
+    public Test(List<Question> questions)
+    {
+        this.questions = questions;
     }
     public void Check()
     {
@@ -122,6 +164,21 @@ class Test : Challenge, ICheckable
         passOrNo = false;
         return passOrNo;
     }
+ 
+
+    public override Test DoClone()
+    {
+        return new Test(this.questions);
+    }
+
+    public override string ToString()
+    {
+        StringBuilder sb = new StringBuilder();
+        sb.Append(GetType());
+        sb.Append(PrintAllChallenge() + "\n");
+        string? text = sb.ToString();
+        return text;
+    }
 }
 
 class Exam : Challenge, ICheckable
@@ -133,7 +190,7 @@ class Exam : Challenge, ICheckable
     }
     public Question question1;
     public Question question2;
-    public Task task = new Task();
+    public Task task;
     public int result = 0;
 
     public Exam()
@@ -185,12 +242,26 @@ class Exam : Challenge, ICheckable
         passOrNo = false;
         return passOrNo;
     }
+
+    public override Exam DoClone()
+    {
+        return new Exam(question1, question2, task);
+    }
+    public override string ToString()
+    {
+        StringBuilder sb = new StringBuilder();
+        sb.Append(PrintAllChallenge() + "\n");
+        string? text = sb.ToString();
+        return text;
+    }
 }
 
 sealed class FinalExam : Exam
 {
+    public new int id = 0;
     public FinalExam(Question question1, Question question2, Task task)
     {
+        id++;
         this.question1 = question1;
         this.question2 = question2;
         this.task = task;
@@ -214,6 +285,11 @@ sealed class FinalExam : Exam
         passOrNo = false;
         return passOrNo;
     }
+
+    public override FinalExam DoClone()
+    {
+        return new FinalExam(question1, question2, task);
+    }
 }
 
 public class HelloWorld
@@ -221,10 +297,14 @@ public class HelloWorld
     public static void Main(string[] args)
     {
         Test test = new Test();
-        Console.WriteLine("\t Тест вариант 1");
         test.addQuestion("Микрофон?", "Да");
         test.addQuestion("10 премуществ цикла for", "Нет");
-        Console.WriteLine(test.PrintAllChallenge());
+        Console.WriteLine(test.ToString());
+
+        Test test5 = new Test();
+        test5.addQuestion("Микрофон?", "Да");
+        test5.addQuestion("10 премуществ цикла for", "Нет");
+        Console.WriteLine(test5.ToString());
 
         test.questions[0].guess = Console.ReadLine().ToLower();
         test.questions[1].guess = Console.ReadLine().ToLower();
@@ -232,6 +312,7 @@ public class HelloWorld
 
         test.Check();
         test.tryToPass();
+
 
         Exam exam = new Exam(new Question("10 премуществ цикла for", "нет"), new Question("В каком учебном заведении вы учитесь", "бгту"), new Task("5+5", "10"));
         Console.WriteLine("\t Экзамен вариант 1");
@@ -252,5 +333,23 @@ public class HelloWorld
 
         finalExam.Check();
         finalExam.tryToPass();
+
+        Test test2 = test.DoClone();
+        Exam exam2 = finalExam.DoClone();
+        FinalExam finalExam2 = finalExam.DoClone();
+
+        Console.WriteLine(test2 is Exam);
+        FinalExam? finalExam3 = exam2 as FinalExam;
+
+        Console.WriteLine();
+
+        Printer printer = new Printer();
+        Challenge[] allChallenges = { test, exam, finalExam2 };
+
+
+        for (int i = 0; i < allChallenges.Length; i++)
+        {
+            printer.iIAmPrinting(allChallenges[i]);
+        }
     }
 }
