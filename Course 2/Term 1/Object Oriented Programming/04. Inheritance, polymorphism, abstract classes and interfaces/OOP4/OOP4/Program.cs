@@ -174,8 +174,8 @@ class Test : Challenge, ICheckable
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
-        sb.Append(GetType());
-        sb.Append(PrintAllChallenge() + "\n");
+        sb.Append(GetType() + "\n");
+        sb.Append(PrintAllChallenge());
         string? text = sb.ToString();
         return text;
     }
@@ -300,11 +300,6 @@ public class HelloWorld
         test.addQuestion("Микрофон?", "Да");
         test.addQuestion("10 премуществ цикла for", "Нет");
         Console.WriteLine(test.ToString());
-
-        Test test5 = new Test();
-        test5.addQuestion("Микрофон?", "Да");
-        test5.addQuestion("10 премуществ цикла for", "Нет");
-        Console.WriteLine(test5.ToString());
 
         test.questions[0].guess = Console.ReadLine().ToLower();
         test.questions[1].guess = Console.ReadLine().ToLower();
