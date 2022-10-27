@@ -1,0 +1,10 @@
+﻿  Assembling Source.asm...
+Source.asm(1): error A2008: syntax error : .
+Source.asm(2): error A2008: syntax error : .
+Source.asm(10): error A2008: syntax error : .
+Source.asm(84): error A2008: syntax error : getmin
+Source.asm(85): error A2008: syntax error : getmax
+Source.asm(87): error A2008: syntax error : INVOKE
+Source.asm(90): error A2008: syntax error : main
+Source.asm(90): error A2088: END directive required at end of file
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\BuildCustomizations\masm.targets(70,5): error MSB3721: выход из команды "ml64.exe /c /nologo /Zi /Fo"x64\Debug\Source.obj" /W3 /errorReport:prompt  /TaSource.asm" с кодом "1".
