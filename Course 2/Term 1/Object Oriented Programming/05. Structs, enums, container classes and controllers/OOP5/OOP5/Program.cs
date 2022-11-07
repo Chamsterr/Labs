@@ -1,9 +1,14 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Diagnostics.Metrics;
+using System.Globalization;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using static System.Collections.Specialized.BitVector32;
 using static System.Net.Mime.MediaTypeNames;
+
 
 enum grades
 {
@@ -40,12 +45,13 @@ interface ICloneable
 {
     object DoClone();
 }
-abstract class Challenge : ICloneable
+public abstract class Challenge : ICloneable
 {
+    public string? subjectName { get; set; }
+
     public bool passOrNo;
     public abstract bool tryToPass();
     public abstract object DoClone();
-
 }
 
 class Printer
@@ -56,7 +62,7 @@ class Printer
         Console.WriteLine(obj.ToString());
     }
 }
-partial class Question : Challenge
+public partial class Question : Challenge
 {
     public string? question { get; set; }
     public string? questionAnswer { get; set; }
@@ -84,7 +90,7 @@ partial class Question : Challenge
     }
 }
 
-class Task : Challenge
+public class Task : Challenge
 {
     public string? task { get; set; }
     public string? taskAnswer { get; set; }
@@ -157,7 +163,7 @@ class Test : Challenge, ICheckable
     public void addQuestion(string question, string questionAnswer)
     {
         questions.Add(new Question(question, questionAnswer.ToLower()));
-        numberOfQuestions += 1;
+        numberOfQuestions++;
     }
     public StringBuilder PrintAllChallenge()
     {
@@ -197,7 +203,7 @@ class Test : Challenge, ICheckable
     }
 }
 
-class Exam : Challenge, ICheckable
+public class Exam : Challenge, ICheckable
 {
     static Exam()
     {
@@ -308,6 +314,79 @@ sealed class FinalExam : Exam
     }
 }
 
+public class Container 
+{
+    public List<object> containerList { get; set; }
+
+    public Container()
+    {
+        containerList = new List<object>();
+    }
+    public void Add(object ob)
+    {
+        containerList.Add(ob);
+    }
+    public void Remove(object ob)
+    {
+        containerList.Remove(ob);
+    }
+    public string PrintList()
+    {
+        string text = "";
+        for (int i = 0; i < containerList.Count; i++)
+        {
+            text = text + containerList[i].ToString();
+        }
+        return text;
+    }
+
+}
+
+
+public class Control
+{
+    Container session {get; set;}
+
+    public Control(Container session)
+    {
+        this.session = session;
+    }
+    
+    public int GetQuantityBySubject(string name)
+    {
+        int counter = 0;
+        for (int i = 0; i < session.containerList.Count; i++)
+        {
+            if (session.containerList[i] is Exam || session.containerList[i] is FinalExam) 
+            {
+                Exam? obj1 = session.containerList[i] as Exam;
+                if (obj1.subjectName == name)
+                {
+                    counter++;
+                }
+            }
+        }
+        return counter;
+    }
+
+    public int GetQuantitySpecificQuantity(int number)
+    {
+        int counter = 0;
+        for (int i = 0; i < session.containerList.Count; i++)
+        {
+            if (session.containerList[i] is Test)
+            {
+                Test? obj1 = session.containerList[i] as Test;
+                if (obj1.numberOfQuestions == number)
+                {
+                    counter++;
+                }
+            }
+        }
+        return counter;
+    }
+}
+
 public class HelloWorld
 {
     public static void Main(string[] args)
@@ -319,5 +398,27 @@ public class HelloWorld
         nikita.grade = grades.eight;
 
         nikita.PrintNameAndCourse();
+
+        Exam exam = new Exam(new Question("10 премуществ цикла for", "нет"), new Question("В каком учебном заведении вы учитесь", "бгту"), new Task("5+5", "10"));
+        exam.subjectName = "ОАиП";
+
+        FinalExam finalExam = new FinalExam(new Question("летела стая совсем небольшая. Сколько было птиц и какого вида (через запятую пример: голубь, 1)", "сова, 7"), new Question("Какая фамилия у Белодеда", "белодед"), new Task("2+2*2", "6"));
+        finalExam.subjectName = "ОАиП";
+
+        Test test = new Test();
+        test.addQuestion("Микрофон?", "Да");
+        test.addQuestion("10 премуществ цикла for", "Нет");
+        test.subjectName = "ООП";
+
+        Container container = new Container();
+        container.Add(exam);
+        container.Add(finalExam);
+        container.Add(test);
+        Console.WriteLine(container.PrintList());
+
+        Control session = new Control(container);
+        Console.WriteLine(session.GetQuantityBySubject("ОАиП"));
+
+        Console.WriteLine(session.GetQuantitySpecificQuantity(2));
     }
 }
