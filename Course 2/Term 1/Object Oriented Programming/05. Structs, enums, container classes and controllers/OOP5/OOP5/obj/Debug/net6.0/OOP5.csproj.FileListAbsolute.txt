@@ -1,0 +1,15 @@
+D:\Labs\Course 2\Term 1\Object Oriented Programming\05. Structs, enums, container classes and controllers\OOP5\OOP5\bin\Debug\net6.0\OOP5.exe
+D:\Labs\Course 2\Term 1\Object Oriented Programming\05. Structs, enums, container classes and controllers\OOP5\OOP5\bin\Debug\net6.0\OOP5.deps.json
+D:\Labs\Course 2\Term 1\Object Oriented Programming\05. Structs, enums, container classes and controllers\OOP5\OOP5\bin\Debug\net6.0\OOP5.runtimeconfig.json
+D:\Labs\Course 2\Term 1\Object Oriented Programming\05. Structs, enums, container classes and controllers\OOP5\OOP5\bin\Debug\net6.0\OOP5.dll
+D:\Labs\Course 2\Term 1\Object Oriented Programming\05. Structs, enums, container classes and controllers\OOP5\OOP5\bin\Debug\net6.0\OOP5.pdb
+D:\Labs\Course 2\Term 1\Object Oriented Programming\05. Structs, enums, container classes and controllers\OOP5\OOP5\obj\Debug\net6.0\OOP5.csproj.AssemblyReference.cache
+D:\Labs\Course 2\Term 1\Object Oriented Programming\05. Structs, enums, container classes and controllers\OOP5\OOP5\obj\Debug\net6.0\OOP5.GeneratedMSBuildEditorConfig.editorconfig
+D:\Labs\Course 2\Term 1\Object Oriented Programming\05. Structs, enums, container classes and controllers\OOP5\OOP5\obj\Debug\net6.0\OOP5.AssemblyInfoInputs.cache
+D:\Labs\Course 2\Term 1\Object Oriented Programming\05. Structs, enums, container classes and controllers\OOP5\OOP5\obj\Debug\net6.0\OOP5.AssemblyInfo.cs
+D:\Labs\Course 2\Term 1\Object Oriented Programming\05. Structs, enums, container classes and controllers\OOP5\OOP5\obj\Debug\net6.0\OOP5.csproj.CoreCompileInputs.cache
+D:\Labs\Course 2\Term 1\Object Oriented Programming\05. Structs, enums, container classes and controllers\OOP5\OOP5\obj\Debug\net6.0\OOP5.dll
+D:\Labs\Course 2\Term 1\Object Oriented Programming\05. Structs, enums, container classes and controllers\OOP5\OOP5\obj\Debug\net6.0\refint\OOP5.dll
+D:\Labs\Course 2\Term 1\Object Oriented Programming\05. Structs, enums, container classes and controllers\OOP5\OOP5\obj\Debug\net6.0\OOP5.pdb
+D:\Labs\Course 2\Term 1\Object Oriented Programming\05. Structs, enums, container classes and controllers\OOP5\OOP5\obj\Debug\net6.0\OOP5.genruntimeconfig.cache
+D:\Labs\Course 2\Term 1\Object Oriented Programming\05. Structs, enums, container classes and controllers\OOP5\OOP5\obj\Debug\net6.0\ref\OOP5.dll
