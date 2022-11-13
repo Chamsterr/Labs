@@ -1,0 +1,108 @@
+html {
+    height: 99%;
+}
+
+body {
+    background-color: rgb(26, 26, 26);
+    display: flex;
+    height: 99%;
+    font-family: Roboto;
+    color: white;
+
+}
+
+header input {
+    background-color: rgb(26, 26, 26);
+    border: 0;
+    color: white;
+    font-size: 35px;
+    margin-top: 105px;
+}
+
+header input:focus {
+    border: 0;
+    outline: none;
+    color: white;
+}
+
+header input::placeholder {
+    color: white;
+}
+
+article ul {
+    font-size: 25px;
+    color: white;
+    margin-top: 0;
+}
+
+li {
+    margin-bottom: 15px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+}
+
+header {
+    flex: 0 0 auto;
+    margin-left: 150px;
+    height: 190px;
+}
+
+article {
+    flex: 1 0 auto;
+    margin-left: 150px;
+}
+
+footer {
+    flex: 0 0 auto;
+    height: 95px;
+}
+
+.buttons {
+    position: absolute;
+    right: 150px;
+    top: 115px;
+}
+
+.add {
+    height: 35px;
+    width: 75px;
+    border-style: solid;
+    border-radius: 25px;
+    background-color: rgb(26, 26, 26);
+    color: white;
+    border-style: none;
+    cursor: pointer;
+}
+
+.delete {
+    cursor: pointer;
+    height: 35px;
+    width: 75px;
+    border-style: solid;
+    border-radius: 25px;
+    background-color: rgb(26, 26, 26);
+    color: white;
+    border-style: none;
+}
+
+.search {
+    height: 35px;
+    width: 75px;
+    border-style: solid;
+    border-radius: 25px;
+    background-color: rgb(26, 26, 26);
+    color: white;
+    border-style: none;
+    cursor: pointer;
+}
+
+#text {
+    position: fixed;
+    right: 150px;
+    bottom: 70px;
+}

@@ -1,0 +1,86 @@
+body{
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h1{
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
+    -webkit-text-stroke: 1px black;
+}
+
+h2{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+}
+h3{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+.main{
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    background-color: white;
+    border-radius: 25px;
+    width: 575px;
+    height: 575px;
+    box-sizing: border-box;
+    padding: 2%;
+    border: 2px solid black;
+}
+form{
+    width: 350px;
+    margin: 0 auto;
+}
+label{
+    display: inline-block;
+    width: 169px;
+    margin: 0.75%;
+}
+input[type="submit"]{
+    margin: 1.5% auto;
+    border-radius: 5px;
+    border-color: rgb(126, 125, 125);
+    display: flex;
+    justify-self: center;
+}
+
+.username{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.date{
+    font-size: 15px;
+    color: grey;
+}
+.comments{
+    max-width: 550px;
+    max-height: 300px;
+    margin: 0 auto;
+    overflow-y: auto;
+}
+.text{
+    font-size: 17.5px;
+}
+.comments::-webkit-scrollbar{
+    background: rgb(212, 212, 212);
+    width: 5px;
+}
+
+
+.comments::-webkit-scrollbar-thumb{
+    background: rgb(161, 161, 161);
+    border-radius: 8px;
+}
+
+.no-comments{
+    text-align: center;
+}

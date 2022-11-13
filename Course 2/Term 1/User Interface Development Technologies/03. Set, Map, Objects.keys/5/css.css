@@ -1,0 +1,52 @@
+main {
+    width: 1050px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+html,
+body {
+    height: 95%;
+    background-color: rgb(26, 26, 26);
+    color: white;
+}
+
+div {
+    flex-direction: row;
+    margin: auto;
+}
+
+div h1 {
+    text-align: center;
+}
+
+.div-list,
+.div-cart {
+    list-style-type: none;
+    width: 425px;
+    height: 400px;
+    border: 1px solid white;
+    border-radius: 25px;
+}
+
+.list {
+    padding: 5%;
+    margin: auto;
+    font-size: 30px;
+    border-spacing: 50px;
+    list-style: none;
+}
+
+.cart {
+    padding: 5%;
+    margin: auto;
+    font-size: 30px;
+    border-spacing: 25px;
+    list-style: none;
+}
+
+li {
+    text-align: center;
+}

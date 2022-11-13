@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <title>Задание 3</title>
+</head>
+
+<body>
+    <ul>
+        <li><a href="https://vk.com/">https://vk.com/</a></li>
+        <li><a href="https://steamcommunity.com/">https://steamcommunity.com/</a></li>
+        <li><a href="https://github.com/">https://github.com/</a></li>
+    </ul>
+
+    <button></button>
+    <button></button>
+    <button></button>
+
+    <script>
+        function getStyleByObject(obj) {
+            let style = "";
+            let keys = Object.keys(obj);
+            for (let j = 0; j < keys.length; j++) {
+                style += `${keys[j]}:${obj[keys[j]]}; `
+            }
+            return style
+        }
+
+        let button = {
+            "min-height": "50px",
+            "min-width": "150px",
+            "border-radius": "15px"
+        }
+        let a = {
+            "text-decoration": "none",
+            "color": "black"
+        }
+        let special = {
+            "background": "yellow"
+        }
+
+        let bShow = document.querySelectorAll("button")
+        let aShow = document.querySelectorAll("a")
+
+
+        for (let i = 0; i < bShow.length; i++) {
+            bShow[i].style.cssText = getStyleByObject(button)
+        }
+
+        for (let i = 0; i < aShow.length; i++) {
+            aShow[i].style.cssText = getStyleByObject(a)
+        }
+
+        aShow[2].style.cssText = getStyleByObject(special) + getStyleByObject(a)
+
+        bShow[0].style.cssText = getStyleByObject(special) + getStyleByObject(button)
+
+    </script>
+</body>
+
+</html>

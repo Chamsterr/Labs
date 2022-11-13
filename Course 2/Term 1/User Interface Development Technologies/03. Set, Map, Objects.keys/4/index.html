@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Задание 4</title>
+</head>
+
+<body>
+    <main>
+        <header>
+            <input placeholder="Список товаров">
+            <div class="buttons">
+                <button type="submit" id="add" class="add" onclick="addFunction()">Добавить</button>
+                <button type="submit" id="delete" class="delete" onclick="deleteItem()">Удалить</button>
+                <button type="submit" id="search" class="search" onclick="searchFunction()">Поиск</button>
+            </div>
+        </header>
+        <article>
+            <ul id="list">
+            </ul>
+        </article>
+        <footer>
+            <p id="text">
+            </p>
+        </footer>
+    </main>
+</body>
+<script src="main.js"></script>
+
+</html>
