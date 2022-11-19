@@ -1,2 +1,4 @@
 ﻿  Source.cpp
-  Huffman's algorithm.vcxproj -> D:\Labs\Course 2\Term 1\Data structures and algorithms\12\Huffman's algorithm\x64\Debug\Huffman's algorithm.exe
+D:\Labs\Course 2\Term 1\Data structures and algorithms\12. Huffman's algorithm\Huffman's algorithm\Huffman's algorithm\Source.cpp(95,37): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\Labs\Course 2\Term 1\Data structures and algorithms\12. Huffman's algorithm\Huffman's algorithm\Huffman's algorithm\Source.cpp(98,37): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  Huffman's algorithm.vcxproj -> D:\Labs\Course 2\Term 1\Data structures and algorithms\12. Huffman's algorithm\Huffman's algorithm\x64\Debug\Huffman's algorithm.exe
