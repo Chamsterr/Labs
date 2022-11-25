@@ -1,0 +1,4 @@
+﻿  Source.cpp
+D:\Labs\Course 2\Term 1\Data structures and algorithms\14. Backpack without repetition\Backpack without repetition\Backpack without repetition\Source.cpp(17,13): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+D:\Labs\Course 2\Term 1\Data structures and algorithms\14. Backpack without repetition\Backpack without repetition\Backpack without repetition\Source.cpp(85,2): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  Backpack without repetition.vcxproj -> D:\Labs\Course 2\Term 1\Data structures and algorithms\14. Backpack without repetition\Backpack without repetition\x64\Debug\Backpack without repetition.exe
