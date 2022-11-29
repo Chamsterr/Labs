@@ -1,0 +1,15 @@
+D:\Labs\Course 2\Term 1\Object Oriented Programming\07. Generics\Generics\Generics\bin\Debug\net6.0\Generics.exe
+D:\Labs\Course 2\Term 1\Object Oriented Programming\07. Generics\Generics\Generics\bin\Debug\net6.0\Generics.deps.json
+D:\Labs\Course 2\Term 1\Object Oriented Programming\07. Generics\Generics\Generics\bin\Debug\net6.0\Generics.runtimeconfig.json
+D:\Labs\Course 2\Term 1\Object Oriented Programming\07. Generics\Generics\Generics\bin\Debug\net6.0\Generics.dll
+D:\Labs\Course 2\Term 1\Object Oriented Programming\07. Generics\Generics\Generics\bin\Debug\net6.0\Generics.pdb
+D:\Labs\Course 2\Term 1\Object Oriented Programming\07. Generics\Generics\Generics\obj\Debug\net6.0\Generics.csproj.AssemblyReference.cache
+D:\Labs\Course 2\Term 1\Object Oriented Programming\07. Generics\Generics\Generics\obj\Debug\net6.0\Generics.GeneratedMSBuildEditorConfig.editorconfig
+D:\Labs\Course 2\Term 1\Object Oriented Programming\07. Generics\Generics\Generics\obj\Debug\net6.0\Generics.AssemblyInfoInputs.cache
+D:\Labs\Course 2\Term 1\Object Oriented Programming\07. Generics\Generics\Generics\obj\Debug\net6.0\Generics.AssemblyInfo.cs
+D:\Labs\Course 2\Term 1\Object Oriented Programming\07. Generics\Generics\Generics\obj\Debug\net6.0\Generics.csproj.CoreCompileInputs.cache
+D:\Labs\Course 2\Term 1\Object Oriented Programming\07. Generics\Generics\Generics\obj\Debug\net6.0\Generics.dll
+D:\Labs\Course 2\Term 1\Object Oriented Programming\07. Generics\Generics\Generics\obj\Debug\net6.0\refint\Generics.dll
+D:\Labs\Course 2\Term 1\Object Oriented Programming\07. Generics\Generics\Generics\obj\Debug\net6.0\Generics.pdb
+D:\Labs\Course 2\Term 1\Object Oriented Programming\07. Generics\Generics\Generics\obj\Debug\net6.0\Generics.genruntimeconfig.cache
+D:\Labs\Course 2\Term 1\Object Oriented Programming\07. Generics\Generics\Generics\obj\Debug\net6.0\ref\Generics.dll
