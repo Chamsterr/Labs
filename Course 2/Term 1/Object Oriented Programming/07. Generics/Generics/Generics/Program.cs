@@ -37,18 +37,18 @@ public class Set<T> : I<T>
         List<T>? answers = new List<T>() ;
         for (int i = 0; i < numbers.Count; i++)
         {
-            int? o;
-            int? oo;
+            int? var;
+            int? nextVar;
 
             if (numbers[i] is int)
             {
-                o = numbers[i] as int?;
-                oo = x as int?;
+                var = numbers[i] as int?;
+                nextVar = x as int?;
             }
             else if (numbers[i] is char)
             {
-                o = numbers[i] as char?;
-                oo = x as char?;
+                var = numbers[i] as char?;
+                nextVar = x as char?;
             }
             else
             {
@@ -56,7 +56,7 @@ public class Set<T> : I<T>
                 return answers;
             }
 
-            if (o > oo)
+            if (var > nextVar)
             {
                 answers.Add(numbers[i]);
             }
@@ -69,18 +69,18 @@ public class Set<T> : I<T>
         List<T>? answers = new List<T>();
         for (int i = 0; i < numbers.Count; i++)
         {
-            int? o;
-            int? oo;
+            int? var;
+            int? nextVar;
 
             if (numbers[i] is int)
             {
-                o = numbers[i] as int?;
-                oo = x as int?;
+                var = numbers[i] as int?;
+                nextVar = x as int?;
             }
             else if (numbers[i] is char)
             {
-                o = numbers[i] as char?;
-                oo = x as char?;
+                var = numbers[i] as char?;
+                nextVar = x as char?;
             }
             else
             {
@@ -88,7 +88,7 @@ public class Set<T> : I<T>
                 return answers;
             }
 
-            if (o < oo)
+            if (var < nextVar)
             {
                 answers.Add(numbers[i]);
             }

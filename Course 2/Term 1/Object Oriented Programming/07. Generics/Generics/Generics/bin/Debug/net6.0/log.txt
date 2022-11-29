@@ -1,0 +1,1 @@
+Set - Set`1[System.Int32], кол-во: 3

@@ -58,7 +58,7 @@ public abstract class Challenge : ICloneable
         {
             if (value == null || value == "")
             {
-                throw new ChallengeException("Должно присутствовать название предмета", value);
+                throw new ChallengeException("Название предмета не может быть таким", value);
             }
             name = value;
         }
@@ -159,6 +159,11 @@ class Test : Challenge, ICheckable
             if (value == 0)
             {
                 throw new TestException("Должен быть хотя бы один вопрос", value);
+            }
+            if (value >= 1000)
+            {
+                throw new TestException("Слишком большое количество заданий", value);
+
             }
             numberofquestions = value;
         }
@@ -460,8 +465,9 @@ public class HelloWorld
             Test test2 = new Test();
             test2.addQuestion("Микрофон?", "Да");
             test2.addQuestion("10 премуществ цикла for", "Нет");
-            test2.subjectName = "1";
+            /*test2.subjectName = null;*/
             test2.numberOfQuestions = 0;
+/*            test2.numberOfQuestions = 1111110;*/
         }
         catch (ChallengeException ex)
         {
@@ -472,16 +478,16 @@ public class HelloWorld
             Console.WriteLine($"Ошибка: {ex.Message}");
             try
             {
-                int l = Int16.Parse(Console.ReadLine());
-                if(l == 0)
+                int l = Int32.Parse(Console.ReadLine());
+                if (l == 0)
                 {
                     throw;
                 }
 
             }
-            catch 
+            catch (TestException ex1)
             {
-                Console.WriteLine($"Ошибка");
+                Console.WriteLine($"Ошибка: {ex.Message}");
             }
         }
         catch
@@ -490,7 +496,7 @@ public class HelloWorld
         }
         finally
         {
-            Console.WriteLine("Проблем не существует!");
+            Console.WriteLine("Завершение программы...");
         }
     }
 }
