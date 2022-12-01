@@ -24,7 +24,7 @@ namespace FST
 
 	};
 
-	FST::FST(char* s, short ns, NODE n, ...)
+	FST::FST(std::string s, short ns, NODE n, ...)
 	{
 		string = s;
 		nstates = ns;
@@ -61,7 +61,7 @@ namespace FST
 	{
 		short* rstates = new short[fst.nstates];
 		memset(rstates, 0xff, sizeof(short) * fst.nstates);
-		short lstring = strlen(fst.string);
+		short lstring = fst.string.length();
 		bool rc = true;
 		for (short i = 0; i < lstring && rc; i++)
 		{

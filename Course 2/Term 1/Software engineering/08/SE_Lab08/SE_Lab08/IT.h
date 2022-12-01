@@ -14,8 +14,8 @@ namespace IT
 
 	struct Entry
 	{
-		int idxfirstLE; // индекс первой строки в таблице лексем
-		char id[ID_MAXSIZE]; // идентификаторов (автоматически усекается до ID_MAXSIZE)
+		unsigned int idxfirstLE; // индекс первой строки в таблице лексем
+		const char* id[ID_MAXSIZE]; // идентификаторов (автоматически усекается до ID_MAXSIZE)
 		IDDATATYPE iddatatype; // тип данных
 		IDTYPE idtype; // тип идентификаторов
 		union
@@ -42,7 +42,7 @@ namespace IT
 
 		Entry GetEntry(int n);
 
-		int IsId(char id[ID_MAXSIZE]);
+		int IsId(const char* id[ID_MAXSIZE]);
 
 		void Delete();
 	};

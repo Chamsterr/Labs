@@ -1,5 +1,4 @@
 #include "IT.h"
-
 namespace IT
 {
 	IdTable::IdTable(int ms) 
@@ -18,7 +17,7 @@ namespace IT
 		return table[n];
 	}
 
-	int IdTable::IsId(char id[ID_MAXSIZE]) {
+	int IdTable::IsId(const char* id[ID_MAXSIZE]) {
 		for (int i = 0; i < table.size(); i++) {
 			if (table[i].id == id) {
 				return table[i].value.vint;

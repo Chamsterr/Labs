@@ -1,6 +1,19 @@
 ﻿  In.cpp
   The contents of <filesystem> are available only with C++17 or later.
-D:\Labs\Course 2\Term 1\Software engineering\08\SE_Lab08\SE_Lab08\In.cpp(62,29): warning C4244: инициализация: преобразование "wchar_t" в "unsigned char", возможна потеря данных
-D:\Labs\Course 2\Term 1\Software engineering\08\SE_Lab08\SE_Lab08\In.cpp(81,22): warning C4244: =: преобразование "wchar_t" в "char", возможна потеря данных
-D:\Labs\Course 2\Term 1\Software engineering\08\SE_Lab08\SE_Lab08\In.cpp(82,22): warning C4244: =: преобразование "wchar_t" в "char", возможна потеря данных
-  SE_Lab08.vcxproj -> D:\Labs\Course 2\Term 1\Software engineering\08\SE_Lab08\Debug\SE_Lab08.exe
+D:\Labs\Course 2\Term 1\Software engineering\08\SE_Lab08\SE_Lab08\In.cpp(73,29): warning C4244: инициализация: преобразование "wchar_t" в "unsigned char", возможна потеря данных
+D:\Labs\Course 2\Term 1\Software engineering\08\SE_Lab08\SE_Lab08\In.cpp(88,22): warning C4244: =: преобразование "wchar_t" в "char", возможна потеря данных
+D:\Labs\Course 2\Term 1\Software engineering\08\SE_Lab08\SE_Lab08\In.cpp(89,22): warning C4244: =: преобразование "wchar_t" в "char", возможна потеря данных
+D:\Labs\Course 2\Term 1\Software engineering\08\SE_Lab08\SE_Lab08\In.cpp(138,13): warning C4244: аргумент: преобразование "wchar_t" в "const _Elem", возможна потеря данных
+          with
+          [
+              _Elem=char
+          ]
+D:\Labs\Course 2\Term 1\Software engineering\08\SE_Lab08\SE_Lab08\In.cpp(155,16): warning C4244: аргумент: преобразование "wchar_t" в "_Elem", возможна потеря данных
+          with
+          [
+              _Elem=char
+          ]
+D:\Labs\Course 2\Term 1\Software engineering\08\SE_Lab08\SE_Lab08\In.cpp(164,21): warning C4018: <: несоответствие типов со знаком и без знака
+D:\Labs\Course 2\Term 1\Software engineering\08\SE_Lab08\SE_Lab08\In.cpp(168,21): warning C4018: <: несоответствие типов со знаком и без знака
+D:\Labs\Course 2\Term 1\Software engineering\08\SE_Lab08\SE_Lab08\In.cpp(293,67): error C2440: <function-style-cast>: невозможно преобразовать "initializer list" в "IT::Entry"
+D:\Labs\Course 2\Term 1\Software engineering\08\SE_Lab08\SE_Lab08\In.cpp(293,21): message : Недопустимая агрегатная инициализация

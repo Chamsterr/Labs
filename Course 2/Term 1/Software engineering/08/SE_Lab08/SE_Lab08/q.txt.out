@@ -1,2 +1,70 @@
-'рив            ет' `1
-рив ет `2
+integer function fi(integer x, integer y) `1
+{ `2
+declare integer z; `3
+z= x*(x+y); `4
+z= '             ada  ad  ';  `5
+return z; `6
+};  `7
+string function fs (string a, string b) `8
+{ `9
+declare string c; `10
+declare string function substr(string a, integer p, `11
+ integer n); `12
+c = substr(a, 1,3)+ b; `13
+return c;  `14
+};  `15
+main `16
+{ `17
+declare integer x; `18
+declare integer y; `19
+declare integer z; `20
+declare string sa; `21
+declare string sb; `22
+declare string sc; `23
+declare integer strlen(string p); `24
+x = 1; `25
+y = 5; `26
+sa = '1234567890'; `27
+sb = '1234567890';  `28
+z = fi(x,y); `29
+sc = fs(sa,sb); `30
+print 'контрольный пример'; `31
+print z; `32
+print sc; `33
+print strlen(sc); `34
+return 0; `35
+};integer function fi(integer x, integer y) `36
+{ `37
+declare integer z; `38
+z= x*(x+y); `39
+return z;  `40
+};  `41
+string function fs (string a, string b) `42
+{ `43
+declare string c; `44
+declare string function substr(string a, integer p, `45
+ integer n); `46
+c = substr(a, 1,3)+ b; `47
+return c;  `48
+};  `49
+main `50
+{ `51
+declare integer x; `52
+declare integer y; `53
+declare integer z; `54
+declare string sa; `55
+declare string sb; `56
+declare string sc; `57
+declare integer strlen(string p); `58
+x = 1; `59
+y = 5; `60
+sa = '1234567890'; `61
+sb = '1234567890';  `62
+z = fi(x,y); `63
+sc = fs(sa,sb); `64
+print 'контрольный пример'; `65
+print z; `66
+print sc; `67
+print strlen(sc); `68
+return 0; `69
+}; `70
