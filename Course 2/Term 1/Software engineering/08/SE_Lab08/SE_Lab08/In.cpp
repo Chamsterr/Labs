@@ -161,17 +161,17 @@ namespace In
 			/*return in;*/
 		}
 
-		for (int i = 0; i < words.size(); i++) {
-			std::cout << words[i].word << " " << words[i].line_number << std::endl;
-		}
+		//for (int i = 0; i < words.size(); i++) {
+		//	std::cout << words[i].word << " " << words[i].line_number << std::endl;
+		//}
+		LT::LexTable LT(150);
+		IT::IdTable IT(150);
 
 		for (int i = 0; i < words.size(); i++) {
-			std::cout << words[i].word << std::endl;
-			LT::LexTable LT(150);
-			IT::IdTable IT(150);
+			//std::cout << words[i].word << std::endl;
+
 			bool integer_flag;
 			bool string_flag;
-
 			if (words[i].word[0] == 'f') {
 				FST::FST fst2(
 					words[i].word,
@@ -186,9 +186,19 @@ namespace In
 					FST::NODE(1, FST::RELATION('n', 8)),
 					FST::NODE()
 				);
-				if (FST::execute(fst2)) 
+				if (FST::execute(fst2))
 				{
-					LT.Add(LT::Entry { LEX_FUNCTION, words[i].line_number });
+					LT.Add(LT::Entry{ LEX_FUNCTION, words[i].line_number, LT_TI_NULLIDX });
+				}
+				else
+				{
+					LT.Add(LT::Entry{ LEX_ID, words[i].line_number,  });
+					int test = IT.IsId((char*)words[i].word.c_str());
+					if (test == TI_NULLIDX){
+						IT.Add(IT::Entry{ unsigned int(LT.table.size()-1), words[i].word, IT::IDDATATYPE::INT, IT::IDTYPE::F});
+					}
+					else
+						IT.Add(IT.GetEntry(test));
 				}
 
 			}
@@ -210,6 +220,10 @@ namespace In
 				{
 					LT.Add(LT::Entry{ LEX_DECLARE, words[i].line_number });
 				}
+				else
+				{
+					LT.Add(LT::Entry{ LEX_ID, words[i].line_number });
+				}
 			}
 			else if (words[i].word[0] == 'r')
 			{
@@ -227,6 +241,11 @@ namespace In
 				if (FST::execute(fst))
 				{
 					LT.Add(LT::Entry{ LEX_RETURN, words[i].line_number });
+				}
+				else
+				{
+					LT.Add(LT::Entry{ LEX_ID, words[i].line_number });
+					IT.Add(IT::Entry{ unsigned int(LT.table.size()-1), words[i].word, IT::IDDATATYPE::INT, IT::IDTYPE::F });
 				}
 			}
 			else if (words[i].word[0] == 'p')
@@ -246,12 +265,17 @@ namespace In
 				{
 					LT.Add(LT::Entry{ LEX_PRINT, words[i].line_number });
 				}
+				else
+				{
+					LT.Add(LT::Entry{ LEX_ID, words[i].line_number });
+					IT.Add(IT::Entry{ unsigned int(LT.table.size()-1), words[i].word, IT::IDDATATYPE::INT, IT::IDTYPE::F });
+				}
 			}
 
 			else if (words[i].word[0] == 's' || words[i].word[0] == 'i')
 			{
 
-				FST::FST fst(
+ 				FST::FST fst(
 					words[i].word,
 					7,
 					FST::NODE(1, FST::RELATION('s', 1)),
@@ -276,31 +300,65 @@ namespace In
 					FST::NODE(1, FST::RELATION('r', 7)),
 					FST::NODE()
 				);
-				bool string_flag = FST::execute(fst2);
+				string_flag = FST::execute(fst2);
 
 				if (integer_flag || string_flag)
 				{
 					if (integer_flag)
-						LT.Add(LT::Entry{ LEX_INTEGER, words[i].line_number });
+						LT.Add(LT::Entry{ LEX_INTEGER, words[i].line_number, LT_TI_NULLIDX });
 					if (string_flag)
-						LT.Add(LT::Entry{ LEX_STRING, words[i].line_number });
+						LT.Add(LT::Entry{ LEX_STRING, words[i].line_number, LT_TI_NULLIDX });
+				}
+				else
+				{
+					LT.Add(LT::Entry{ LEX_ID, words[i].line_number });
+					IT.Add(IT::Entry{ unsigned int(LT.table.size() - 1), words[i].word, IT::IDDATATYPE::INT, IT::IDTYPE::F });
 				}
 			}
-
-			else
+			else if (words[i].word[0] == LEX_LEFTHESIS || words[i].word[0] == LEX_RIGHTHESIS || words[i].word[0] == LEX_BRACELET || words[i].word[0] == LEX_LEFTBRACE || words[i].word[0] == LEX_COMMA || words[i].word[0] == LEX_SEMICOLON)
 			{
-				LT.Add(LT::Entry{ LEX_ID, words[i].line_number });
-				IT.Add(IT::Entry{ LT.table.size(), words[i].word.c_str(), 2, 1});
-					std::cout << " ---------------------------------" << words[i].word.c_str() << std::endl;
+				LT.Add(LT::Entry{ words[i].word[0], words[i].line_number });
 			}
-			//for (int i = 0; i < LT.table.size(); i++) {
-			//	std::cout << " -----" << LT.table[i].lexema << std::endl;
-			//}
+			else if (words[i].word[0] == '+' || words[i].word[0] == '-' || words[i].word[0] == '*' || words[i].word[0] == '/' || words[i].word[0] == '=')
+			{
+				LT.Add(LT::Entry{ LEX_DIRSLASH, words[i].line_number });
+			}
+
+			else //Литерал
+			{
+				if (words[i].word[0] == '\'' || ((int)words[i].word[0] <= 57 && (int)words[i].word[0] >= 48)) 
+				{
+					LT.Add(LT::Entry{ (char)LEX_LITERAL, words[i].line_number, IT.table.size() - 1 });
+				}
+				else // идентификатор
+				{
+					LT.Add(LT::Entry{ (char)LEX_ID, words[i].line_number, IT.table.size() - 1 });
+					IT.Add(IT::Entry{ unsigned int(LT.table.size() - 1), words[i].word, IT::IDDATATYPE::STR, IT::IDTYPE::V });
+					LT::Entry LT_EN = LT.table[LT.table.size() - 1];
+
+				}
+				/*IT::Entry EN = { LT.table.size(), (char)words[i].word.c_str(), 2, 1, );*/
+
+				//EN.value = words[];
+				//IT.Add(IT::Entry{ LT.table.size(), (char)words[i].word.c_str(), 2, 1, );
+				//IT::Entry EN = { LT.table.size(), (char)words[i].word.c_str(), 2, 1 };
+				//LT.Add(LT::Entry{ LEX_ID, words[i].line_number });
+				//IT.Add(IT::Entry{ LT.table.size(), (char)words[i].word.c_str(), 2, 1, });
+				//	std::cout << " ---------------------------------" << IT.table[IT.table.size() - 1].id << std::endl;
+			}
 			//for (int i = 0; i < IT.table.size(); i++) {
 			//	std::cout << " ---------------------------------" << IT.table[i].id << std::endl;
 			//}
 		}
-
+		for (int i = 0; i < LT.table.size()-1; i++) {
+			std::cout << words[i].word << "-----" << LT.table[i].lexema[0] << "-----" << "       (" << words[i].line_number << std::endl;
+		}
+	
+		for (int i = 0; i < IT.table.size(); i++) {
+			std::cout << IT.table[i].id << std::endl;
+		}
+		LT.Delete();
+		IT.Delete();
 	}
 
 };

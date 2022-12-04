@@ -1,12 +1,12 @@
 #pragma once
-#define ID_MAXSIZE 5 // максимальное кол-во символов в идентификаторе
+#define ID_MAXSIZE 7 // максимальное кол-во символов в идентификаторе
 #define TI_MAXSIZE 4096 // макс кол-во строк в таблице идентификаторов
 #define TI_INT_DEFAULT 0x00000000 // значение по умолчанию для integer
 #define TI_STR_DEFAULT 0x00 // значение по умолчанию для string
 #define TI_NULLIDX 0xffffffff // нет элемента таблицы идентификаторов
 #define TI_STR_MAXSIZE 255 
 #include <vector>
-
+#include <string>
 namespace IT
 {
 	enum IDDATATYPE {INT=1, STR=2}; // типы данных идентификаторов: integer, string
@@ -15,19 +15,20 @@ namespace IT
 	struct Entry
 	{
 		unsigned int idxfirstLE; // индекс первой строки в таблице лексем
-		const char* id[ID_MAXSIZE]; // идентификаторов (автоматически усекается до ID_MAXSIZE)
+		char id[ID_MAXSIZE]; // идентификаторов (автоматически усекается до ID_MAXSIZE)
 		IDDATATYPE iddatatype; // тип данных
 		IDTYPE idtype; // тип идентификаторов
 		union
 		{
 			int vint; // значение integer
+			
 			struct
 			{
 				char len; // кол-во символов в string
 				char str[TI_STR_MAXSIZE - 1]; // символы string
-			} vstr[TI_STR_MAXSIZE];
+			} vstr;
 		} value; // значение идентификатора
-
+		Entry(unsigned int ifLE, std::string i, IT::IDDATATYPE idd, IT::IDTYPE idt);
 	};
 
 	struct  IdTable // экземпрляр таблицы идентификаторов
@@ -42,7 +43,7 @@ namespace IT
 
 		Entry GetEntry(int n);
 
-		int IsId(const char* id[ID_MAXSIZE]);
+		int IsId(char id[ID_MAXSIZE]);
 
 		void Delete();
 	};

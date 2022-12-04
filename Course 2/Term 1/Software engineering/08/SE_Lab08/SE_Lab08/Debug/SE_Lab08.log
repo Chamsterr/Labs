@@ -13,7 +13,11 @@ D:\Labs\Course 2\Term 1\Software engineering\08\SE_Lab08\SE_Lab08\In.cpp(155,16)
           [
               _Elem=char
           ]
-D:\Labs\Course 2\Term 1\Software engineering\08\SE_Lab08\SE_Lab08\In.cpp(164,21): warning C4018: <: несоответствие типов со знаком и без знака
-D:\Labs\Course 2\Term 1\Software engineering\08\SE_Lab08\SE_Lab08\In.cpp(168,21): warning C4018: <: несоответствие типов со знаком и без знака
-D:\Labs\Course 2\Term 1\Software engineering\08\SE_Lab08\SE_Lab08\In.cpp(293,67): error C2440: <function-style-cast>: невозможно преобразовать "initializer list" в "IT::Entry"
-D:\Labs\Course 2\Term 1\Software engineering\08\SE_Lab08\SE_Lab08\In.cpp(293,21): message : Недопустимая агрегатная инициализация
+D:\Labs\Course 2\Term 1\Software engineering\08\SE_Lab08\SE_Lab08\In.cpp(170,21): warning C4018: <: несоответствие типов со знаком и без знака
+D:\Labs\Course 2\Term 1\Software engineering\08\SE_Lab08\SE_Lab08\In.cpp(353,21): warning C4018: <: несоответствие типов со знаком и без знака
+D:\Labs\Course 2\Term 1\Software engineering\08\SE_Lab08\SE_Lab08\In.cpp(357,21): warning C4018: <: несоответствие типов со знаком и без знака
+  IT.cpp
+D:\Labs\Course 2\Term 1\Software engineering\08\SE_Lab08\SE_Lab08\IT.cpp(28,21): warning C4018: <: несоответствие типов со знаком и без знака
+  Создание кода...
+D:\Labs\Course 2\Term 1\Software engineering\08\SE_Lab08\SE_Lab08\In.cpp(362): warning C4715: In::getin: значение возвращается не при всех путях выполнения
+  SE_Lab08.vcxproj -> D:\Labs\Course 2\Term 1\Software engineering\08\SE_Lab08\Debug\SE_Lab08.exe

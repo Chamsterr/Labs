@@ -32,11 +32,16 @@ let message = 'Введенные данные неверны';
 // let a = 5;
 // let name = "Name";
 // let i = 0;
-// let double = 0.23;
-// let result = 1/0;
-// let answer = true;
-// let no = null;
+let double = 0.23;
+let result = 1/0;
+let answer = true;
+let no = null;
 
+
+console.log(typeof(double));
+console.log(typeof(result));
+console.log(typeof(answer));
+console.log(typeof(no));
 //---------------------4---------------------
 function getArea(firstRectangelSide, secondRectangelSide){
     return firstRectangelSide * secondRectangelSide;
@@ -214,5 +219,5 @@ examResultsCheck();
 //---------------------14--------------------
 // neponaytnoChto2(`${prompt('Введите x')}`)
 
-//---------------------14--------------------
+//---------------------15--------------------
 // getDay()
