@@ -70,9 +70,6 @@ products[product2.name] = product2
 products[product3.name] = product3
 
 
-let priceee = products[product1.name].totalPrice;
-console.log(priceee)
-
 let all = document.querySelector("#ul_products");
 let counter = 0;
 for (product in products) {

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Форма для авторизации</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<script src="script.js"></script>
+</head>
+
+<body>
+	<div class="dws-wrapper">
+		<div class="dws-form">
+			<!-- Вкладки на CSS -->
+			<input type="radio" id="tab-1" name="tabs" checked>
+			<label class="tab" for="tab-1" title="Вкладка 1">Авторизация</label>
+
+			<input type="radio" name="tabs" id="tab-2">
+			<label class="tab" for="tab-2" title="Вкладка 2">Регистрация</label>
+
+			<!-- Вкладки на JS -->
+			<!--<label class="tab active" title="Вкладка 1">Авторизация</label>-->
+			<!--<label class="tab " title="Вкладка 2">Регистрация</label>-->
+
+			<form id="form-1" class="tab-form">
+				<div class="box-input">
+					<input class="input" type="text" required>
+					<label>Введите E-mail</label>
+				</div>
+
+				<div class="box-input">
+					<input class="input" type="password" required>
+					<label>Введите пароль</label>
+				</div>
+
+				<a href="#" class="button">Войти</a>
+				<ul class="social">
+					<li><a href="#">
+							<div><i class="fa fa-facebook"></i></div>
+						</a></li>
+					<li><a href="#">
+							<div><i class="fa fa-twitter"></i></div>
+						</a></li>
+					<li><a href="#">
+							<div><i class="fa fa-instagram"></i></div>
+						</a></li>
+					<li><a href="#">
+							<div><i class="fa fa-vk"></i></div>
+						</a></li>
+					<li><a href="#">
+							<div><i class="fa fa-youtube"></i></div>
+						</a></li>
+				</ul>
+				<a href="#">Я забыл свой E-mail или пароль</a>
+			</form>
+
+			<form id="form-2" class="tab-form">
+				<input class="input" type="email" placeholder="Введите E-mail адрес" id="regEmail">
+				<input class="input" type="text" placeholder="Введите свое имя" id="regName">
+				<input class="input" type="text" placeholder="Введите свою фамилию" id="regLastName">
+				<input class="input" type="date" id="regDate" required>
+				<input class="input" type="password" placeholder="Введите пароль" id="regPassword">
+				<a href="#" class="button" id="regButton" onclick="validation()">Регистрация</a>
+
+				<div class="recover">
+					<input type="checkbox" id="ckbox">
+					<label for="ckbox">Ознакомлен(-а) и принимаю <a href="#">условия регистрации</a></label>
+				</div>
+			</form>
+
+		</div>
+	</div>
+</body>
+
+</html>

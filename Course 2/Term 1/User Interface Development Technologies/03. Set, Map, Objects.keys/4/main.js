@@ -30,7 +30,6 @@ function deleteItem() {
 function searchFunction() {
     let liTags = document.getElementsByTagName("li");
     let item = prompt("Что хотите найти?")
-    let found;
 
     for (var i = 0; i < liTags.length; i++) {
         if (liTags[i].textContent.toLowerCase() == item.toLowerCase()) {

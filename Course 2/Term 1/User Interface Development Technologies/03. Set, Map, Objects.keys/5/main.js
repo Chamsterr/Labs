@@ -46,15 +46,13 @@ function htmlGenerator() {
 
 }
 function transfer(string) {
-    console.log(string)
     let item = string.split(' ')[1];
-    console.log(item)
+
     if (!cart.has(item)) {
         let text = Object.assign({}, list.get(item));
         cart.set(item, text)
     }
     else {
-        console.log("Я тут")
         let number = cart.get(item)["number"];
         number++;
         cart.get(item)["number"] = number
@@ -65,16 +63,15 @@ function transfer(string) {
 function deleteFromCart(string) {
     let item = string.split(' ')[1];
     let number = cart.get(item)["number"];
-    console.log(number)
+
     if (number == 1) {
         cart.delete(item)
     }
     else {
         number--;
         cart.get(item)["number"] = number
-        console.log(cart)
     }
     htmlGenerator()
-}
+}  
 
 htmlGenerator()

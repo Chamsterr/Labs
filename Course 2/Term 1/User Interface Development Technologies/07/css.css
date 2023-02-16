@@ -1,0 +1,52 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: url(img/back2.png);
+    /* background: url(img/back.jpg); */
+    background-size: cover;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 1.5em;
+}
+
+.dart {
+    height: 65px;
+    transform: rotate(270deg);
+    cursor: grab;
+}
+
+#dart1 {
+    position: absolute;
+    top: 565px;
+    left: 1225px;
+}
+
+#dart2 {
+    position: absolute;
+    top: 555px;
+    left: 1185px;
+}
+
+.zone {
+    position: absolute;
+    width: 35%;
+    height: 100%;
+    /* height: 37.5%; */
+    opacity: 0.5;
+    margin-left: 9%;
+    margin-right: 9%;
+}
+
+.zone1 {
+    right: 0;
+    /* background: blue; */
+}
+
+.zone2 {
+    left: 0;
+    /* background: red; */
+}
