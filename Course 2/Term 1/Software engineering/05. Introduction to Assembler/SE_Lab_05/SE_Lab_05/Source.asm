@@ -1,84 +1,114 @@
-.586P												
-.MODEL FLAT, STDCALL									
-includelib kernel32.lib									
+.586
+.model flat, stdcall
+includelib libucrt.lib
+includelib kernel32.lib
+ExitProcess PROTO:DWORD 
+.stack 4096
 
-getmin PROTO :DWORD, :DWORD
-getmax PROTO :DWORD, :DWORD
+ PrintNumber PROTO : DWORD
 
-ExitProcess PROTO :DWORD							
+ PrintString PROTO : DWORD
 
-.STACK 586									
+ PrintStrLine PROTO : DWORD
 
-.CONST													
+ PrintNumLine PROTO : DWORD
 
-.DATA
-	myDoubles DWORD 7, 2, 3, 4, -1, 6, 5
-	myPointer DWORD myDoubles
-	minimum DWORD ?
-	maximum DWORD ?
+ SystemPause PROTO 
+
+ lenght PROTO: DWORD, : DWORD
+
+ Power PROTO : DWORD, : DWORD
+
+ convert PROTO: DWORD, : DWORD
+
+ EXTRN substr: PROC;
+ substr PROTO: DWORD, : DWORD, : DWORD
+
+.const
+ null_division BYTE 'ERROR: DIVISION BY ZERO', 0
+ overflow BYTE 'ERROR: VARIABLE OVERFLOW', 0 
+	L1 BYTE '12', 0
+	L2 SDWORD 0
+	L3 SDWORD 1
+	L4 BYTE '11', 0
+.data
+  buffer byte 256 dup(0) 
+	mainstr1 DWORD ?
+	mainstr2 DWORD ?
+	mainanswer SDWORD 0
+	mainres SDWORD 0
+
+.code
+
+main PROC
+	push offset L1
+	pop mainstr1
+
+	push offset substr
+	push L2
+	push L3
+	push offset L4
+	pop edx
+	pop edx
+	pop edx
+	pop edx
+
+	push offset L4
+	push L3
+	push L2
+ 
+		call substr
+	push eax
+	pop mainstr2
 
 
+push mainstr2
+call PrintStrLine
 
-.CODE			
-getmax PROC myPointer1 : DWORD, lenght1 : DWORD 
-	START:
-		mov ECX, lenght1
-		sub ECX, 1
-		mov ESI, myPointer1
 
-		mov EAX, [ESI]
+	push convert
+	push mainstr1
 
-		CYCLE:
-			mov EBX, [ESI + 4]
+	pop edx
+	pop edx
+	push mainstr1
+	push offset buffer
+ 
+		call convert
+	push eax
+	pop mainanswer
 
-			add ESI, type myPointer1
-			cmp EBX, EAX
+	push lenght
+	push mainstr1
+	pop edx
+	pop edx
+	push mainstr1
+	push offset buffer
+ 
+		call lenght
+	push eax
+	pop mainres
 
-			jg mhw
-			BACK:
-				loop CYCLE
 
-			ret
-		mhw:
-			mov EAX, EBX
-			jmp BACK
+push mainres
+call PrintNumLine
 
-	getmax ENDP
-
-	getmin PROC myPointer1 : DWORD, lenght1 : DWORD 
-	START:
-		mov ECX, lenght1
-		sub ECX, 1
-		mov ESI, myPointer1
-
-		mov EAX, [ESI]
-
-		CYCLE:
-			mov EBX, [ESI + 4]
-
-			add ESI, type myPointer1
-			cmp EBX, EAX
-
-			jl mhw
-			BACK:
-				loop CYCLE
-
-			ret
-		mhw:
-			mov EAX, EBX
-			jmp BACK
-
-	getmin ENDP
-main PROC												
-START :
-
-	INVOKE getmin, myPointer, lengthof myDoubles
-	mov minimum, EAX
-	
-	INVOKE getmax, myPointer, lengthof myDoubles
-	mov maximum, EAX
-
-	INVOKE ExitProcess, 0
+push mainanswer
+call PrintNumLine
+call SystemPause
+push 0
+call ExitProcess
+SOMETHINGWRONG:
+push offset null_division
+call PrintStrLine
+call SystemPause
+push -1
+call ExitProcess
+EXIT_OVERFLOW:
+push offset overflow
+call PrintStrLine
+call SystemPause
+push -2
+call ExitProcess
 main ENDP
-
 end main

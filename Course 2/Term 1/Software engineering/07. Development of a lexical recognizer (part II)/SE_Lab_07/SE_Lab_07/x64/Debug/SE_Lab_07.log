@@ -1,0 +1,5 @@
+﻿  FST.cpp
+D:\Labs\Course 2\Term 1\Software engineering\07. Development of a lexical recognizer (part II)\SE_Lab_07\SE_Lab_07\FST.cpp(64,37): warning C4267: инициализация: преобразование из "size_t" в "short"; возможна потеря данных
+  Source.cpp
+  Создание кода...
+  SE_Lab_07.vcxproj -> D:\Labs\Course 2\Term 1\Software engineering\07. Development of a lexical recognizer (part II)\SE_Lab_07\x64\Debug\SE_Lab_07.exe

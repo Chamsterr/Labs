@@ -1,50 +1,104 @@
-Microsoft (R) Macro Assembler Version 14.33.31629.0	    09/15/22 19:52:53
+Microsoft (R) Macro Assembler Version 14.33.31629.0	    10/24/22 19:06:06
 Source.asm						     Page 1 - 1
 
 
-				.586													;система команд(процессор Pentium)
+				.586P												
+				.MODEL FLAT, STDCALL									
+				includelib kernel32.lib									
 
-				.MODEL FLAT, STDCALL									;модель памяти, соглашение о вызовах
+				getmin PROTO :DWORD, :DWORD
+				getmax PROTO :DWORD, :DWORD
 
-				includelib kernel32.lib									; компановщику: компановать с kernel32.lib
+				ExitProcess PROTO :DWORD							
 
-				ExitProcess PROTO : DWORD								; прототип функции ExitProcess
-				MessageBoxA PROTO : DWORD, : DWORD, : DWORD, : DWORD	; прототип функции MessageBox
+				.STACK 586									
 
-				.STACK 4096												; cегмент стека объемом 4096
-																																				
- 00000000			.CONST													; сегмент констант
+ 00000000			.CONST													
 
- 00000000			.DATA													; сегмент данных 
- = 00000001			MB_OK		EQU 1										; EQU определяет константу 
- 00000000 CC EE FF 20 EF	STR1		DB "Моя первая программа", 0				; строка + нулевой байт
-	   E5 F0 E2 E0 FF
-	   20 EF F0 EE E3
-	   F0 E0 EC EC E0
-	   00
- 00000015 CF F0 E8 E2 E5	STR2		DB "Привет всем!", 0						; строка + нулевой байт
-	   F2 20 E2 F1 E5
-	   EC 21 00
- 00000022 00000000		HW			DD ?										; двойное слово длинной 4 байта, неинициализирована
+ 00000000			.DATA
+ 00000000 00000007			myDoubles DWORD 7, 2, 3, 4, -1, 6, 5
+	   00000002
+	   00000003
+	   00000004
+	   FFFFFFFF
+	   00000006
+	   00000005
+ 0000001C 00000000 R			myPointer DWORD myDoubles
+ 00000020 00000000			minimum DWORD ?
+ 00000024 00000000			maximum DWORD ?
 
- 00000000			.CODE													; сегмент кода
 
- 00000000			main PROC												; точка входа, начало процедуры main
- 00000000			START :													; метка
 
-					INVOKE  MessageBoxA, HW, OFFSET STR2, OFFSET STR1, MB_OK			
-				;		PUSH	MB_OK									
-				;		PUSH	OFFSET STR1								
-				;		PUSH	OFFSET STR2								
-				;		PUSH	HW										
-				;		CALL	MessageBoxA								; вызов функции
+ 00000000			.CODE			
+ 00000000				getmax PROC myPointer1 : DWORD, lenght1 : DWORD 
+ 00000003				START:
+ 00000003  8B 75 08				mov ESI, myPointer1
+ 00000006  66| 8B 06				mov AX, [ESI]
+ 00000009  66| 8B 46 08				mov AX, [ESI + 8]
+					
+ 0000000D  8B 4D 0C				mov ECX, lenght1
+ 00000010  83 E9 01				sub ECX, 1
+ 00000013  8B 75 08				mov ESI, myPointer1
 
- 00000017  6A FF			push -1												; код возврата процесса Windows(параметр ExitProcess)
- 00000019  E8 00000000 E		call ExitProcess									; так завершается любой процесс Windows
- 0000001E			main ENDP												; конец процедуры
+ 00000016  8B 1E				mov EBX, [ESI]
 
-				end main												; конец модуля main		
-Microsoft (R) Macro Assembler Version 14.33.31629.0	    09/15/22 19:52:53
+ 00000018					CYCLE:
+ 00000018  8B 46 04					mov EAX, [ESI + 4]
+
+ 0000001B  83 C6 04					add ESI, type myPointer1
+ 0000001E  3B C3					cmp EAX, EBX
+
+ 00000020  7F 0C					jg mhw
+ 00000022						BACK:
+ 00000022  E2 F4						loop CYCLE
+
+ 00000024  89 1D 00000024 R				mov maximum, EBX
+							ret
+ 0000002E					mhw:
+ 0000002E  8B D8					mov EBX, EAX
+ 00000030  EB F0					jmp BACK
+
+ 00000032				getmax ENDP
+
+ 00000032				getmin PROC myPointer1 : DWORD, lenght1 : DWORD 
+ 00000035				START:
+ 00000035  8B 75 08				mov ESI, myPointer1
+ 00000038  66| 8B 46 08				mov AX, [ESI + 8]
+
+ 0000003C  8B 4D 0C				mov ECX, lenght1
+ 0000003F  83 E9 01				sub ECX, 1
+ 00000042  8B 75 08				mov ESI, myPointer1
+
+ 00000045  8B 1E				mov EBX, [ESI]
+
+ 00000047					CYCLE:
+ 00000047  8B 46 04					mov EAX, [ESI + 4]
+
+ 0000004A  83 C6 04					add ESI, type myPointer1
+ 0000004D  3B C3					cmp EAX, EBX
+
+ 0000004F  7C 0C					jl mhw
+ 00000051						BACK:
+ 00000051  E2 F4						loop CYCLE
+
+ 00000053  89 1D 00000020 R				mov minimum, EBX
+							ret
+ 0000005D					mhw:
+ 0000005D  8B D8					mov EBX, EAX
+ 0000005F  EB F0					jmp BACK
+
+ 00000061				getmin ENDP
+
+ 00000061			main PROC												
+ 00000061			START :
+					INVOKE getmin, myPointer, lengthof myDoubles
+					INVOKE getmax, myPointer, lengthof myDoubles
+
+					INVOKE ExitProcess, 0
+ 00000082			main ENDP
+
+				end main
+Microsoft (R) Macro Assembler Version 14.33.31629.0	    10/24/22 19:06:06
 Source.asm						     Symbols 2 - 1
 
 
@@ -56,9 +110,9 @@ Segments and Groups:
 
 CONST  . . . . . . . . . . . . .	32 Bit	 00000000 Para	  Public  'CONST'	 ReadOnly
 FLAT . . . . . . . . . . . . . .	GROUP
-STACK  . . . . . . . . . . . . .	32 Bit	 00001000 Para	  Stack	  'STACK'	 
-_DATA  . . . . . . . . . . . . .	32 Bit	 00000026 Para	  Public  'DATA'	
-_TEXT  . . . . . . . . . . . . .	32 Bit	 0000001E Para	  Public  'CODE'	
+STACK  . . . . . . . . . . . . .	32 Bit	 0000024A Para	  Stack	  'STACK'	 
+_DATA  . . . . . . . . . . . . .	32 Bit	 00000028 Para	  Public  'DATA'	
+_TEXT  . . . . . . . . . . . . .	32 Bit	 00000082 Para	  Public  'CODE'	
 
 
 Procedures, parameters, and locals:
@@ -66,9 +120,22 @@ Procedures, parameters, and locals:
                 N a m e                 Type     Value    Attr
 
 ExitProcess  . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
-MessageBoxA  . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
-main . . . . . . . . . . . . . .	P Near	 00000000 _TEXT	Length= 0000001E Public STDCALL
-  START  . . . . . . . . . . . .	L Near	 00000000 _TEXT	
+getmax . . . . . . . . . . . . .	P Near	 00000000 _TEXT	Length= 00000032 Public STDCALL
+  myPointer1 . . . . . . . . . .	DWord	 bp + 00000008
+  lenght1  . . . . . . . . . . .	DWord	 bp + 0000000C
+  START  . . . . . . . . . . . .	L Near	 00000003 _TEXT	
+  CYCLE  . . . . . . . . . . . .	L Near	 00000018 _TEXT	
+  BACK . . . . . . . . . . . . .	L Near	 00000022 _TEXT	
+  mhw  . . . . . . . . . . . . .	L Near	 0000002E _TEXT	
+getmin . . . . . . . . . . . . .	P Near	 00000032 _TEXT	Length= 0000002F Public STDCALL
+  myPointer1 . . . . . . . . . .	DWord	 bp + 00000008
+  lenght1  . . . . . . . . . . .	DWord	 bp + 0000000C
+  START  . . . . . . . . . . . .	L Near	 00000035 _TEXT	
+  CYCLE  . . . . . . . . . . . .	L Near	 00000047 _TEXT	
+  BACK . . . . . . . . . . . . .	L Near	 00000051 _TEXT	
+  mhw  . . . . . . . . . . . . .	L Near	 0000005D _TEXT	
+main . . . . . . . . . . . . . .	P Near	 00000061 _TEXT	Length= 00000021 Public STDCALL
+  START  . . . . . . . . . . . .	L Near	 00000061 _TEXT	
 
 
 Symbols:
@@ -84,10 +151,10 @@ Symbols:
 @fardata?  . . . . . . . . . . .	Text   	 FLAT
 @fardata . . . . . . . . . . . .	Text   	 FLAT
 @stack . . . . . . . . . . . . .	Text   	 FLAT
-HW . . . . . . . . . . . . . . .	DWord	 00000022 _DATA	
-MB_OK  . . . . . . . . . . . . .	Number	 00000001h   
-STR1 . . . . . . . . . . . . . .	Byte	 00000000 _DATA	
-STR2 . . . . . . . . . . . . . .	Byte	 00000015 _DATA	
+maximum  . . . . . . . . . . . .	DWord	 00000024 _DATA	
+minimum  . . . . . . . . . . . .	DWord	 00000020 _DATA	
+myDoubles  . . . . . . . . . . .	DWord	 00000000 _DATA	
+myPointer  . . . . . . . . . . .	DWord	 0000001C _DATA	
 
 	   0 Warnings
 	   0 Errors

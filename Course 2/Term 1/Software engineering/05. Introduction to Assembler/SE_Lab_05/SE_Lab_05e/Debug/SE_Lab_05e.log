@@ -1,2 +1,6 @@
 ﻿  Assembling SourceE.asm...
-  SE_Lab_05e.vcxproj -> D:\Labs\Course 2\Term 1\Software engineering\05. Introduction to Assembler\SE_Lab_05\Debug\SE_Lab_05e.exe
+SourceE.asm(26): error A2008: syntax error : substr
+SourceE.asm(45): error A2008: syntax error : substr
+SourceE.asm(48): error A2008: syntax error : substr
+SourceE.asm(61): error A2008: syntax error : substr
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\BuildCustomizations\masm.targets(70,5): error MSB3721: выход из команды "ml.exe /c /nologo /Zi /Fo"Debug\SourceE.obj" /W3 /errorReport:prompt  /TaSourceE.asm" с кодом "1".

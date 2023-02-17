@@ -8,7 +8,6 @@ includelib "..\Debug\SE_Lab_05lib.lib"
 
 getmin PROTO : DWORD, : DWORD
 getmax PROTO : DWORD, : DWORD
-
 ExitProcess PROTO : DWORD
 
 .STACK 4096
@@ -19,7 +18,6 @@ myPointer DWORD myDoubles
 minimum DWORD ?
 maximum DWORD ?
 
-word1 DWORD ?
 
 .CODE
 main PROC

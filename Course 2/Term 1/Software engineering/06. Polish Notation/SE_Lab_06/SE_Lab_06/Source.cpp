@@ -53,17 +53,11 @@ void main()
 	setlocale(LC_ALL, "Ru");
 	string expression;
 
-	cout << "Ââåäèòå âûðàæåíèå: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð²Ñ‹Ñ€Ð°Ð¶ÐµÐ½Ð¸Ðµ: ";
 
 	getline(cin, expression);
 
 	cout << expression << " -- > "<< PolishNotation(expression) << endl;
 
-	cout << "a+b/(c+ñ)*(g/(l-q/l)) + a --> " << PolishNotation("a+b/(c+ñ)*(g/(l-q/l)) + a") << endl; //a b c / g q / * +
-	cout << "(a + c / (a + c / (a + c)))* (a + c) --> " << PolishNotation("(a + c / (a + c / (a + c)))* (a + c)") << endl; //a c a c a c + / + / + a c + *
-	cout << "(a+c)*2+2 --> " << PolishNotation("(a+c)*2+2") << endl; // a c + 2 * 2 +
-	cout << "2*(a+c)-2*(2+q)*p+2 --> " << PolishNotation("2*(a+c)-2*(2+q)*p+2") << endl; // 2 a c + * 2 2 q + * p * - 2 +
-	cout << "q+w+e+r+t*y/s+1/(p+g) --> " << PolishNotation("q+w+e+r+t*y/s+1/(p+g)") << endl; // q w + e + r + t y * s / + 1 p g + / +
-	cout << "(q-w+e*r+t*y-s*k/(p+g))/z --> " << PolishNotation("(q-w+e*r+t*y-s*k/(p+g))/z") << endl; // q w - e r * + t y * + s k * p g + / - z /
-	cout << "x + (y * z + x) * z --> " << PolishNotation("(x + (y * z + x) * z)") << endl;
+	cout << "i(i,i,i)vi; --> " << PolishNotation("i(i,i,i)vi;") << endl;
 }

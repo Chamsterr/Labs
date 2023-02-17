@@ -1,28 +1,19 @@
-﻿#include "pch.h"
-#include "framework.h"
-#include <iostream>
+﻿#include <iostream>
 
-extern "C"
-int getminC(int* x, int size) {
-    int min = *x;
-    for (int i = 0; i < size; i++)
-    {
-        if (*x < min)
-            min = *x;
-        x++;
-    }
-    return min;
-}
+extern "C" {
+	int raiser(int a, int b) {
+		return pow(a, b);
+	}
+	int module(int a) {
+		return abs(a);
+	}
+	void __stdcall print(char* value)
+	{
+		std::cout << value << "\n";
+	}
 
-extern "C"
-int getmaxC(int* x, int size) {
-    int max = *x;
-
-    for (int i = 0; i < size; i++)
-    {
-        if (*x > max)
-            max = *x;
-        x++;
-    }
-    return max;
+	void __stdcall printint(int value)
+	{
+		std::cout << value << "\n";
+	}
 }

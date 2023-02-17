@@ -1,4 +1,4 @@
-	.586													;система команд(процессор Pentium)
+.586													;система команд(процессор Pentium)
 
 	.MODEL FLAT, STDCALL									;модель памяти, соглашение о вызовах
 
@@ -33,4 +33,4 @@
 		call ExitProcess									; так завершается любой процесс Windows
 	main ENDP												; конец процедуры
 
-	end main												; конец модуля main		
+	end main												; конец модуля main
