@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="plan.xsd">
+  <first>
+    <name>Maxim</name>
+    <age>25</age>
+    <salary>2500</salary>
+    <grade>Junior</grade>
+  </first>
+  <second>
+    <name>Mikita</name>
+    <age>19</age>
+    <salary>741</salary>
+    <grade>Junior</grade>
+  </second>
+  <third>
+    <name>Lee</name>
+    <age>27</age>
+    <salary>7089</salary>
+    <grade>Senior</grade>
+  </third>
+  <forth>
+    <name>Roman</name>
+    <age>47</age>
+    <salary>18112</salary>
+    <grade>Senior</grade>
+  </forth>
+</plan>

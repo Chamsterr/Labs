@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="unnamed4">
+    <output-path>$PROJECT_DIR$/out/artifacts/unnamed4</output-path>
+    <root id="archive" name="unnamed.jar">
+      <element id="library" level="project" name="Maven: org.json:json:20210307" />
+      <element id="module-output" name="ItCompany" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact name="ItCompany:jar2">
+    <output-path>$PROJECT_DIR$/out/artifacts/ItCompany_jar2</output-path>
+    <root id="root">
+      <element id="archive" name="ItCompany.jar">
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="module-output" name="ItCompany" />
+      </element>
+      <element id="library" level="project" name="Maven: org.json:json:20210307" />
+      <element id="dir-copy" path="$PROJECT_DIR$" />
+      <element id="artifact" artifact-name="ItCompany:jar" />
+    </root>
+  </artifact>
+</component>

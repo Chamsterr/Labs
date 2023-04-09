@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="plan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="first" type="employee"/>
+        <xs:element name="second" type="employee"/>
+        <xs:element name="third" type="employee"/>
+        <xs:element name="forth" type="employee"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="employee">
+    <xs:sequence>
+      <xs:element name="name" type="nameType"/>
+
+      <xs:element name="age" type="xs:int">
+        <xs:simpleType>
+          <xs:restriction base="xs:int">
+            <xs:minInclusive value="16" />
+            <xs:maxInclusive value="60" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+
+      <xs:element name="salary">
+        <xs:simpleType>
+          <xs:restriction base="xs:int">
+            <xs:minInclusive value="0" />
+            <xs:maxInclusive value="100000" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+
+      <xs:element name="grade" type="GradesType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="GradesType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Junior"/>
+      <xs:enumeration value="Middle"/>
+      <xs:enumeration value="Senior"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="nameType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Z][a-z]+(\s[A-Z][a-z]+)*"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

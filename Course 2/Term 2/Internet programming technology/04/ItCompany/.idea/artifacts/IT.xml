@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact name="IT">
+    <output-path>$PROJECT_DIR$/out/artifacts/IT</output-path>
+    <root id="root">
+      <element id="module-output" name="ItCompany" />
+      <element id="library" level="project" name="Maven: org.json:json:20210307" />
+      <element id="artifact" artifact-name="ItCompany:jar" />
+      <element id="dir-copy" path="$PROJECT_DIR$" />
+    </root>
+  </artifact>
+</component>
