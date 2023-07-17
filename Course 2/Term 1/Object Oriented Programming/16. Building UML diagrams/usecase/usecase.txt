@@ -1,0 +1,38 @@
+@startuml
+title "Usecase diagram для телефоной станции"
+
+left to right direction
+
+'----------Actors-----------'
+actor Абонент as subscriber
+actor Администратор as admin
+'---------------------------'
+
+'----------Для абонента-----------'
+usecase "указать идентификатор услуги" as GetServiceID
+usecase "подключить услугу" as ActiveService
+(подключить несколько услуг).up.> ActiveService :extends
+ActiveService ..> GetServiceID: include
+
+usecase "оплатить счет за разговоры и услуги" as PayService
+(оплатить за 5 лет).up.> PayService :extends
+
+
+subscriber -> ActiveService
+subscriber -> PayService
+'---------------------------------'
+
+'----------Для администратора-----------'
+usecase "Подключение абонетов" as ConnectUser
+usecase "Посмотреть список неоплаченных счетов" as CheckList
+usecase "Заблокировать Абонента" as BlockUser
+usecase "указать идентификатор абонета" as GetSubcriberID
+BlockUser ..> GetSubcriberID: include
+ConnectUser ..> GetSubcriberID: include
+
+admin -> CheckList
+admin -> BlockUser
+admin -> ConnectUser
+'---------------------------------------'
+
+@enduml

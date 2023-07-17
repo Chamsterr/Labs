@@ -418,7 +418,6 @@ public class HelloWorld
 
         Control session = new Control(container);
         Console.WriteLine(session.GetQuantityBySubject("ОАиП"));
-
         Console.WriteLine(session.GetQuantitySpecificQuantity(2));
     }
 }

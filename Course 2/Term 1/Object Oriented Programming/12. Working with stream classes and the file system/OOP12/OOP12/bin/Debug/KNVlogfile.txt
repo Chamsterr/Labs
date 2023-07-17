@@ -1,0 +1,756 @@
+Date - 12/25/2022 9:07:04 PM
+Method - FreeDiskSpace
+
+Date - 12/25/2022 9:07:04 PM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/25/2022 9:07:04 PM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/25/2022 9:07:04 PM
+File - OOP12.exe 
+Method - GetFileInfo
+
+Date - 12/25/2022 9:14:50 PM
+Method - FreeDiskSpace
+
+Date - 12/25/2022 9:14:50 PM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/25/2022 9:14:50 PM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/25/2022 9:14:50 PM
+File - OOP12.exe 
+Method - GetFileInfo
+
+Date - 12/25/2022 9:14:50 PM
+File - Test 
+Method - GetFileInfo
+
+Date - 12/25/2022 9:15:10 PM
+Method - FreeDiskSpace
+
+Date - 12/25/2022 9:15:10 PM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/25/2022 9:15:10 PM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/25/2022 9:15:10 PM
+File - OOP12.exe 
+Method - GetFileInfo
+
+Date - 12/25/2022 9:15:10 PM
+File - Test 
+Method - GetFileInfo
+
+Date - 12/25/2022 9:15:37 PM
+Method - FreeDiskSpace
+
+Date - 12/25/2022 9:15:37 PM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/25/2022 9:15:37 PM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/25/2022 9:15:37 PM
+File - OOP12.exe 
+Method - GetFileInfo
+
+Date - 12/25/2022 9:15:37 PM
+File - Test 
+Method - GetFileInfo
+
+Date - 12/25/2022 9:15:43 PM
+Method - FreeDiskSpace
+
+Date - 12/25/2022 9:15:43 PM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/25/2022 9:15:43 PM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/25/2022 9:15:43 PM
+File - OOP12.exe 
+Method - GetFileInfo
+
+Date - 12/25/2022 9:15:43 PM
+File - Test 
+Method - GetFileInfo
+
+Date - 12/25/2022 9:36:23 PM
+Method - FreeDiskSpace
+
+Date - 12/25/2022 9:36:23 PM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/25/2022 9:36:23 PM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/25/2022 9:36:23 PM
+File - OOP12.exe 
+Method - GetFileInfo
+
+Date - 12/25/2022 9:36:23 PM
+File - Test 
+Method - GetFileInfo
+
+Date - 12/25/2022 9:38:02 PM
+Method - FreeDiskSpace
+
+Date - 12/25/2022 9:38:02 PM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/25/2022 9:38:02 PM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/25/2022 9:38:02 PM
+File - OOP12.exe 
+Method - GetFileInfo
+
+Date - 12/25/2022 9:38:02 PM
+File - Test 
+Method - GetFileInfo
+
+Date - 12/25/2022 9:38:02 PM
+Method - GetAllFilesAndDir
+
+Date - 12/25/2022 9:38:23 PM
+Method - FreeDiskSpace
+
+Date - 12/25/2022 9:38:23 PM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/25/2022 9:38:23 PM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/25/2022 9:38:23 PM
+File - OOP12.exe 
+Method - GetFileInfo
+
+Date - 12/25/2022 9:38:23 PM
+File - Test 
+Method - GetFileInfo
+
+Date - 12/25/2022 9:38:23 PM
+Method - GetAllFilesAndDir
+
+Date - 12/25/2022 9:38:36 PM
+Method - FreeDiskSpace
+
+Date - 12/25/2022 9:38:36 PM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/25/2022 9:38:36 PM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/25/2022 9:38:36 PM
+File - OOP12.exe 
+Method - GetFileInfo
+
+Date - 12/25/2022 9:38:36 PM
+File - Test 
+Method - GetFileInfo
+
+Date - 12/25/2022 9:38:36 PM
+Method - GetAllFilesAndDir
+
+Date - 12/27/2022 12:45:21 AM
+Method - FreeDiskSpace
+
+Date - 12/27/2022 12:45:21 AM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/27/2022 12:45:21 AM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/27/2022 12:45:21 AM
+File - OOP12.exe 
+Method - GetFileInfo
+
+Date - 12/27/2022 12:45:43 AM
+Method - FreeDiskSpace
+
+Date - 12/27/2022 12:45:43 AM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/27/2022 12:45:43 AM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/27/2022 12:45:43 AM
+File - OOP12.exe 
+Method - GetFileInfo
+
+Date - 12/27/2022 12:45:58 AM
+Method - FreeDiskSpace
+
+Date - 12/27/2022 12:45:58 AM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/27/2022 12:45:58 AM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/27/2022 12:45:58 AM
+File - OOP12.exe 
+Method - GetFileInfo
+
+Date - 12/27/2022 12:45:58 AM
+File - Test 
+Method - GetFileInfo
+
+Date - 12/27/2022 12:45:58 AM
+Method - GetAllFilesAndDir
+
+Date - 12/27/2022 12:45:58 AM
+Method - CreateDir
+
+Date - 12/27/2022 1:18:01 AM
+Method - FreeDiskSpace
+
+Date - 12/27/2022 1:18:01 AM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/27/2022 1:18:01 AM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/27/2022 1:18:01 AM
+File - OOP12.exe 
+Method - GetFileInfo
+
+Date - 12/27/2022 1:18:01 AM
+File - Test 
+Method - GetFileInfo
+
+Date - 12/27/2022 1:18:01 AM
+Method - GetAllFilesAndDir
+
+Date - 12/27/2022 1:18:01 AM
+Method - CreateDir
+
+Date - 12/27/2022 1:18:01 AM
+Method - CreateDir
+
+Date - 12/27/2022 1:18:21 AM
+Method - FreeDiskSpace
+
+Date - 12/27/2022 1:18:21 AM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/27/2022 1:18:21 AM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/27/2022 1:18:21 AM
+File - OOP12.exe 
+Method - GetFileInfo
+
+Date - 12/27/2022 1:18:21 AM
+File - Test 
+Method - GetFileInfo
+
+Date - 12/27/2022 1:18:21 AM
+Method - GetAllFilesAndDir
+
+Date - 12/27/2022 1:18:21 AM
+Method - CreateDir
+
+Date - 12/27/2022 1:18:21 AM
+Method - CreateDir
+
+Date - 12/27/2022 1:18:21 AM
+Method - CreateDir
+
+Date - 12/27/2022 1:19:45 AM
+Method - FreeDiskSpace
+
+Date - 12/27/2022 1:19:45 AM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/27/2022 1:19:45 AM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/27/2022 1:19:45 AM
+File - OOP12.exe 
+Method - GetFileInfo
+
+Date - 12/27/2022 1:19:45 AM
+File - Test 
+Method - GetFileInfo
+
+Date - 12/27/2022 1:19:45 AM
+Method - GetAllFilesAndDir
+
+Date - 12/27/2022 1:19:45 AM
+Method - CreateDir
+
+Date - 12/27/2022 1:19:45 AM
+Method - CreateDir
+
+Date - 12/27/2022 1:19:45 AM
+Method - CreateDir
+
+Date - 12/27/2022 1:20:33 AM
+Method - FreeDiskSpace
+
+Date - 12/27/2022 1:20:33 AM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/27/2022 1:20:33 AM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/27/2022 1:20:33 AM
+File - OOP12.exe 
+Method - GetFileInfo
+
+Date - 12/27/2022 1:20:33 AM
+File - Test 
+Method - GetFileInfo
+
+Date - 12/27/2022 1:20:33 AM
+Method - GetAllFilesAndDir
+
+Date - 12/27/2022 1:20:33 AM
+Method - CreateDir
+
+Date - 12/27/2022 1:20:33 AM
+Method - CreateDir
+
+Date - 12/27/2022 1:20:33 AM
+Method - CreateDir
+
+Date - 12/27/2022 1:20:33 AM
+Method - CopyFile
+
+Date - 12/27/2022 1:22:03 AM
+Method - FreeDiskSpace
+
+Date - 12/27/2022 1:22:03 AM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/27/2022 1:22:03 AM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/27/2022 1:22:03 AM
+File - OOP12.exe 
+Method - GetFileInfo
+
+Date - 12/27/2022 1:22:03 AM
+File - Test 
+Method - GetFileInfo
+
+Date - 12/27/2022 1:22:03 AM
+Method - GetAllFilesAndDir
+
+Date - 12/27/2022 1:22:03 AM
+Method - CreateDir
+
+Date - 12/27/2022 1:22:03 AM
+Method - CreateDir
+
+Date - 12/27/2022 1:22:03 AM
+Method - CreateDir
+
+Date - 12/27/2022 1:22:03 AM
+Method - CopyFile
+
+Date - 12/27/2022 1:22:36 AM
+Method - FreeDiskSpace
+
+Date - 12/27/2022 1:22:36 AM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/27/2022 1:22:36 AM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/27/2022 1:22:36 AM
+File - OOP12.exe 
+Method - GetFileInfo
+
+Date - 12/27/2022 1:22:36 AM
+File - Test 
+Method - GetFileInfo
+
+Date - 12/27/2022 1:22:36 AM
+Method - GetAllFilesAndDir
+
+Date - 12/27/2022 1:22:36 AM
+Method - CreateDir
+
+Date - 12/27/2022 1:22:36 AM
+Method - CreateDir
+
+Date - 12/27/2022 1:22:36 AM
+Method - CreateDir
+
+Date - 12/27/2022 1:22:37 AM
+Method - CopyFile
+
+Date - 12/27/2022 1:25:14 AM
+Method - FreeDiskSpace
+
+Date - 12/27/2022 1:25:14 AM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/27/2022 1:25:14 AM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/27/2022 1:25:14 AM
+File - OOP12.exe 
+Method - GetFileInfo
+
+Date - 12/27/2022 1:25:14 AM
+File - Test 
+Method - GetFileInfo
+
+Date - 12/27/2022 1:25:14 AM
+Method - GetAllFilesAndDir
+
+Date - 12/27/2022 1:25:14 AM
+Method - CreateDir
+
+Date - 12/27/2022 1:25:14 AM
+Method - CreateDir
+
+Date - 12/27/2022 1:25:14 AM
+Method - CreateDir
+
+Date - 12/27/2022 1:25:14 AM
+Method - CopyFile
+
+Date - 12/27/2022 1:25:14 AM
+Method - ZipFiles
+
+Date - 12/27/2022 11:21:40 AM
+Method - FreeDiskSpace
+
+Date - 12/27/2022 11:21:40 AM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/27/2022 11:21:40 AM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/27/2022 11:21:40 AM
+File - OOP12.exe 
+Method - GetFileInfo
+
+Date - 12/27/2022 11:21:40 AM
+File - Test 
+Method - GetFileInfo
+
+Date - 12/27/2022 11:21:40 AM
+Method - GetAllFilesAndDir
+
+Date - 12/27/2022 11:21:40 AM
+Method - CreateDir
+
+Date - 12/27/2022 11:21:40 AM
+Method - CreateDir
+
+Date - 12/27/2022 11:21:40 AM
+Method - CreateDir
+
+Date - 12/27/2022 11:21:40 AM
+Method - CopyFile
+
+Date - 12/27/2022 11:21:40 AM
+Method - ZipFiles
+
+Date - 12/27/2022 11:21:57 AM
+Method - FreeDiskSpace
+
+Date - 12/27/2022 11:21:57 AM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/27/2022 11:21:57 AM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/27/2022 11:21:57 AM
+File - OOP12.exe 
+Method - GetFileInfo
+
+Date - 12/27/2022 11:21:57 AM
+File - Test 
+Method - GetFileInfo
+
+Date - 12/27/2022 11:21:57 AM
+Method - GetAllFilesAndDir
+
+Date - 12/27/2022 11:21:57 AM
+Method - CreateDir
+
+Date - 12/27/2022 11:21:57 AM
+Method - CreateDir
+
+Date - 12/27/2022 11:21:58 AM
+Method - CreateDir
+
+Date - 12/27/2022 11:21:58 AM
+Method - CopyFile
+
+Date - 12/27/2022 11:21:58 AM
+Method - ZipFiles
+
+Date - 12/27/2022 11:22:37 AM
+Method - FreeDiskSpace
+
+Date - 12/27/2022 11:22:38 AM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/27/2022 11:22:38 AM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/27/2022 11:22:38 AM
+File - OOP12.exe 
+Method - GetFileInfo
+
+Date - 12/27/2022 11:22:38 AM
+File - Test 
+Method - GetFileInfo
+
+Date - 12/27/2022 11:22:38 AM
+Method - GetAllFilesAndDir
+
+Date - 12/27/2022 11:22:38 AM
+Method - CreateDir
+
+Date - 12/27/2022 11:22:38 AM
+Method - CreateDir
+
+Date - 12/27/2022 11:22:38 AM
+Method - CreateDir
+
+Date - 12/27/2022 11:22:38 AM
+Method - CopyFile
+
+Date - 12/27/2022 11:22:38 AM
+Method - ZipFiles
+
+Date - 12/27/2022 11:26:26 AM
+Method - FreeDiskSpace
+
+Date - 12/27/2022 11:26:26 AM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/27/2022 11:26:26 AM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/27/2022 11:26:26 AM
+File - OOP12.exe 
+Method - GetFileInfo
+
+Date - 12/27/2022 11:26:26 AM
+File - Test 
+Method - GetFileInfo
+
+Date - 12/27/2022 11:26:26 AM
+Method - GetAllFilesAndDir
+
+Date - 12/27/2022 11:26:26 AM
+Method - CreateDir
+
+Date - 12/27/2022 11:26:26 AM
+Method - CreateDir
+
+Date - 12/27/2022 11:26:26 AM
+Method - CreateDir
+
+Date - 12/27/2022 11:26:26 AM
+Method - CopyFile
+
+Date - 12/27/2022 11:26:26 AM
+Method - ZipFiles
+
+Date - 12/27/2022 11:32:07 AM
+Method - FreeDiskSpace
+
+Date - 12/27/2022 11:32:07 AM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/27/2022 11:32:07 AM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/27/2022 11:32:07 AM
+File - OOP12.exe 
+Method - GetFileInfo
+
+Date - 12/27/2022 11:32:07 AM
+File - Test 
+Method - GetFileInfo
+
+Date - 12/27/2022 11:32:07 AM
+Method - GetAllFilesAndDir
+
+Date - 12/27/2022 11:32:07 AM
+Method - CreateDir
+
+Date - 12/27/2022 11:32:07 AM
+Method - CreateDir
+
+Date - 12/27/2022 11:32:07 AM
+Method - CreateDir
+
+Date - 12/27/2022 11:32:07 AM
+Method - CopyFile
+
+Date - 12/27/2022 11:32:07 AM
+Method - ZipFiles
+
+Date - 12/27/2022 11:32:46 AM
+Method - FreeDiskSpace
+
+Date - 12/27/2022 11:32:46 AM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/27/2022 11:32:46 AM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/27/2022 11:32:46 AM
+File - OOP12.exe 
+Method - GetFileInfo
+
+Date - 12/27/2022 11:32:46 AM
+File - Test 
+Method - GetFileInfo
+
+Date - 12/27/2022 11:32:46 AM
+Method - GetAllFilesAndDir
+
+Date - 12/27/2022 11:32:46 AM
+Method - CreateDir
+
+Date - 12/27/2022 11:32:46 AM
+Method - CreateDir
+
+Date - 12/27/2022 11:32:46 AM
+Method - CreateDir
+
+Date - 12/27/2022 11:32:46 AM
+Method - CopyFile
+
+Date - 12/27/2022 11:32:46 AM
+Method - ZipFiles
+
+Date - 12/27/2022 11:35:26 AM
+Method - FreeDiskSpace
+
+Date - 12/27/2022 11:35:26 AM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/27/2022 11:35:26 AM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/27/2022 11:35:26 AM
+File - OOP12.exe 
+Method - GetFileInfo
+
+Date - 12/27/2022 11:35:26 AM
+File - Test 
+Method - GetFileInfo
+
+Date - 12/27/2022 11:35:26 AM
+Method - GetAllFilesAndDir
+
+Date - 12/27/2022 11:35:26 AM
+Method - CreateDir
+
+Date - 12/27/2022 11:35:26 AM
+Method - CreateDir
+
+Date - 12/27/2022 11:35:26 AM
+Method - CreateDir
+
+Date - 12/27/2022 11:35:26 AM
+Method - CopyFile
+
+Date - 12/27/2022 11:35:26 AM
+Method - ZipFiles
+
+Date - 12/27/2022 5:34:34 PM
+Method - FreeDiskSpace
+
+Date - 12/27/2022 5:34:34 PM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/27/2022 5:34:34 PM
+File - OOP12.exe 
+Method - AbsolutePath
+
+Date - 12/27/2022 5:34:34 PM
+File - OOP12.exe 
+Method - GetFileInfo
+
+Date - 12/27/2022 5:34:34 PM
+File - Test 
+Method - GetFileInfo
+
+Date - 12/27/2022 5:34:34 PM
+Method - GetAllFilesAndDir
+
+Date - 12/27/2022 5:34:34 PM
+Method - CreateDir
+
+Date - 12/27/2022 5:34:34 PM
+Method - CreateDir
+
+Date - 12/27/2022 5:34:34 PM
+Method - CreateDir
+
+Date - 12/27/2022 5:34:34 PM
+Method - CopyFile
+
+Date - 12/27/2022 5:34:34 PM
+Method - ZipFiles
+

@@ -1,0 +1,23 @@
+OOP11, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+-------------Конструкторы-------------
+Void .ctor(System.String)
+Void .ctor(Int32)
+Void .ctor()
+------------------Методы----------------
+System.String get_Name()
+Void Walk()
+Void Eat(System.String)
+Void Sleep(Int32)
+Boolean Equals(System.Object)
+Int32 GetHashCode()
+System.Type GetType()
+System.String ToString()
+-----------------Поля----------------
+Int32 age
+-----------------Свойства----------------
+System.String Name
+-----------------Интерфейсы----------------
+------------------Методы 2----------------
+Void Eat(System.String)
+Void Sleep(Int32)
+Boolean Equals(System.Object)

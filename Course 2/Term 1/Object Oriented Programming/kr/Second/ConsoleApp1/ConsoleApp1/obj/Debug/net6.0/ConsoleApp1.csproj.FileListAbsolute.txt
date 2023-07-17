@@ -1,0 +1,15 @@
+D:\Labs\Course 2\Term 1\Object Oriented Programming\kr\Second\ConsoleApp1\ConsoleApp1\bin\Debug\net6.0\ConsoleApp1.exe
+D:\Labs\Course 2\Term 1\Object Oriented Programming\kr\Second\ConsoleApp1\ConsoleApp1\bin\Debug\net6.0\ConsoleApp1.deps.json
+D:\Labs\Course 2\Term 1\Object Oriented Programming\kr\Second\ConsoleApp1\ConsoleApp1\bin\Debug\net6.0\ConsoleApp1.runtimeconfig.json
+D:\Labs\Course 2\Term 1\Object Oriented Programming\kr\Second\ConsoleApp1\ConsoleApp1\bin\Debug\net6.0\ConsoleApp1.dll
+D:\Labs\Course 2\Term 1\Object Oriented Programming\kr\Second\ConsoleApp1\ConsoleApp1\bin\Debug\net6.0\ConsoleApp1.pdb
+D:\Labs\Course 2\Term 1\Object Oriented Programming\kr\Second\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.csproj.AssemblyReference.cache
+D:\Labs\Course 2\Term 1\Object Oriented Programming\kr\Second\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.GeneratedMSBuildEditorConfig.editorconfig
+D:\Labs\Course 2\Term 1\Object Oriented Programming\kr\Second\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.AssemblyInfoInputs.cache
+D:\Labs\Course 2\Term 1\Object Oriented Programming\kr\Second\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.AssemblyInfo.cs
+D:\Labs\Course 2\Term 1\Object Oriented Programming\kr\Second\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.csproj.CoreCompileInputs.cache
+D:\Labs\Course 2\Term 1\Object Oriented Programming\kr\Second\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.dll
+D:\Labs\Course 2\Term 1\Object Oriented Programming\kr\Second\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\refint\ConsoleApp1.dll
+D:\Labs\Course 2\Term 1\Object Oriented Programming\kr\Second\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.pdb
+D:\Labs\Course 2\Term 1\Object Oriented Programming\kr\Second\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.genruntimeconfig.cache
+D:\Labs\Course 2\Term 1\Object Oriented Programming\kr\Second\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\ref\ConsoleApp1.dll

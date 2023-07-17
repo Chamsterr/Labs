@@ -1,0 +1,155 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "Sax.Net/2.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Sax.Net.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net45/Sax.Net.dll": {
+            "related": ".XML"
+          }
+        }
+      },
+      "TagSoup.Net/1.2.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Sax.Net": "2.0.1"
+        },
+        "compile": {
+          "lib/net45/TagSoup.Net.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net45/TagSoup.Net.dll": {
+            "related": ".XML"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Sax.Net/2.0.1": {
+      "sha512": "mfHPOgbGTuSe/4iXQqTq8cNlmwVSsjKRV50l/nj4leGRvzLBJoR21V3jli8cnZOlbm/4lz4ClQ/I1PtZA4WdpQ==",
+      "type": "package",
+      "path": "sax.net/2.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Sax.Net.XML",
+        "lib/net45/Sax.Net.dll",
+        "sax.net.2.0.1.nupkg.sha512",
+        "sax.net.nuspec"
+      ]
+    },
+    "TagSoup.Net/1.2.1.1": {
+      "sha512": "G13AUni7yce8R6S7Cra/TqK8CBXmpaSdIMq9Pt5oDvAZgNpHRqmEZNihSyz0xFh1HtZ8LZd6EqGeT26WcfmYWg==",
+      "type": "package",
+      "path": "tagsoup.net/1.2.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/TagSoup.Net.XML",
+        "lib/net45/TagSoup.Net.dll",
+        "tagsoup.net.1.2.1.1.nupkg.sha512",
+        "tagsoup.net.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "TagSoup.Net >= 1.2.1.1"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Chamster\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\Labs\\Course 2\\Term 1\\Object Oriented Programming\\13\\OOP13\\OOP13_\\OOP13_.csproj",
+      "projectName": "OOP13_",
+      "projectPath": "D:\\Labs\\Course 2\\Term 1\\Object Oriented Programming\\13\\OOP13\\OOP13_\\OOP13_.csproj",
+      "packagesPath": "C:\\Users\\Chamster\\.nuget\\packages\\",
+      "outputPath": "D:\\Labs\\Course 2\\Term 1\\Object Oriented Programming\\13\\OOP13\\OOP13_\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Chamster\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "dependencies": {
+          "TagSoup.Net": {
+            "target": "Package",
+            "version": "[1.2.1.1, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Пакет \"Sax.Net 2.0.1\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\", а не целевой платформы проекта \"net6.0\". Этот пакет может быть не полностью совместим с вашим проектом.",
+      "libraryId": "Sax.Net",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Пакет \"TagSoup.Net 1.2.1.1\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\", а не целевой платформы проекта \"net6.0\". Этот пакет может быть не полностью совместим с вашим проектом.",
+      "libraryId": "TagSoup.Net",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
+}

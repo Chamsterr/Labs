@@ -216,5 +216,6 @@ class Program
         }
         set.Write("log.txt");
         set.Read("log.txt");
+        Console.WriteLine();
     }
 }

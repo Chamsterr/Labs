@@ -1,0 +1,9 @@
+@startuml
+title Class Diagram
+
+class "Телефоная станция"
+class "Абонент"
+class "Администратор"
+
+
+@enduml

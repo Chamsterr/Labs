@@ -1,0 +1,15 @@
+D:\Labs\Course 2\Term 1\Object Oriented Programming\17\17\17\obj\Debug\net6.0\17.csproj.AssemblyReference.cache
+D:\Labs\Course 2\Term 1\Object Oriented Programming\17\17\17\obj\Debug\net6.0\17.GeneratedMSBuildEditorConfig.editorconfig
+D:\Labs\Course 2\Term 1\Object Oriented Programming\17\17\17\obj\Debug\net6.0\17.AssemblyInfoInputs.cache
+D:\Labs\Course 2\Term 1\Object Oriented Programming\17\17\17\obj\Debug\net6.0\17.AssemblyInfo.cs
+D:\Labs\Course 2\Term 1\Object Oriented Programming\17\17\17\obj\Debug\net6.0\17.csproj.CoreCompileInputs.cache
+D:\Labs\Course 2\Term 1\Object Oriented Programming\17\17\17\bin\Debug\net6.0\17.exe
+D:\Labs\Course 2\Term 1\Object Oriented Programming\17\17\17\bin\Debug\net6.0\17.deps.json
+D:\Labs\Course 2\Term 1\Object Oriented Programming\17\17\17\bin\Debug\net6.0\17.runtimeconfig.json
+D:\Labs\Course 2\Term 1\Object Oriented Programming\17\17\17\bin\Debug\net6.0\17.dll
+D:\Labs\Course 2\Term 1\Object Oriented Programming\17\17\17\bin\Debug\net6.0\17.pdb
+D:\Labs\Course 2\Term 1\Object Oriented Programming\17\17\17\obj\Debug\net6.0\17.dll
+D:\Labs\Course 2\Term 1\Object Oriented Programming\17\17\17\obj\Debug\net6.0\refint\17.dll
+D:\Labs\Course 2\Term 1\Object Oriented Programming\17\17\17\obj\Debug\net6.0\17.pdb
+D:\Labs\Course 2\Term 1\Object Oriented Programming\17\17\17\obj\Debug\net6.0\17.genruntimeconfig.cache
+D:\Labs\Course 2\Term 1\Object Oriented Programming\17\17\17\obj\Debug\net6.0\ref\17.dll

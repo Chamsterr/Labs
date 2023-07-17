@@ -1,0 +1,32 @@
+{
+  "version": 2,
+  "dgSpecHash": "2SFTfFSRlODflq8NTaBgcUDj9xfnOjxR56wqFPrnXGntjSSS14m4N5ZXmwNLlF/4rwpgbklWrK/RELzbOW/bVg==",
+  "success": true,
+  "projectFilePath": "D:\\Labs\\Course 2\\Term 1\\Object Oriented Programming\\13\\OOP13\\OOP13_\\OOP13_.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Chamster\\.nuget\\packages\\sax.net\\2.0.1\\sax.net.2.0.1.nupkg.sha512",
+    "C:\\Users\\Chamster\\.nuget\\packages\\tagsoup.net\\1.2.1.1\\tagsoup.net.1.2.1.1.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Пакет \"Sax.Net 2.0.1\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\", а не целевой платформы проекта \"net6.0\". Этот пакет может быть не полностью совместим с вашим проектом.",
+      "libraryId": "Sax.Net",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Пакет \"TagSoup.Net 1.2.1.1\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\", а не целевой платформы проекта \"net6.0\". Этот пакет может быть не полностью совместим с вашим проектом.",
+      "libraryId": "TagSoup.Net",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
+}

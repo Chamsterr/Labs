@@ -25,6 +25,10 @@ public class Set
 
     public List<int> numbers = new List<int>();
 
+    public Set(int n)
+    {
+        numbers.Add(n);
+    }
     public Set()
     {
         numbers.Add(0);
@@ -46,9 +50,12 @@ public class Set
     }
     public static Set operator +(Set set, Set set2)
     {
-        foreach (int i in set2.numbers)
+        for (int i = 0; i < set2.numbers.Count; i++)
         {
-            set.numbers.Add(i);
+            if (!set.numbers.Contains(set2.numbers[i]))
+            {
+                set.numbers.Add(set2.numbers[i]);
+            }
         }
         return set;
     }
@@ -100,6 +107,24 @@ static class StatisticOperation
         }
         return set;
     }
+
+    public static int AmountElementsSet(Set set)
+    {
+        return set.numbers.Count;
+    }
+
+    public static Set SumSet(Set set, Set set2)
+    {
+        for (int i = 0; i < set2.numbers.Count; i++)
+        {
+            if (!set.numbers.Contains(set2.numbers[i]))
+            {
+                set.numbers.Add(set2.numbers[i]);
+            }
+        }
+        return set;
+    }
+
     public static bool CheckingForTheOrderOfaSet(this Set set)
     {
         for (int i = 0; i < set.numbers.Count - 1; i++)
@@ -125,12 +150,12 @@ static class StatisticOperation
 class Program
 {    static void Main(string[] args)
     {
-        Set set = new Set();
+        Set set = new Set(5);
 
         Console.Write($"множество до ++ - ");
         set.PrintSet();
 
-        set++;
+        ++set;
 
         Console.Write($"множество после ++ - ");
         set.PrintSet();
@@ -147,7 +172,7 @@ class Program
 
         Console.WriteLine($"Мощность множества множество - {(int)set}");
 
-        Console.WriteLine($"Элемент множества - {set%1}");
+        Console.WriteLine($"Второй элемент множества - {set%1}");
 
 
         List<int> numbers_ = new List<int>() { 1, 2, 3, 3, 4};
@@ -169,12 +194,16 @@ class Program
         developer.Department = "Dom";
         Console.WriteLine($"{developer.Id}. {developer.FullName} {developer.Department}");
 
-        List<int> numbers_1 = new List<int>() { 1, 2, 3, 4 };
+        List<int> numbers_1 = new List<int>() { 1, 2, 3, 4, 10 };
         Set set4 = new Set(numbers_1);
 
         List<int> numbers_2 = new List<int>() { 3, 4, 5, 6, 7 };
         Set set5 = new Set(numbers_2);
 
         StatisticOperation.SetSubtraction(set4, set5).PrintSet();
+
+        StatisticOperation.SumSet(set4, set5).PrintSet();
+        Console.WriteLine(StatisticOperation.AmountElementsSet(set4));
+
     }
 }

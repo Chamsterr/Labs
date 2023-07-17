@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "5dzRAYJ7vhRMHDDhrcMPxDFVH6wUPEi+4lYe3/5Z8LBF+xA6kUil7f3z+/mHZf3vSInBlrkmhLyMiFt3cgIW0Q==",
+  "success": true,
+  "projectFilePath": "D:\\Labs\\Course 2\\Term 1\\Object Oriented Programming\\19\\OOP19\\OOP19\\OOP19.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Chamster\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.12\\microsoft.netcore.app.host.win-x64.6.0.12.nupkg.sha512",
+    "C:\\Users\\Chamster\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.12\\microsoft.aspnetcore.app.ref.6.0.12.nupkg.sha512",
+    "C:\\Users\\Chamster\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.12\\microsoft.windowsdesktop.app.ref.6.0.12.nupkg.sha512",
+    "C:\\Users\\Chamster\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.12\\microsoft.netcore.app.ref.6.0.12.nupkg.sha512"
+  ],
+  "logs": []
+}

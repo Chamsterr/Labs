@@ -1,0 +1,8 @@
+D:\Labs\Course 2\Term 1\Object Oriented Programming\12. Working with stream classes and the file system\OOP12\OOP12\bin\Debug\OOP12.exe.config
+D:\Labs\Course 2\Term 1\Object Oriented Programming\12. Working with stream classes and the file system\OOP12\OOP12\bin\Debug\OOP12.exe
+D:\Labs\Course 2\Term 1\Object Oriented Programming\12. Working with stream classes and the file system\OOP12\OOP12\bin\Debug\OOP12.pdb
+D:\Labs\Course 2\Term 1\Object Oriented Programming\12. Working with stream classes and the file system\OOP12\OOP12\obj\Debug\OOP12.csproj.AssemblyReference.cache
+D:\Labs\Course 2\Term 1\Object Oriented Programming\12. Working with stream classes and the file system\OOP12\OOP12\obj\Debug\OOP12.csproj.SuggestedBindingRedirects.cache
+D:\Labs\Course 2\Term 1\Object Oriented Programming\12. Working with stream classes and the file system\OOP12\OOP12\obj\Debug\OOP12.csproj.CoreCompileInputs.cache
+D:\Labs\Course 2\Term 1\Object Oriented Programming\12. Working with stream classes and the file system\OOP12\OOP12\obj\Debug\OOP12.exe
+D:\Labs\Course 2\Term 1\Object Oriented Programming\12. Working with stream classes and the file system\OOP12\OOP12\obj\Debug\OOP12.pdb

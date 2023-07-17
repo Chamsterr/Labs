@@ -1,0 +1,15 @@
+D:\Labs\Course 2\Term 1\Object Oriented Programming\14. Working with threads\OOP14\OOP14\bin\Debug\net7.0\OOP14.exe
+D:\Labs\Course 2\Term 1\Object Oriented Programming\14. Working with threads\OOP14\OOP14\bin\Debug\net7.0\OOP14.deps.json
+D:\Labs\Course 2\Term 1\Object Oriented Programming\14. Working with threads\OOP14\OOP14\bin\Debug\net7.0\OOP14.runtimeconfig.json
+D:\Labs\Course 2\Term 1\Object Oriented Programming\14. Working with threads\OOP14\OOP14\bin\Debug\net7.0\OOP14.dll
+D:\Labs\Course 2\Term 1\Object Oriented Programming\14. Working with threads\OOP14\OOP14\bin\Debug\net7.0\OOP14.pdb
+D:\Labs\Course 2\Term 1\Object Oriented Programming\14. Working with threads\OOP14\OOP14\obj\Debug\net7.0\OOP14.csproj.AssemblyReference.cache
+D:\Labs\Course 2\Term 1\Object Oriented Programming\14. Working with threads\OOP14\OOP14\obj\Debug\net7.0\OOP14.GeneratedMSBuildEditorConfig.editorconfig
+D:\Labs\Course 2\Term 1\Object Oriented Programming\14. Working with threads\OOP14\OOP14\obj\Debug\net7.0\OOP14.AssemblyInfoInputs.cache
+D:\Labs\Course 2\Term 1\Object Oriented Programming\14. Working with threads\OOP14\OOP14\obj\Debug\net7.0\OOP14.AssemblyInfo.cs
+D:\Labs\Course 2\Term 1\Object Oriented Programming\14. Working with threads\OOP14\OOP14\obj\Debug\net7.0\OOP14.csproj.CoreCompileInputs.cache
+D:\Labs\Course 2\Term 1\Object Oriented Programming\14. Working with threads\OOP14\OOP14\obj\Debug\net7.0\OOP14.dll
+D:\Labs\Course 2\Term 1\Object Oriented Programming\14. Working with threads\OOP14\OOP14\obj\Debug\net7.0\refint\OOP14.dll
+D:\Labs\Course 2\Term 1\Object Oriented Programming\14. Working with threads\OOP14\OOP14\obj\Debug\net7.0\OOP14.pdb
+D:\Labs\Course 2\Term 1\Object Oriented Programming\14. Working with threads\OOP14\OOP14\obj\Debug\net7.0\OOP14.genruntimeconfig.cache
+D:\Labs\Course 2\Term 1\Object Oriented Programming\14. Working with threads\OOP14\OOP14\obj\Debug\net7.0\ref\OOP14.dll

@@ -1,0 +1,30 @@
+D:\Labs\Course 2\Term 1\Object Oriented Programming\14. Working with threads\OOP15\OOP15\bin\Debug\net7.0\OOP15.exe
+D:\Labs\Course 2\Term 1\Object Oriented Programming\14. Working with threads\OOP15\OOP15\bin\Debug\net7.0\OOP15.deps.json
+D:\Labs\Course 2\Term 1\Object Oriented Programming\14. Working with threads\OOP15\OOP15\bin\Debug\net7.0\OOP15.runtimeconfig.json
+D:\Labs\Course 2\Term 1\Object Oriented Programming\14. Working with threads\OOP15\OOP15\bin\Debug\net7.0\OOP15.dll
+D:\Labs\Course 2\Term 1\Object Oriented Programming\14. Working with threads\OOP15\OOP15\bin\Debug\net7.0\OOP15.pdb
+D:\Labs\Course 2\Term 1\Object Oriented Programming\14. Working with threads\OOP15\OOP15\obj\Debug\net7.0\OOP15.csproj.AssemblyReference.cache
+D:\Labs\Course 2\Term 1\Object Oriented Programming\14. Working with threads\OOP15\OOP15\obj\Debug\net7.0\OOP15.GeneratedMSBuildEditorConfig.editorconfig
+D:\Labs\Course 2\Term 1\Object Oriented Programming\14. Working with threads\OOP15\OOP15\obj\Debug\net7.0\OOP15.AssemblyInfoInputs.cache
+D:\Labs\Course 2\Term 1\Object Oriented Programming\14. Working with threads\OOP15\OOP15\obj\Debug\net7.0\OOP15.AssemblyInfo.cs
+D:\Labs\Course 2\Term 1\Object Oriented Programming\14. Working with threads\OOP15\OOP15\obj\Debug\net7.0\OOP15.csproj.CoreCompileInputs.cache
+D:\Labs\Course 2\Term 1\Object Oriented Programming\14. Working with threads\OOP15\OOP15\obj\Debug\net7.0\OOP15.dll
+D:\Labs\Course 2\Term 1\Object Oriented Programming\14. Working with threads\OOP15\OOP15\obj\Debug\net7.0\refint\OOP15.dll
+D:\Labs\Course 2\Term 1\Object Oriented Programming\14. Working with threads\OOP15\OOP15\obj\Debug\net7.0\OOP15.pdb
+D:\Labs\Course 2\Term 1\Object Oriented Programming\14. Working with threads\OOP15\OOP15\obj\Debug\net7.0\OOP15.genruntimeconfig.cache
+D:\Labs\Course 2\Term 1\Object Oriented Programming\14. Working with threads\OOP15\OOP15\obj\Debug\net7.0\ref\OOP15.dll
+D:\Labs\Course 2\Term 1\Object Oriented Programming\15\OOP15\OOP15\bin\Debug\net7.0\OOP15.exe
+D:\Labs\Course 2\Term 1\Object Oriented Programming\15\OOP15\OOP15\bin\Debug\net7.0\OOP15.deps.json
+D:\Labs\Course 2\Term 1\Object Oriented Programming\15\OOP15\OOP15\bin\Debug\net7.0\OOP15.runtimeconfig.json
+D:\Labs\Course 2\Term 1\Object Oriented Programming\15\OOP15\OOP15\bin\Debug\net7.0\OOP15.dll
+D:\Labs\Course 2\Term 1\Object Oriented Programming\15\OOP15\OOP15\bin\Debug\net7.0\OOP15.pdb
+D:\Labs\Course 2\Term 1\Object Oriented Programming\15\OOP15\OOP15\obj\Debug\net7.0\OOP15.csproj.AssemblyReference.cache
+D:\Labs\Course 2\Term 1\Object Oriented Programming\15\OOP15\OOP15\obj\Debug\net7.0\OOP15.GeneratedMSBuildEditorConfig.editorconfig
+D:\Labs\Course 2\Term 1\Object Oriented Programming\15\OOP15\OOP15\obj\Debug\net7.0\OOP15.AssemblyInfoInputs.cache
+D:\Labs\Course 2\Term 1\Object Oriented Programming\15\OOP15\OOP15\obj\Debug\net7.0\OOP15.AssemblyInfo.cs
+D:\Labs\Course 2\Term 1\Object Oriented Programming\15\OOP15\OOP15\obj\Debug\net7.0\OOP15.csproj.CoreCompileInputs.cache
+D:\Labs\Course 2\Term 1\Object Oriented Programming\15\OOP15\OOP15\obj\Debug\net7.0\OOP15.dll
+D:\Labs\Course 2\Term 1\Object Oriented Programming\15\OOP15\OOP15\obj\Debug\net7.0\refint\OOP15.dll
+D:\Labs\Course 2\Term 1\Object Oriented Programming\15\OOP15\OOP15\obj\Debug\net7.0\OOP15.pdb
+D:\Labs\Course 2\Term 1\Object Oriented Programming\15\OOP15\OOP15\obj\Debug\net7.0\OOP15.genruntimeconfig.cache
+D:\Labs\Course 2\Term 1\Object Oriented Programming\15\OOP15\OOP15\obj\Debug\net7.0\ref\OOP15.dll

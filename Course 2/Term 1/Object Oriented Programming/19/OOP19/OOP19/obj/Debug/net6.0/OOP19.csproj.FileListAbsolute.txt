@@ -1,0 +1,15 @@
+D:\Labs\Course 2\Term 1\Object Oriented Programming\19\OOP19\OOP19\obj\Debug\net6.0\OOP19.csproj.AssemblyReference.cache
+D:\Labs\Course 2\Term 1\Object Oriented Programming\19\OOP19\OOP19\obj\Debug\net6.0\OOP19.GeneratedMSBuildEditorConfig.editorconfig
+D:\Labs\Course 2\Term 1\Object Oriented Programming\19\OOP19\OOP19\obj\Debug\net6.0\OOP19.AssemblyInfoInputs.cache
+D:\Labs\Course 2\Term 1\Object Oriented Programming\19\OOP19\OOP19\obj\Debug\net6.0\OOP19.AssemblyInfo.cs
+D:\Labs\Course 2\Term 1\Object Oriented Programming\19\OOP19\OOP19\obj\Debug\net6.0\OOP19.csproj.CoreCompileInputs.cache
+D:\Labs\Course 2\Term 1\Object Oriented Programming\19\OOP19\OOP19\bin\Debug\net6.0\OOP19.exe
+D:\Labs\Course 2\Term 1\Object Oriented Programming\19\OOP19\OOP19\bin\Debug\net6.0\OOP19.deps.json
+D:\Labs\Course 2\Term 1\Object Oriented Programming\19\OOP19\OOP19\bin\Debug\net6.0\OOP19.runtimeconfig.json
+D:\Labs\Course 2\Term 1\Object Oriented Programming\19\OOP19\OOP19\bin\Debug\net6.0\OOP19.dll
+D:\Labs\Course 2\Term 1\Object Oriented Programming\19\OOP19\OOP19\bin\Debug\net6.0\OOP19.pdb
+D:\Labs\Course 2\Term 1\Object Oriented Programming\19\OOP19\OOP19\obj\Debug\net6.0\OOP19.dll
+D:\Labs\Course 2\Term 1\Object Oriented Programming\19\OOP19\OOP19\obj\Debug\net6.0\refint\OOP19.dll
+D:\Labs\Course 2\Term 1\Object Oriented Programming\19\OOP19\OOP19\obj\Debug\net6.0\OOP19.pdb
+D:\Labs\Course 2\Term 1\Object Oriented Programming\19\OOP19\OOP19\obj\Debug\net6.0\OOP19.genruntimeconfig.cache
+D:\Labs\Course 2\Term 1\Object Oriented Programming\19\OOP19\OOP19\obj\Debug\net6.0\ref\OOP19.dll
