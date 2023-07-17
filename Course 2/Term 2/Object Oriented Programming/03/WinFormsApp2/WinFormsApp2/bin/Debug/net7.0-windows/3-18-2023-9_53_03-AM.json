@@ -1,0 +1,21 @@
+[
+  {
+    "id": "09876",
+    "type": "Грузовой",
+    "model": "BlueBird Airlines",
+    "workers": [
+      {
+        "FullName": " Алексей Смирнов",
+        "JobTitle": "Пилот"
+      },
+      {
+        "FullName": " Екатерина Ковалева",
+        "JobTitle": " Стюардесса"
+      }
+    ],
+    "numberOfPlace": 40,
+    "carrying": 536,
+    "date": "2023-02-24T00:00:00",
+    "technicalInspection": "2022-11-16T00:00:00"
+  }
+]

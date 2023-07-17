@@ -1,0 +1,97 @@
+[
+  {
+    "id": "73773",
+    "type": "Военный",
+    "model": "Nimbus Aviation",
+    "workers": [
+      {
+        "FullName": " Игорь Кузнецов",
+        "JobTitle": "Пилот"
+      },
+      {
+        "FullName": " Юлия Смирнова",
+        "JobTitle": " Стюардесса"
+      }
+    ],
+    "numberOfPlace": 34,
+    "carrying": 527,
+    "date": "2021-05-12T00:00:00",
+    "technicalInspection": "2022-11-17T00:00:00"
+  },
+  {
+    "id": "98768",
+    "type": "Грузовой",
+    "model": "Airwave",
+    "workers": [
+      {
+        "FullName": " Елена Макарова",
+        "JobTitle": "Пилот"
+      },
+      {
+        "FullName": " Александра Никитина",
+        "JobTitle": " Стюардесса"
+      }
+    ],
+    "numberOfPlace": 34,
+    "carrying": 527,
+    "date": "2021-01-04T00:00:00",
+    "technicalInspection": "2022-10-27T00:00:00"
+  },
+  {
+    "id": "98768",
+    "type": "Грузовой",
+    "model": "Startfly",
+    "workers": [
+      {
+        "FullName": " Елена Макарова",
+        "JobTitle": "Пилот"
+      },
+      {
+        "FullName": " Александра Никитина",
+        "JobTitle": " Стюардесса"
+      }
+    ],
+    "numberOfPlace": 27,
+    "carrying": 643,
+    "date": "2021-11-12T00:00:00",
+    "technicalInspection": "2022-09-28T00:00:00"
+  },
+  {
+    "id": "65433",
+    "type": "Пассажирский",
+    "model": "Oceanic Air",
+    "workers": [
+      {
+        "FullName": " Елена Макарова",
+        "JobTitle": "Пилот"
+      },
+      {
+        "FullName": " Александра Никитина",
+        "JobTitle": " Стюардесса"
+      }
+    ],
+    "numberOfPlace": 55,
+    "carrying": 870,
+    "date": "2022-10-21T00:00:00",
+    "technicalInspection": "2022-09-13T00:00:00"
+  },
+  {
+    "id": "09876",
+    "type": "Грузовой",
+    "model": "BlueBird Airlines",
+    "workers": [
+      {
+        "FullName": " Алексей Смирнов",
+        "JobTitle": "Пилот"
+      },
+      {
+        "FullName": " Екатерина Ковалева",
+        "JobTitle": " Стюардесса"
+      }
+    ],
+    "numberOfPlace": 40,
+    "carrying": 536,
+    "date": "2023-02-24T00:00:00",
+    "technicalInspection": "2022-11-16T00:00:00"
+  }
+]

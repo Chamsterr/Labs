@@ -1,0 +1,30 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:Taskify0._5.CustomControl">
+
+
+    <Style TargetType="{x:Type local:CustomControl1}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:CustomControl1}">
+                    <Grid>
+                        <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Padding="{TemplateBinding Padding}">
+                            <ContentPresenter/>
+                        </Border>
+                        <CheckBox FontSize="12" Width="20" Height="20" Margin="10 10 0 10" 
+                              Style="{DynamicResource MyCheckBox}" VerticalAlignment="Bottom" 
+                              HorizontalAlignment="Left" BorderThickness="0"  
+                              TextElement.FontFamily="pack://application:,,,/FontAwesome.WPF;component/#FontAwesome"
+                              x:Name="myCheckBox"
+                              IsChecked="{Binding IsChecked, RelativeSource={RelativeSource TemplatedParent}}"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

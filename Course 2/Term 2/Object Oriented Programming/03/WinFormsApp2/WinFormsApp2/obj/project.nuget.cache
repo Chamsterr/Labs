@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "nvBaZSub46WFgUhlTHRQuF5EtURvzd2J03QM9n+4neFyj5+smBCvtcO13updn15/QsnFSc9yEVIeUyT8UIm9UQ==",
+  "success": true,
+  "projectFilePath": "D:\\Labs\\Course 2\\Term 2\\Object Oriented Programming\\03\\WinFormsApp2\\WinFormsApp2\\WinFormsApp2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Chamster\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

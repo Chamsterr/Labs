@@ -1,0 +1,18 @@
+{
+  "id": "1",
+  "type": "Пассажирский",
+  "model": "SkyWings",
+  "workers": [
+    {
+      "FullName": " Игорь Кузнецов",
+      "JobTitle": "Пилот"
+    },
+    {
+      "FullName": " Юлия Смирнова",
+      "JobTitle": " Стюардесса"
+    }
+  ],
+  "numberOfPlace": 31,
+  "carrying": 652,
+  "technicalInspection": "2023-03-04T00:00:00"
+}

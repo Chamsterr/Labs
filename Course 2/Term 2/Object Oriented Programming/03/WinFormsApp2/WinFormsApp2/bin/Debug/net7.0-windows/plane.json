@@ -1,0 +1,21 @@
+[
+  {
+    "id": "12321",
+    "type": "Военный",
+    "model": "BlueBird Airlines",
+    "workers": [
+      {
+        "FullName": " Игорь Кузнецов",
+        "JobTitle": "Пилот"
+      },
+      {
+        "FullName": " Юлия Смирнова",
+        "JobTitle": " Стюардесса"
+      }
+    ],
+    "numberOfPlace": 10,
+    "carrying": 500,
+    "date": "2023-03-04T00:00:00",
+    "technicalInspection": "2023-03-04T00:00:00"
+  }
+]

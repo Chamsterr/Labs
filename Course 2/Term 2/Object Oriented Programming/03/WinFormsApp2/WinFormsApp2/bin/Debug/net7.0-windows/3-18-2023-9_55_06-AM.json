@@ -1,0 +1,40 @@
+[
+  {
+    "id": "73773",
+    "type": "Военный",
+    "model": "Nimbus Aviation",
+    "workers": [
+      {
+        "FullName": " Игорь Кузнецов",
+        "JobTitle": "Пилот"
+      },
+      {
+        "FullName": " Юлия Смирнова",
+        "JobTitle": " Стюардесса"
+      }
+    ],
+    "numberOfPlace": 34,
+    "carrying": 527,
+    "date": "2021-05-12T00:00:00",
+    "technicalInspection": "2022-11-17T00:00:00"
+  },
+  {
+    "id": "98768",
+    "type": "Грузовой",
+    "model": "Airwave",
+    "workers": [
+      {
+        "FullName": " Елена Макарова",
+        "JobTitle": "Пилот"
+      },
+      {
+        "FullName": " Александра Никитина",
+        "JobTitle": " Стюардесса"
+      }
+    ],
+    "numberOfPlace": 34,
+    "carrying": 527,
+    "date": "2021-01-04T00:00:00",
+    "technicalInspection": "2022-10-27T00:00:00"
+  }
+]
