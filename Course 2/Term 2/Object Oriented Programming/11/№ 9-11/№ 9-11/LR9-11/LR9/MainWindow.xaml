@@ -1,0 +1,57 @@
+﻿<Window x:Class="LR9.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LR9"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <DataGrid x:Name="DataGridName" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+
+        <!--Find-->
+        <Button x:Name="BTN_Find" Content="Show All Players" HorizontalAlignment="Left" Margin="10,161,0,0" VerticalAlignment="Top" Click="BTN_Find_Click"/>
+        <Button x:Name="BTN_FilteredFind" Content="Filtered Find" HorizontalAlignment="Left" Margin="10,209,0,0" VerticalAlignment="Top" Click="BTN_FilteredFind_Click"/>
+        <TextBox x:Name="TB_TeamID" HorizontalAlignment="Left" Margin="90,210,0,0" TextWrapping="Wrap" Text="TeamID" VerticalAlignment="Top" Width="59"/>
+        <Button x:Name="BTN_ShowAllTeams" Content="Show All Teams" HorizontalAlignment="Left" Margin="120,161,0,0" VerticalAlignment="Top" Click="BTN_ShowAllTeams_Click"/>
+
+        <!--Create Player-->
+        <Label Content="Create Player" HorizontalAlignment="Left" Margin="657,130,0,0" VerticalAlignment="Top"/>
+
+        <TextBox x:Name="TB_PlayerName" HorizontalAlignment="Left" Margin="657,161,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TB_PlayerAge" HorizontalAlignment="Left" Margin="657,184,0,0" TextWrapping="Wrap" Text="Age" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TB_PlayerPosition" HorizontalAlignment="Left" Margin="657,207,0,0" TextWrapping="Wrap" Text="Position" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TB_TeamIdCreate" HorizontalAlignment="Left" Margin="657,232,0,0" TextWrapping="Wrap" Text="TeamId" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="BTN_CreatePlayer" Content="Create Player" HorizontalAlignment="Left" Margin="657,255,0,0" VerticalAlignment="Top" Width="120" Click="BTN_CreatePlayer_Click"/>
+
+        <!--Create Team-->
+        <TextBox x:Name="TB_TeamName" HorizontalAlignment="Left" Margin="504,161,0,0" TextWrapping="Wrap" Text="TeamName" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Create Team" HorizontalAlignment="Left" Margin="504,130,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="BTN_CreateTeam" Content="Create Team " HorizontalAlignment="Left" Margin="504,187,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click"/>
+
+        <!--Create Team And Player Transaction-->
+        <Button x:Name="BTN_Transaction" Content="Transaction" HorizontalAlignment="Left" Margin="504,235,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.909,-0.85" Click="BTN_Transaction_Click"/>
+
+        <!--Delete-->
+        <Button Content="Delete Player" HorizontalAlignment="Left" Margin="263,162,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
+        <Button Content="Delete Team" HorizontalAlignment="Left" Margin="263,187,0,0" VerticalAlignment="Top" Width="73" Click="Button_Click_2"/>
+        <TextBox x:Name="TB_PlayerIdDelete" HorizontalAlignment="Center" Margin="0,162,0,0" TextWrapping="Wrap" Text="PlayerId" VerticalAlignment="Top" Width="82"/>
+        <TextBox x:Name="TB_TeamdIdDelete" HorizontalAlignment="Center" Margin="0,189,0,0" TextWrapping="Wrap" Text="TeamId" VerticalAlignment="Top" Width="82"/>
+
+        <!--Edit-->
+        <Label Content="Delete" HorizontalAlignment="Left" Margin="263,131,0,0" VerticalAlignment="Top"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="263,241,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TB_EPN" HorizontalAlignment="Left" Margin="400,272,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TB_EPA" HorizontalAlignment="Left" Margin="400,295,0,0" TextWrapping="Wrap" Text="Age" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TB_EPP" HorizontalAlignment="Left" Margin="400,318,0,0" TextWrapping="Wrap" Text="Position" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TB_EditPlayerId" HorizontalAlignment="Left" Margin="263,272,0,0" TextWrapping="Wrap" Text="PlayerId" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="TB_LoadPlayer" Content="Load Player" HorizontalAlignment="Left" Margin="263,298,0,0" VerticalAlignment="Top" Click="TB_LoadPlayer_Click"/>
+        <Button x:Name="BTN_SaveChanges" Content="Save Changes" HorizontalAlignment="Left" Margin="400,341,0,0" VerticalAlignment="Top" Click="BTN_SaveChanges_Click"/>
+        <GroupBox Header="Sort By" Margin="10,250,656,98">
+            <StackPanel>
+                <RadioButton x:Name="Radio1" Content="Id" IsChecked="True" GroupName="Sort" />
+                <RadioButton x:Name="Radio2" Content="Age" GroupName="Sort" />
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+</Window>

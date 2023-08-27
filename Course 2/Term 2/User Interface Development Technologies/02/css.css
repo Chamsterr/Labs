@@ -1,0 +1,31 @@
+* {
+    margin: 5px auto;
+    text-align: center;
+    background-color: #042940;
+    color: #cdd6dc;
+}
+
+.all_products {
+    border: 1px solid #cdd6dc;
+    height: 250px;
+    width: 520px;
+}
+
+#filter_products {
+    border: 1px solid #cdd6dc;
+    height: 250px;
+    width: 520px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    border-bottom: 1px solid #cdd6dc;
+}
+
+input{
+    border-color: #cdd6dc;
+}

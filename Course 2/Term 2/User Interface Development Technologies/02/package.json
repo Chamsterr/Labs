@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "@types/node": "^18.14.0",
+    "core-js": "^3.28.0"
+  }
+}

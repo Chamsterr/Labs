@@ -1,0 +1,22 @@
+﻿<Window x:Class="HabrMVVM.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HabrMVVM"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.DataContext>
+        <local:MainVM/>
+        <!-- Создаем новый VM и соединяем его со View -->
+    </Window.DataContext>
+    <StackPanel>
+        <!--Binding, собственно, соединяет текстовое поле со свойством в VM -->
+        <!--UpdateSourceTrigger, в данном случае, выполняет передачу значение в VM в момент ввода -->
+        <TextBox Width="30" Text="{Binding Number1, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox Width="30" Text="{Binding Number2, UpdateSourceTrigger=PropertyChanged}"/>
+        <!--Mode=OneWay необходим для призязки свойства только для чтения -->
+        <TextBox Width="30" Text="{Binding Number3, Mode=OneWay}" IsReadOnly="True"/>
+
+    </StackPanel>
+</Window>

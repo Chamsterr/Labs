@@ -1,0 +1,36 @@
+﻿<Window x:Class="ScrollViewer.MainWindow"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ScrollViewer"
+        mc:Ignorable="d"
+        Title="ScrolViewer" Height="250" Width="300">
+    <Grid>
+        <ScrollViewer CanContentScroll="True">
+            <!-- Здесь вы можете добавить свои навигационные элементы -->
+            <StackPanel Width="315" Height="640" Margin="0 10">
+                <Button x:Name="All" Content="Все" Width="220" HorizontalContentAlignment="Left" Margin="10 0 0 4" />
+                <Button  Content="Входящие" Width="220" HorizontalContentAlignment="Left" Margin="10 0 0 4"  />
+                <Button  Content="Входящие" Width="220" HorizontalContentAlignment="Left" Margin="10 0 0 4"  />
+                <Button  Content="Входящие" Width="220" HorizontalContentAlignment="Left" Margin="10 0 0 4"  />
+                <Button  Content="Входящие" Width="220" HorizontalContentAlignment="Left" Margin="10 0 0 4"  />
+                <Button  Content="Входящие" Width="220" HorizontalContentAlignment="Left" Margin="10 0 0 4"  />
+                <Button  Content="Входящие" Width="220" HorizontalContentAlignment="Left" Margin="10 0 0 4"  />
+                <Button  Content="Входящие" Width="220" HorizontalContentAlignment="Left" Margin="10 0 0 4"  />
+                <Button  Content="Входящие" Width="220" HorizontalContentAlignment="Left" Margin="10 0 0 4"  />
+                <Button  Content="Входящие" Width="220" HorizontalContentAlignment="Left" Margin="10 0 0 4"  />
+                <Button  Content="Входящие" Width="220" HorizontalContentAlignment="Left" Margin="10 0 0 4"  />
+                <Button  Content="Входящие" Width="220" HorizontalContentAlignment="Left" Margin="10 0 0 4"  />
+                <Button  Content="Входящие" Width="220" HorizontalContentAlignment="Left" Margin="10 0 0 4"  />
+                <Button  Content="Входящие" Width="220" HorizontalContentAlignment="Left" Margin="10 0 0 4"  />
+                <Button  Content="Входящие" Width="220" HorizontalContentAlignment="Left" Margin="10 0 0 4"  />
+                <Button  Content="Входящие" Width="220" HorizontalContentAlignment="Left" Margin="10 0 0 4"  />
+                <Button  Content="Входящие" Width="220" HorizontalContentAlignment="Left" Margin="10 0 0 4"  />
+                <Button  Content="Входящие" Width="220" HorizontalContentAlignment="Left" Margin="10 0 0 4"  />
+                <Button  Content="Входящие" Width="220" HorizontalContentAlignment="Left" Margin="10 0 0 4"  />
+                
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>

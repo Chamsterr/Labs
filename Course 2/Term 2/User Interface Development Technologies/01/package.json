@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "@types/es6-collections": "^0.5.33"
+  },
+  "dependencies": {
+    "vue": "^3.2.47"
+  }
+}

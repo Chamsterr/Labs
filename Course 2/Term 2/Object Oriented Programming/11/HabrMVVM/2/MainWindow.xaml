@@ -1,0 +1,30 @@
+﻿<Window x:Class="_2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.DataContext>
+        <local:MainVM/>
+        <!-- Устанавливаем DataContext -->
+    </Window.DataContext>
+    <DockPanel>
+        <!-- Число для добавления в коллекцию -->
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+            <TextBox x:Name="TheNumber" Width="50" Margin="5"/>
+            <Button Content="Add" Margin="5" Command="{Binding AddCommand}"
+                    CommandParameter="{Binding ElementName=TheNumber, Path=Text}"/>
+        </StackPanel>
+        <!-- Сумма -->
+        <TextBox DockPanel.Dock="Bottom" Text="{Binding Sum, Mode=OneWay}" Margin="5"/>
+        <!-- Кнопка удаления из коллекции -->
+        <Button DockPanel.Dock="Right" VerticalAlignment="Top" Content="Remove"
+                Width="130" Margin="5"
+                Command="{Binding RemoveCommand}"
+                CommandParameter="{Binding ElementName=TheListBox, Path=SelectedIndex}"/>
+        <!-- Коллекция -->
+        <ListBox  x:Name="TheListBox" ItemsSource="{Binding MyValues}"/>
+    </DockPanel>
+</Window>
