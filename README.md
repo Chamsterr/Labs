@@ -1,1 +1,2 @@
-OOP (ООП) Labs: https://github.com/KarpovichMaksim/KarpovichMaksim.github.io
+Что-то хорошо, что-то нормально, что-то не очень. :))
+Где-то все есть, где-то чего-то нет.
