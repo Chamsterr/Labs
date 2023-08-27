@@ -1,0 +1,58 @@
+.R, .G, .B, .C, .M, .Y, .K {
+	display: inline-block;
+	margin-top: 10px;
+	padding: 10px;
+}
+
+.R{
+	border: 2px outset rgb(255, 0, 0);
+}
+
+.G{
+	border: 2px dashed rgb(0, 128, 0);
+}
+
+.B{
+	border: 4px dotted rgb(0, 0, 255);
+}
+
+.C{
+	border:  double rgb(0, 191, 255);	
+}
+
+.M{
+	border: 2px groove rgb(128, 0, 128);
+}
+
+.Y{
+	border: 2px inset rgb(255, 255, 0);
+}
+
+.K{
+	border: 2px solid rgb(0, 0, 0);
+}
+
+strong, em, span{
+	display: inline-block;
+	padding: 5px;
+	margin: 5px;
+	background-color: #FFA500;
+	border: 2px solid #FF4500;
+}
+
+.p1 {
+	width: 400px;
+	margin: auto;
+	border: 2px solid #FF7F50;
+}
+
+.p2{
+	border: 5px solid rgb(255, 0, 0);
+	border-radius: 20px/40px;
+	box-shadow: inset 2px 2px 8px 8px rgba(0, 0, 0, .5);
+	overflow: auto;
+}
+
+.p3{
+	border: 2px solid #FF6347;
+}

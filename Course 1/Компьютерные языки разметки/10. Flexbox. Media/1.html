@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>1 задание</title>
+    <link rel="stylesheet" href="1.css">
+    <link rel="stylesheet" media="(min-width: 1280px)" href="img4.css">
+    <style>
+    @media(min-width: 480px) and (max-width: 768px){
+      .img2 figcaption{
+        color: blue;
+      }
+      .img2 img{
+        transform: skewX(-20deg);
+      }
+
+    }
+</style>
+  </head>
+  <body>
+    <figure class="img1">
+      <img src="6.jpg" alt="">
+      <figcaption>
+        dolor sit amet
+      </figcaption>
+    </figure>
+
+    <figure class="img2">
+      <img src="5.jpg" alt="">
+      <figcaption>
+        Lorem ipsum dolor sit amet
+      </figcaption>
+    </figure>
+
+    <figure class="img3">
+      <img src="8.jpg" alt="">
+      <figcaption>
+        dolor sit amet
+      </figcaption>
+    </figure>
+
+    <figure class="img4">
+      <img src="7.jpg" alt="">
+      <figcaption>
+        dolor sit amet
+      </figcaption>
+    </figure>
+    <div class="container1">
+  		<div class="div1">
+  			Flex верстка
+  		</div>
+  		<div class="div2">
+  			Flexbox-верстка — разметка макетов веб-страниц, которая позволяет автоматически настраивать ширину элементов, находящихся внутри flex-контейнера. Для применения данного способа разметки следует учитывать разделение применяемых свойств на свойства flex-контейнера и свойства flex-элемента.
+  		</div>
+  		<div class="div2">
+  			С помощью display: flex; осуществляется преобразование HTML-элемента в flex-контейнер, а элементы находящийся внутри него в flex-лементы. По умолчанию flex-элементы помещаются друг за другом в одной строке. Свойство flex-flow позволяет выбрать направление отображения элементов в контейнере, а также указать их перенос на следующую строку. Первое значение определяет направление, а второе перенос на следующую строку.
+  		</div>
+  		<div class="div2">
+  			Свойство flex-flow является сокращенной запись и содержит значения
+  			свойств flex-direction и flex-wrap. Flex-элементы могут размещаться в строке (значение row) или в колонке (значение column). Перенос элементов осуществляется с помощью значения wrap.
+  		</div>
+  		<div class="div2">
+  			Свойство justify-content определяет способ выключки flex-элементов в
+  			строке. Для выравнивания левому краю используется значения flex-start, а по правому краю — flex-end. Для равномерного распределения элементов создавая пространство между ними необходимо значение space-between, а space-around добавляет поля по левому и правому краям крайних элементов.
+  		</div>
+  		<div class="div2">
+  			Свойство align-items определяет, как flex-элементы различной высоты будут выровнены по высоте строки в flex-контейнере. Для выравнивания верхнему краю используется значения flex-start, а по нижнему краю — flexend. Значение stretch позволяет растянуть каждый элемент по высоте контейнера, делая их высоты одинаковыми. Свойство align-contentопределяет как будут размещены flex-элементы, занимающие несколько строк.
+  		</div>
+  	</div>
+  </body>
+</html>

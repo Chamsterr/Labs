@@ -1,0 +1,42 @@
+PERSON
+{ display:block;
+margin:50px 100px;
+ border-style:solid;
+border-color:#8C0088;}
+
+INFO{
+  display: block;
+  text-align: center;
+}
+
+FIRST_NAME
+{  display: block;
+  font-style:italic;
+  color: blue;
+}
+
+LAST_NAME{
+  display: block;
+  font-family: fantasy;
+  color: green;
+}
+
+AGE{
+  display: block;
+  color: purple;
+}
+
+COUNTRY{
+  display: block;
+  color: skyblue;
+}
+
+LOCATION{
+  display: block;
+  color: red;
+}
+
+NATIVE_CITY{
+  display: block;
+  color: gray;
+}

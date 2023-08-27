@@ -1,0 +1,56 @@
+Важно! Язык разработки С++ без классов.
+
+Пишем примитивный и никому не нужный компилятор
+https://habr.com/ru/post/133780/
+
+Новый язык программирования Mash
+https://habr.com/en/post/434966/
+
+Субъективное видение идеального языка программирования
+https://habr.com/ru/post/435300/
+
+Пишем свой язык программирования, часть 4: Представление структур и классов, генерация аллокаторов
+https://habr.com/ru/post/436224/
+
+Ссылки на предыдущие части:
+Часть 1: пишем языковую ВМ
+https://habr.com/ru/post/435202/
+
+Часть 2: промежуточное представление программ
+https://habr.com/ru/post/435258/
+
+Часть 3: Архитектура транслятора. Разбор языковых структур и математических выражений
+https://habr.com/ru/post/435520/
+
++
+
+Интерпретаторы байт-кодов своими руками
+Часть первая, вводная (текущая)
+https://habr.com/en/company/badoo/blog/425325/
+
+Часть вторая, оптимизирующая
+https://habr.com/ru/company/badoo/blog/428878/
+
+Часть третья, прикладная
+https://habr.com/ru/company/badoo/blog/433054/
+
+___
+
+Генерация кода во время исполнения или «Пишем свой JIT-компилятор»
+https://habr.com/ru/post/254831/
+
+Hello, JIT World: The Joy of Simple JITs (Hello, JIT World!)
+http://blog.reverberate.org/2012/12/hello-jit-world-joy-of-simple-jits.html
+
+JIT для начинающих:
+Основы Just In Time компиляции (примере программы на C)
+https://tproger.ru/translations/basic-jit/
+
+Пишем x86-64 JIT-комплятор с нуля в стоковом Python
+https://habr.com/ru/post/342410/
+
+Семантический анализ (Теория языков программирования и методы трансляции)
+http://ermak.cs.nstu.ru/trans/Trans411.htm
+
+
+

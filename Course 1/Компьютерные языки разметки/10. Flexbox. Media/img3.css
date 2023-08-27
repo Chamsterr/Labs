@@ -1,0 +1,7 @@
+.img3 figcaption{
+  color: yellow;
+}
+
+.img3 img{
+  transform: rotateX(20deg);
+}

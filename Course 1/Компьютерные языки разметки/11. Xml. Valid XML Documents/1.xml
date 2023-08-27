@@ -1,0 +1,35 @@
+<?xmlversion = "1.0" encoding="UTF8"?>
+<!--FileName: 1.xml-->
+<?xml-stylesheet type="text/css" href="1.css"?>
+
+<body>
+  <PERSON>
+    <INFO>info</INFO>
+    <FIRST_NAME>first name: Nikita</FIRST_NAME>
+    <LAST_NAME>last name: Kovkel</LAST_NAME>
+    <AGE>age: 17</AGE>
+    <COUNTRY>country: Belarus</COUNTRY>
+    <LOCATION>location: Minsk</LOCATION>
+    <NATIVE_CITY>native city: Lida</NATIVE_CITY>
+  </PERSON>
+
+  <PERSON>
+    <INFO>info</INFO>
+    <FIRST_NAME>Abraham</FIRST_NAME>
+    <LAST_NAME>Korshun</LAST_NAME>
+    <AGE>15</AGE>
+    <COUNTRY>Belarus</COUNTRY>
+    <LOCATION>Minsk</LOCATION>
+    <NATIVE_CITY>Minsk</NATIVE_CITY>
+  </PERSON>
+
+  <PERSON>
+    <INFO>info</INFO>
+    <FIRST_NAME>Boris</FIRST_NAME>
+    <LAST_NAME>Laptop</LAST_NAME>
+    <AGE>27</AGE>
+    <COUNTRY>Russia</COUNTRY>
+    <LOCATION>Moscow</LOCATION>
+    <NATIVE_CITY>Moscow</NATIVE_CITY>
+  </PERSON>
+</body>

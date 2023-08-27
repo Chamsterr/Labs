@@ -1,0 +1,191 @@
+
+ @keyframes img14_1{
+	from{
+		left: 0;
+	}
+	to{
+		left: 200px;
+	}
+}
+
+@keyframes img14_2{
+	from{
+		top: 0px;
+	}
+	to{
+		top: 200px;
+	}
+}
+
+@keyframes img14_3{
+	from{
+		left: 0px;
+		top: 0px;
+	}
+	to{
+		left: 500px;
+		top: 500px;
+	}
+}
+
+@keyframes img14_4{
+	0% { left: 0; top: 0; }
+	25% { left: 200px; top: 0; }
+	50% { left: 200px; top: 200px; }
+	75% { left: 0; top: 200px; }
+	100% { left: 0; top: 0; }
+}
+
+
+body{
+	background-color: lavender;
+}
+
+img {
+	height: 200px;
+	width: 320px;
+	margin: 2px;
+}
+
+figure{
+	margin: 20px;
+	height: 250px;
+	float: left;
+	perspective: 800px;
+}
+
+h1{
+	text-align: center;
+	animation: h1 5s alternate infinite;
+	float: all;
+}
+
+
+
+.img1:hover{
+	transform: scale(0.5);
+}
+
+.img2:hover{
+	transform: rotate(45deg);
+}
+
+.img3:hover{
+	transform: translate(50px);
+}
+
+.img4:hover{
+	transform: skew(-20deg);
+}
+
+.img5{
+	transform: rotateX(20deg);
+
+}
+
+.img6{
+
+	transform: rotateY(30deg);
+}
+
+.img7{
+	transform: rotateX(30deg);
+}
+
+.img8{
+	transform: rotateY(-30deg)
+}
+
+.img14_1{
+	position: relative;
+	animation: img14_1 5s linear infinite;
+
+}
+.img14_2{
+
+	position: relative;
+	animation: img14_2 5s linear infinite;
+}
+.img14_3{
+	position: relative;
+	animation: img14_3 5s linear infinite;
+}
+.img14_4{
+
+	position: relative;
+	animation: img14_4 5s linear infinite;
+}
+
+
+/*Задание 3*/
+p {
+	margin: auto;
+	height: 300px;
+	width: 300px;
+	color: red;
+	transition: color 10s linear;
+}
+p:hover {
+	height: 300px;
+	width: 300px;
+	color: rgb(0,0,255);
+}
+
+
+/*Слайдер*/
+div {
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	height: 200px;
+	width: 320px;
+	margin: 2px;
+}
+
+.photo-container-2 {
+	border: 2px solid black;
+	margin: auto;
+	position: relative;
+	box-sizing: content-box;
+	animation: rotate 25s linear alternate infinite;
+}
+/*.photo-container-2 img {
+	width: 100%;
+	height: 100%;
+}
+*/
+
+@keyframes rotate {
+	0% {
+		background-image: url(img/9.jpg);
+	}
+	20% {
+		background-image: url(img/10.jpg);
+	}
+	40% {
+		background-image: url(img/11.jpg);
+	}
+	60% {
+		background-image: url(img/12.jpg);
+	}
+	80% {
+		background-image: url(img/13.jpg);
+	}
+	100% {
+		background-image: url(img/14.jpg);
+	}
+}
+/*Задание 2*/
+
+.nav li {
+  display: inline;
+}
+
+.nav a {
+display: inline-block; /*для плавающих элементов значение block*/
+border: 1px solid black;
+padding: 5px 15px 5px 15px;
+background-color: yellow;
+text-decoration: none;
+color: green;
+}

@@ -1,0 +1,68 @@
+@font-face { 
+	font-family: Caveat;
+	src: url('Caveat.woff');
+
+	font-family: 'Exo 2';
+	src:url('Exo2.woff');
+
+	font-family: 'Comfortaa';
+	src:url('Comfortaa.woff');
+}
+
+h1 {
+	font-family: 'Caveat';
+	margin-bottom: 0;
+	margin-top: 0;
+	text-align: center;
+	font-weight: bold;
+	font-size: 45px;
+	text-shadow: 6px 6px 1px red;
+	text-transform: uppercase;
+
+}
+
+h2{
+	font-family: "Exo 2";
+	margin-bottom: 1.2em;
+	margin-top: 0.2rem;
+	text-align: left;
+	text-indent: 25px;
+
+}
+
+p:first-letter {
+	font-weight: bold;
+	font-size: 45px;
+	color: white;
+	background-color: hsla(275, 100%, 10%, 1);
+} 
+
+p{
+	font-family: "Comfortaa";
+	text-indent: 25px;
+	font-size: 20px;
+	text-align: justify;
+	margin-top: 0;
+	margin-bottom: 0;
+	line-height: 200%;
+	font-size: 20px;
+}
+
+ol {
+	font-family: "Comfortaa";
+	font-size: 20px;
+}
+
+ol li {
+	list-style-type: none;
+	counter-increment: item; /* Указываем идентификатор */
+}
+
+ol li:before {
+	content: counter(item, upper-roman) "."; /* Выводим текст перед содержимым тега li */
+	color: blue;
+}
+
+#last {
+	margin-bottom: 0;
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0"
+encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="1.xsl"?>
+
+<body>
+  <PERSON>
+    <FIRST_NAME>Nikita</FIRST_NAME>
+    <LAST_NAME>Kovkel</LAST_NAME>
+    <AGE>17</AGE>
+    <COUNTRY>Belarus</COUNTRY>
+    <LOCATION>Minsk</LOCATION>
+    <NATIVE_CITY>Lida</NATIVE_CITY>
+  </PERSON>
+
+  <PERSON>
+    <FIRST_NAME>Abraham</FIRST_NAME>
+    <LAST_NAME>Korshun</LAST_NAME>
+    <AGE>15</AGE>
+    <COUNTRY>Belarus</COUNTRY>
+    <LOCATION>Minsk</LOCATION>
+    <NATIVE_CITY>Minsk</NATIVE_CITY>
+  </PERSON>
+
+  <PERSON>
+    <FIRST_NAME>Boris</FIRST_NAME>
+    <LAST_NAME>Laptop</LAST_NAME>
+    <AGE>27</AGE>
+    <COUNTRY>Russia</COUNTRY>
+    <LOCATION>Moscow</LOCATION>
+    <NATIVE_CITY>Moscow</NATIVE_CITY>
+  </PERSON>
+</body>

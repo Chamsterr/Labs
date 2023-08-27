@@ -1,0 +1,49 @@
+@charset "UTF-8";
+body {
+  background: url(../img/1.jpg);
+  /* Параметры фона */
+  background-size: cover;
+  background-attachment: fixed;
+                              /* Свойство background-attachment устанавливает, будет ли прокручиваться фоновое изображение вместе c
+содержимым элемента */
+  max-width: 1400px;
+  margin: auto; }
+
+table {
+  margin: auto; }
+
+h1, h2 {
+  text-align: center;
+  color: white; }
+
+p {
+  color: white; }
+
+h3 {
+  text-align: center; }
+
+.ab2 {
+  color: LightCyan; }
+
+.ab3 {
+  color: LightYellow;
+  font-size: 2;
+  font-family: fantasy; }
+
+ul, ol {
+  color: white; }
+
+table {
+  border: 1px solid grey;
+  color: white;
+  /*устанавливаем для таблицы внешнюю границу серого цвета толщиной 1px*/ }
+  table .dni {
+    writing-mode: tb-rl; }
+
+th {
+  border: 1px solid grey; }
+
+td {
+  border: 1px solid grey; }
+
+/*# sourceMappingURL=css11.css.map */

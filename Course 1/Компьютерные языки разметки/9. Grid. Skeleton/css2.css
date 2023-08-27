@@ -1,0 +1,13 @@
+img{
+  max-height: 40px;
+  margin-top: 20px;
+}
+li {
+  display: inline-block;
+}
+
+.button{
+  text-decoration: none;
+  margin-left: 15 px;
+  margin-top: 20px;
+}

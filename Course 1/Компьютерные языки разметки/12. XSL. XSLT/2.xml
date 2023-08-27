@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="2.xsl"?>
+<!--Как подключить XSLT к xml-->
+<body>
+    <people>
+        <name>Dmitry</name>
+            <rating1>9</rating1>
+            <rating2>6</rating2>
+            <rating3>9</rating3>
+            <rating4>7</rating4>
+    </people>
+    <people>
+        <name>Lisa</name>
+            <rating1>8</rating1>
+            <rating2>1</rating2>
+            <rating3>8</rating3>
+            <rating4>8</rating4>
+    </people>
+    <people>
+        <name>Kirill</name>
+            <rating1>6</rating1>
+            <rating2>2</rating2>
+            <rating3>4</rating3>
+            <rating4>3</rating4>
+    </people>
+    <people>
+        <name>Alexandera</name>
+            <rating1>7</rating1>
+            <rating2>3</rating2>
+            <rating3>3</rating3>
+            <rating4>7</rating4>
+    </people>
+    <people>
+        <name>Polina</name>
+            <rating1>9</rating1>
+            <rating2>9</rating2>
+            <rating3>10</rating3>
+            <rating4>5</rating4>
+    </people>
+    <people>
+        <name>Misha</name>
+            <rating1>9</rating1>
+            <rating2>2</rating2>
+            <rating3>10</rating3>
+            <rating4>10</rating4>
+    </people>
+</body>

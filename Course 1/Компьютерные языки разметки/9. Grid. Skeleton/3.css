@@ -1,0 +1,14 @@
+
+body{
+  background-color: lavender;
+}
+.grid{
+  display: grid;
+grid-gap: 5px;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+
+img{
+  width: 240px;
+}

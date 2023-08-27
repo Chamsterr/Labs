@@ -1,0 +1,17 @@
+body{
+	padding-left: 100px;
+	background-color: gray; ;
+}
+img{
+	width: 345px;
+	height: 230px;
+}
+
+figure {
+	text-align: center;
+	padding: 10px;
+	margin: 0;
+    background: #5f6a72;
+    display: block;
+    float: left; 
+}

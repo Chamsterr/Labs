@@ -1,0 +1,44 @@
+
+.nav li {
+  display: inline-block;
+  float: left;
+  width: 180px;
+  height: 30px;
+  border: 1px solid black;
+}
+
+.nav a {
+display: inline-block; /*для плавающих элементов значение block*/
+text-decoration: none;
+color: green;
+}
+
+a.picture {
+background: url(img/facultet.png) no-repeat 0 0;
+
+width: 30px;
+height: 30px;
+display:block;
+text-indent: 35px;
+}
+
+/*background-position*/
+a.picture:hover {
+background: url(img/facultet.png) no-repeat;
+}
+
+a.picture1:hover {
+background: url(img/facultet.png) no-repeat 0 -30px;
+}
+
+a.picture2:hover {
+background: url(img/facultet.png) no-repeat 0 -90px;
+}
+
+a.picture3:hover {
+background: url(img/facultet.png) no-repeat 0 -60px;
+}
+
+span{
+  padding-left: 40px;
+}

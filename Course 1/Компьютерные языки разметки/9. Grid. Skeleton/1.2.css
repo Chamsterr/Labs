@@ -1,0 +1,18 @@
+.grid {
+ display:grid;
+ grid-gap: 5px;
+  grid-template-columns: 25px 49% 49%;
+ }
+ .title{
+   background: #FF9983;
+   border: 3px solid;
+   writing-mode: vertical-rl;
+   text-orientation: upright;
+
+ }
+ .div2 {
+ background: #FFC0B3;
+ border: 3px solid;
+ grid-auto-columns: minmax(200px, auto);
+ grid-auto-rows: minmax(200px, auto);
+ }

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>2 задание</title>
+    <link rel="stylesheet" href="Skeleton-2.0.4/css/normalize.css">
+    <link rel="stylesheet" href="Skeleton-2.0.4/css/skeleton.css">
+    <link rel="stylesheet" href="css2.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+          <div class="one column">
+            <img src="фит.png">
+          </div>
+          <div class="eleven columns">
+            <nav>
+              <a class="button" href="http://getskeleton.com/">скачать Skeleton</a>
+              <a class="button" href="1.1.html">Grid-верстка1</a>
+              <a class="button" href="1.2.html">Grid-верстка2</a>
+              <a class="button" href="1.3.html">Grid-верстка3</a>
+            </nav>
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="three columns">
+            <h5>   Skeleton</h5>
+          </div>
+          <div class="three columns">
+            <h5>Как начать?</h5>
+          </div>
+          <div class="three columns">
+            <h5>Модульная сетка</h5>
+          </div>
+          <div class="three columns">
+            <h5>Реализация:</h5>
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="three columns">
+            Система Skeleton — адаптивная система модульной верстки веб-
+            страниц. Система позволяет сверстать сетчатый макет структурировав
+            контент страницы в несколько колонок на планшетных устройствах,
+            ноутбуках и компьютерах. На смартфоне содержимое страницы
+            преобразуется в одноколоночный.
+          </div>
+          <div class="three columns">
+            Чтобы начать работу, необходимо посетить сайт getskeleton.com и
+            нажать кнопку Download. Загруженный архив содержит несколько папок и
+            файлов. В каталоге css расположены необходимые файлы normalize.css,
+            который сбрасывает базовые стили CSS, чтобы браузеры отображали HTML-
+            элементы одинаково, и файл skeleton.css, содержащий для компоновки макета
+          </div>
+          <div class="three columns">
+            Система Skeleton основана на модульной сетке, состоящей из 12
+            столбцов, поэтому каждый из добавленных элементов div должен быть не
+            менее одного или не более 12 (полная ширина контейнера) столбцов в
+            ширину.
+          </div>
+          <div class="three columns">
+            <ol>
+              Система модульной верстки реализуется следующим образом:
+              <li>1. Прикрепить CSS-файлы normalize.css и skeleton.css:</li>
+              <li>2. Добавить контейнеры div.</li>
+              <li>3. Добавить контейнеры div для строк.</li>
+              <li>4. Добавить контейнеры div для колонок.</li>
+              <li>5. Добавить контент в элементы div колонок.</li>
+              <li>6. Создать собственные стили, например custom.css</li>
+            </ol>
+          </div>
+
+      </div>
+    </div>
+  </body>
+</html>

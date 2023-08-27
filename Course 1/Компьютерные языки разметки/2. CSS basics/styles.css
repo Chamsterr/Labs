@@ -1,0 +1,36 @@
+h1, h2, h3{
+	color: Purple;
+	font-family: "Monotype Corsiva";	
+}
+
+.red {
+ 	color: red;
+ 	font-family: "Times New Roman";
+ 	font-size: 18pt;
+
+ }
+
+.yellow {
+ 	color: yellow;
+ 	font-family: "Times New Roman";
+ 	font-size: 20pt;
+ }
+
+.green {
+ 	color: green;
+ 	font-family: "Times New Roman";
+ 	font-size: 22pt;
+ }
+
+body {
+    background: url(https://c.wallhere.com/photos/18/2f/1920x1080_px_Dragonborn_sword_The_Elder_Scrolls_V_Skyrim-658652.jpg!d); /* Параметры фона */
+    background-size: cover;
+    background-attachment: fixed; /* Свойство background-attachment устанавливает, будет ли прокручиваться фоновое изображение вместе c
+    содержимым элемента */
+    max-width: 1400px;
+    margin: auto;
+   }
+
+p {
+	color: white;
+}

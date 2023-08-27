@@ -1,0 +1,7 @@
+.img4 figcaption{
+  color: orange;
+}
+
+.img4 img{
+  transform: scaleY(0.5);
+}

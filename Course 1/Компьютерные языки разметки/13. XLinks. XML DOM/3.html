@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>3 задание</title>
+  </head>
+  <body>
+    <p id="name"></p>
+    <p id="population"></p>
+    <p id="square"></p>
+    <p id="foundation"></p>
+    <script>
+      //переменная txt, в которой содержится XML-документ в строковом формате
+      txt = "<city>";
+      txt = txt + "<name>Minsk</name>";
+      txt = txt + "<population>1,975 миллиона</population>";
+      txt = txt + "<square> 348,8 км2 </square>";
+      txt = txt + "<foundation>1067</foundation>";
+      txt = txt + "</city>";
+      if (window.DOMParser) {
+        parser = new DOMParser();
+        xmlDoc = parser.parseFromString(txt, "text/xml"); // метод вернет XMLDocument
+      }
+      //Internet Explorer
+      else {
+        xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+        xmlDoc.async = false;
+        xmlDoc.loadXML(txt);
+      }
+
+      /*вывод содержимого на экран браузера с помощью преобразования
+      содержимого документа свойства innerHTML содержимое XML-элемента,
+      получив к нему доступ используя метод getElementsByTagName(),
+      а свойство nodeValue определяет текстовое содержание элемента.*/
+      document.getElementById("name").innerHTML =
+        xmlDoc.getElementsByTagName("name")[0].childNodes[0].nodeValue;
+      document.getElementById("population").innerHTML =
+        xmlDoc.getElementsByTagName("population")[0].childNodes[0].nodeValue;
+        document.getElementById("square").innerHTML =
+          xmlDoc.getElementsByTagName("square")[0].childNodes[0].nodeValue;
+      document.getElementById("foundation").innerHTML =
+        xmlDoc.getElementsByTagName("foundation")[0].childNodes[0].nodeValue;
+    </script>
+  </body>
+</html>

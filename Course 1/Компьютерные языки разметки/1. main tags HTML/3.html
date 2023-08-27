@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <style>
+      body{
+         margin: auto;
+         max-width: 450px;
+      }
+      h2{
+         background: gray
+      }
+      </style>
+      <title>Заказ</title>
+   </head>
+   <body>
+      <h2>Оформить заказ</h2>
+      <form>
+         <fieldset>
+            <p>
+               имя
+               <span style="padding-left: 100px"></span>
+               <input type="text" name="name" align=>
+            </p>
+
+            <p>
+               телефон
+               <span style="padding-left: 70px;"></span>
+               <input type="text" name="phone">
+            <p>
+
+            <p>
+               адрес
+               <span style="padding-left: 90px"></span>
+               <textarea>
+               </textarea>
+
+            </p>
+
+            <p>
+               способ оплаты
+               <span style="padding-left: 20px;"></span>
+               <input type="radio" name="sposob"> наличные
+               <br>
+               <span style="padding-left: 124px;"></span>
+               <input type="radio" name="sposob"> пластиковой картой
+               <br>
+               <span style="padding-left: 124px;"></span>
+               <input type="radio" name="sposob"> безналичный расчет
+
+            </p>
+        
+            
+               <p >желаемый день <br> доставки
+               <span style="padding-left: 65px;"></span>
+
+               <select>
+                  <option>Понедельник</option>
+                  <option>Вторник</option>
+                  <option>Среда</option>
+                  <option>Четверг</option>
+                  <option>Пятница</option>
+                  <option>Суббота</option>
+                  <option>Воскресенье</option>
+               </select>
+               </p>
+         
+            дополнительно 
+            <span style="padding-left: 20px;"></span>
+            <input type="checkbox" name="add"> перед доставкой 
+            свяжитесь со мной
+            <br>
+            <span style="padding-left: 127px;"></span>
+            <input type="checkbox" name="add"> курьер должен быть трезвым 
+         
+            <br>
+            <p align="center">
+               <input type="button" value="Отправить" name="knopka">
+            </p>
+         
+         </fieldset>
+      </form>
+   </body>
+</html> 

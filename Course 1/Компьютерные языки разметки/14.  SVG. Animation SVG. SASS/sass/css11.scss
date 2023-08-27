@@ -1,0 +1,59 @@
+body {
+ background: url(../img/1.jpg); /* Параметры фона */
+ background-size: cover;
+ background-attachment: fixed; /* Свойство background-attachment устанавливает, будет ли прокручиваться фоновое изображение вместе c
+ содержимым элемента */
+ max-width: 1400px;
+ margin: auto;
+}
+
+$colorforH: white;
+$colorforAb2: LightCyan;
+$colorforAb3:  LightYellow;
+$colorforTable: grey;
+
+table{
+   margin: auto;
+}
+
+h1, h2 {
+  text-align: center;
+  color: $colorforH;
+}
+
+p{
+  color: $colorforH;
+}
+
+h3{
+  text-align: center;
+}
+
+.ab2{
+  color: $colorforAb2;
+}
+
+.ab3{
+  color: $colorforAb3;
+    font-size: 2;
+    font-family: fantasy;
+}
+ul, ol{
+  color: $colorforH;
+}
+table {
+   border: 1px solid $colorforTable;
+   color: $colorforH;
+   .dni{
+      writing-mode: tb-rl
+   }
+   /*устанавливаем для таблицы внешнюю границу серого цвета толщиной 1px*/
+}
+
+th {
+   border: 1px solid $colorforTable;
+}
+
+td {
+   border: 1px solid $colorforTable;
+}

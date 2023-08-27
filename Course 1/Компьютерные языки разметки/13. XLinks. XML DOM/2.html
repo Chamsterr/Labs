@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>2 задание</title>
+  </head>
+  <body>
+    <p id="name"></p>
+    <p id="lastname"></p>
+    <p id="midllename"></p>
+    <p id="date"></p>
+    <p id="spec"></p>
+    <script>
+      //переменная txt, в которой содержится XML-документ в строковом формате
+      txt = "<student>";
+      txt = txt + "<name>Никита</name>";
+      txt = txt + "<lastname>Ковкель</lastname>";
+      txt = txt + "<midllename>Викторович</midllename>";
+      txt = txt + "<date>2004</date>";
+      txt = txt + "<spec>ПОИТ</spec>";
+      txt = txt + "</student>";
+      if (window.DOMParser) {
+        parser = new DOMParser();
+        xmlDoc = parser.parseFromString(txt, "text/xml"); // метод вернет XMLDocument
+      }
+      //Internet Explorer
+      else {
+        xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+        xmlDoc.async = false;
+        xmlDoc.loadXML(txt);
+      }
+
+      /*вывод содержимого на экран браузера с помощью преобразования
+      содержимого документа свойства innerHTML содержимое XML-элемента,
+      получив к нему доступ используя метод getElementsByTagName(),
+      а свойство nodeValue определяет текстовое содержание элемента.*/
+      document.getElementById("name").innerHTML =
+        xmlDoc.getElementsByTagName("name")[0].childNodes[0].nodeValue;
+      document.getElementById("lastname").innerHTML = xmlDoc.getElementsByTagName("lastname")[0].childNodes[0].nodeValue;
+      document.getElementById("midllename").innerHTML =
+        xmlDoc.getElementsByTagName("midllename")[0].childNodes[0].nodeValue;
+        document.getElementById("date").innerHTML =
+          xmlDoc.getElementsByTagName("date")[0].childNodes[0].nodeValue;
+      document.getElementById("spec").innerHTML =
+        xmlDoc.getElementsByTagName("spec")[0].childNodes[0].nodeValue;
+    </script>
+  </body>
+</html>

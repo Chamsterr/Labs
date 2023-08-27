@@ -1,0 +1,36 @@
+*{
+	padding: 0px;
+}
+
+.dni{
+	writing-mode: tb-rl;
+}
+
+.obcshie{
+	text-align: center;
+}
+table{
+	border-collapse: collapse;
+	border: 2px solid black;
+	border-spacing: 0px;
+}
+
+th{
+	border-collapse: collapse;
+	border: 1px solid black; 
+}
+
+td{
+	border-collapse: collapse;
+	border: 2px solid black;	
+}
+
+
+thead {
+ 	background-color: deepskyblue;
+}
+
+th:nth-child(1){
+ 	background-color: deepskyblue;
+}
+

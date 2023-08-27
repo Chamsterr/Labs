@@ -1,0 +1,39 @@
+@import url(img3.css) (min-width: 768px) and (max-width: 1280px);
+*{
+  margin: 0px
+}
+.container1 {
+	display: flex;
+	flex-flow: wrap;
+  /* flex-direction: column; */
+	/* justify-content: space-between; */
+	text-align: center;
+	margin:10px 50px 0px 50px ;
+}
+.div1{
+	flex: 1 1 100%;
+	border: 2px solid black;
+	margin: 2px;
+   background: #FF9983;
+}
+.div2{
+	flex: 1 1 250px;
+	border: 2px solid black;
+	margin: 1px;
+  background: #FFC0B3;
+}
+img{
+  max-height: 180px;
+  max-width: 300px;
+}
+figure{
+  display: inline-block;
+}
+ @media (max-width: 480px) {
+  .img1 figcaption{
+    color: red;
+  }
+  .img1 img{
+    transform: skewX(20deg);
+  }
+}
