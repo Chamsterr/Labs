@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "dgram": "^1.0.1",
+    "global": "^4.4.0"
+  }
+}
