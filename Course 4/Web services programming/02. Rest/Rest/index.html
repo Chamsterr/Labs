@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>REST Client</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <div class="container mt-4">
+        <div class="mb-2">
+            <button onclick="sendGetRequest()">GET</button>
+            <button onclick="sendPostRequest()">POST</button>
+            <button onclick="sendPutRequest()">PUT</button>
+            <button onclick="sendDeleteRequest()">DELETE</button>
+        </div>
+        <pre id="result" class="mt-2 border p-2"></pre>
+    </div>
+
+    <script>
+        const resultElement = $('#result');
+
+        function sendGetRequest() {
+            $.ajax({
+                url: 'http://localhost:81/api/stack',
+                method: 'GET',
+                success: function (data) {
+                    resultElement.text(JSON.stringify(data, null, 2));
+                },
+                error: function (xhr, status, error) {
+                    resultElement.text(`GET Request Error: ${error}`);
+                    console.error('GET Request Error:', error);
+                }
+            });
+        }
+
+        function sendPostRequest() {
+            const resultParameter = prompt('Enter integer parameter RESULT:');
+            if (resultParameter !== null) {
+                $.ajax({
+                    url: `http://localhost:81/api/stack?result=${resultParameter}`,
+                    method: 'POST',
+                    success: function () {
+                        resultElement.text('POST Request Successful');
+                    },
+                    error: function (xhr, status, error) {
+                        resultElement.text(`POST Request Failed: ${xhr.statusText}`);
+                        console.error('POST Request Error:', error);
+                    }
+                });
+            }
+        }
+
+        function sendPutRequest() {
+            const addParameter = prompt('Enter integer parameter ADD:');
+            if (addParameter !== null) {
+                $.ajax({
+                    url: `http://localhost:81/api/stack?add=${addParameter}`,
+                    method: 'PUT',
+                    success: function () {
+                        resultElement.text('PUT Request Successful');
+                    },
+                    error: function (xhr, status, error) {
+                        resultElement.text(`PUT Request Failed: ${xhr.statusText}`);
+                        console.error('PUT Request Error:', error);
+                    }
+                });
+            }
+        }
+
+        function sendDeleteRequest() {
+            $.ajax({
+                url: 'http://localhost:81/api/stack',
+                method: 'DELETE',
+                success: function () {
+                    resultElement.text('DELETE Request Successful');
+                },
+                error: function (xhr, status, error) {
+                    resultElement.text(`DELETE Request Failed: ${xhr.statusText}`);
+                    console.error('DELETE Request Error:', error);
+                }
+            });
+        }
+    </script>
+</body>
+</html>

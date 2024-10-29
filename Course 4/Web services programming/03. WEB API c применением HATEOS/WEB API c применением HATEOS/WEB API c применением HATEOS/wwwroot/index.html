@@ -1,0 +1,436 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student HATEOAS Client</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .student {
+            margin-bottom: 15px;
+        }
+
+            .student h3 {
+                margin: 0;
+            }
+
+            .student button {
+                margin-right: 10px;
+            }
+
+        .controls {
+            margin-bottom: 20px;
+        }
+
+        label {
+            margin-right: 10px;
+        }
+
+        input[type="text"] {
+            margin-right: 10px;
+        }
+
+        select {
+            margin-right: 10px;
+        }
+
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Student List</h1>
+
+    <div class="controls">
+        <label for="sort">Sort by:</label>
+        <select id="sort">
+            <option value="name">Name</option>
+            <option value="phone">Phone</option>
+        </select>
+
+        <label for="minid">minid</label>
+        <input type="number" id="minid" placeholder="minid" value="0">
+
+        <label for="maxid">maxid</label>
+        <input type="number" id="maxid" placeholder="maxid" value="10">
+
+        <label for="like">Search (like):</label>
+        <input type="text" id="like" placeholder="Search name">
+
+        <label for="globalLike">Global Search (like):</label>
+        <input type="text" id="globalLike" placeholder="Search all fields">
+
+        <label for="limit">Limit:</label>
+        <input type="number" id="limit" value="10" min="1">
+
+        <label for="offset">Offset:</label>
+        <input type="number" id="offset" value="0" min="0">
+
+        <label for="columns">Columns:</label>
+        <input type="text" id="columns" placeholder="id,name,phone">
+
+        <label for="format">Format:</label>
+        <select id="format">
+            <option value="json">JSON</option>
+            <option value="xml">XML</option>
+        </select>
+
+        <button id="apply-filters">Apply Filters</button>
+    </div>
+
+
+    <div id="student-list"></div>
+
+    <div id="error-message" class="error"></div>
+
+    <h2>Add New Student</h2>
+    <form id="student-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" required>
+        <button type="submit">Add Student</button>
+    </form>
+
+    <h2>Delete Student by ID</h2>
+    <form id="delete-student-form">
+        <label for="delete-id">Student ID:</label>
+        <input type="number" id="delete-id" required>
+        <label for="delete-format">Format:</label>
+        <select id="delete-format">
+            <option value="json">JSON</option>
+            <option value="xml">XML</option>
+        </select>
+        <button type="submit">Delete Student</button>
+    </form>
+
+    <h2>Отправить запрос на ошибку</h2>
+    <form id="error-code-form">
+        <label for="error-code">Код ошибки:</label>
+        <input type="text" id="error-code" required placeholder="Введите код ошибки">
+
+        <label for="error-format">Формат:</label>
+        <select id="error-format">
+            <option value="json">JSON</option>
+            <option value="xml">XML</option>
+        </select>
+
+        <button type="submit">Отправить запрос</button>
+    </form>
+
+    <div id="error-response"></div>
+
+    <h2>Ответ от GET-запрос на студента</h2>
+    <form id="student-id-form">
+        <!--<label for="student-id">ID студента:</label>
+        <input type="text" id="student-id" required placeholder="Введите ID студента">-->
+
+        <label for="student-format">Формат:</label>
+        <select id="student-format">
+            <option value="json">JSON</option>
+            <option value="xml">XML</option>
+        </select>
+
+        <!--<button type="submit">Отправить запрос</button>-->
+    </form>
+
+    <div id="student-response"></div>
+
+    <script>
+        const baseUrl = 'http://localhost:83/api/Students';
+        document.getElementById('apply-filters').addEventListener('click', function () {
+            getStudents();
+        });
+        async function getStudents() {
+            const sort = document.getElementById('sort').value;
+            const like = document.getElementById('like').value;
+            const globalLike = document.getElementById('globalLike').value;
+            const limit = document.getElementById('limit').value;
+            const offset = document.getElementById('offset').value;
+            const format = document.getElementById('format').value;
+            const minid = document.getElementById('minid').value;
+            const maxid = document.getElementById('maxid').value;
+            const columns = document.getElementById('columns').value;
+
+            let apiUrl = `${baseUrl}?sort=${sort}&limit=${limit}&offset=${offset}`;
+
+            if (minid) {
+                apiUrl += `&minid=${minid}`;
+            }
+            if (maxid) {
+                apiUrl += `&maxid=${maxid}`;
+            }
+            if (like) {
+                apiUrl += `&like=${like}`;
+            }
+            if (globalLike) {
+                apiUrl += `&globalLike=${globalLike}`;
+            }
+            if (columns) {
+                apiUrl += `&columns=${columns}`;
+            }
+
+            const headers = {
+                'Accept': format === 'json' ? 'application/json' : 'application/xml'
+            };
+
+            try {
+                const response = await fetch(apiUrl, { headers });
+                const contentType = response.headers.get('Content-Type');
+
+                if (!response.ok) {
+                    const errorMsg = await response.text();
+                    displayError(`Error fetching students: ${errorMsg}`);
+                    return;
+                }
+
+                if (contentType.includes('application/json')) {
+                    const data = await response.json();
+                    displayStudents(data.students);
+                } else if (contentType.includes('application/xml')) {
+                    const xmlText = await response.text();
+                    displayStudentsFromXML(xmlText);
+                }
+            } catch (error) {
+                displayError(`Error: ${error.message}`);
+            }
+        }
+
+
+        function displayStudents(students) {
+            const studentList = document.getElementById('student-list');
+            studentList.innerHTML = '';
+
+            students.forEach(student => {
+                const studentDiv = document.createElement('div');
+                studentDiv.classList.add('student');
+
+                studentDiv.innerHTML = `
+                                                    <h3>${student.name} (ID: ${student.id})</h3>
+                                                    <p>Phone: ${student.phone}</p>
+                                                    <button onclick="deleteStudent('${student.links.find(link => link.rel === 'delete').href}')">Delete</button>
+                                                    <button onclick="editStudent('${student.links.find(link => link.rel === 'update').href}', '${student.id}', '${student.name}', '${student.phone}')">Edit</button>
+                                                    <button onclick="getStudent('${student.links.find(link => link.rel === 'get').href}')">Get</button>
+                                                `;
+
+                studentList.appendChild(studentDiv);
+            });
+        }
+
+        function displayStudentsFromXML(xmlText) {
+            const parser = new DOMParser();
+            const xmlDoc = parser.parseFromString(xmlText, 'application/xml');
+
+            if (xmlDoc.documentElement.nodeName === "parsererror") {
+                console.error("Error parsing XML:", xmlDoc.documentElement.textContent);
+                return;
+            }
+
+            const students = xmlDoc.getElementsByTagName('StudentResponse');
+            const studentList = document.getElementById('student-list');
+            studentList.innerHTML = '';
+
+            Array.from(students).forEach(student => {
+                const studentDiv = document.createElement('div');
+                studentDiv.classList.add('student');
+
+                const id = student.getElementsByTagName('Id')[0]?.textContent || '';
+                const name = student.getElementsByTagName('Name')[0]?.textContent || '';
+                const phone = student.getElementsByTagName('Phone')[0]?.textContent || '';
+
+                studentDiv.innerHTML = `
+                                                    <h3>${name} (ID: ${id})</h3>
+                                                    <p>Phone: ${phone}</p>
+                                                    <button onclick="deleteStudent('${getLinkHref(student, 'delete')}')">Delete</button>
+                                                    <button onclick="editStudent('${getLinkHref(student, 'update')}', '${id}', '${name}', '${phone}')">Edit</button>
+                                                `;
+
+                studentList.appendChild(studentDiv);
+            });
+        }
+
+        async function editStudent(apiUrl, id, currentName, currentPhone) {
+            console.log("editStudent")
+            const newName = prompt('Enter new name:', currentName);
+            const newPhone = prompt('Enter new phone:', currentPhone);
+
+            if (newName && newPhone) {
+                const updateUrl = `${apiUrl}`;
+                const response = await fetch(updateUrl, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ id, name: newName, phone: newPhone })
+                });
+
+                if (response.ok) {
+                    getStudents();
+                }
+            }
+        }
+
+        function getLinkHref(student, rel) {
+            const links = student.getElementsByTagName('Link');
+            for (let i = 0; i < links.length; i++) {
+                if (links[i].getElementsByTagName('Rel')[0].textContent === rel) {
+                    return links[i].getElementsByTagName('Href')[0].textContent;
+                }
+            }
+            return null;
+        }
+
+        function displayError(message) {
+            const errorMessageDiv = document.getElementById('error-message');
+            errorMessageDiv.textContent = message;
+        }
+
+        document.getElementById('student-form').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+
+            const response = await fetch(baseUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name, phone })
+            });
+
+            if (response.ok) {
+                document.getElementById('name').value = '';
+                document.getElementById('phone').value = '';
+                getStudents();
+                displayError('');
+            } else {
+                const errorMsg = await response.text();
+                displayError(`Error adding student: ${errorMsg}`);
+            }
+        });
+
+        document.getElementById('delete-student-form').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const deleteId = document.getElementById('delete-id').value;
+            const deleteFormat = document.getElementById('delete-format').value;
+
+            if (deleteId) {
+                const deleteUrl = `${baseUrl}/${deleteId}`;
+                const headers = {
+                    'Accept': deleteFormat === 'json' ? 'application/json' : 'application/xml'
+                };
+                const response = await fetch(deleteUrl, { method: 'DELETE', headers });
+
+                if (response.ok) {
+                    getStudents();
+                    displayError('');
+                } else {
+                    const errorMsg = await response.text();
+                    displayError(`Error deleting student: ${errorMsg}`);
+                }
+            }
+        });
+
+        async function deleteStudent(deleteUrl) {
+            const response = await fetch(deleteUrl, { method: 'DELETE' });
+            if (response.ok) {
+                getStudents();
+                displayError('');
+            } else {
+                const errorMsg = await response.text();
+                displayError(`Error deleting student: ${errorMsg}`);
+            }
+        }
+
+        getStudents();
+
+        document.getElementById('error-code-form').addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const errorCode = document.getElementById('error-code').value;
+            const format = document.getElementById('error-format').value;
+            const apiUrl = `${baseUrl}/error/${errorCode}`;
+
+            const headers = {
+                'Accept': format === 'json' ? 'application/json' : 'application/xml'
+            };
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'GET',
+                    headers: headers
+                });
+
+                if (response.ok) {
+                    const contentType = response.headers.get('Content-Type');
+                    let result;
+
+                    if (contentType.includes('application/json')) {
+                        result = await response.json();
+                    } else if (contentType.includes('application/xml')) {
+                        const xmlText = await response.text();
+                        result = xmlText;
+                    }
+
+                    document.getElementById('error-response').textContent = JSON.stringify(result, null, 2);
+                } else {
+                    const errorMsg = await response.text();
+                    document.getElementById('error-response').textContent = `Ошибка: ${errorMsg}`;
+                }
+            } catch (error) {
+                document.getElementById('error-response').textContent = `Произошла ошибка: ${error.message}`;
+            }
+        });
+
+        async function getStudent(apiUrl) {
+
+            //const studentId = document.getElementById('student-id').value;
+            const format = document.getElementById('student-format').value;
+            if (!apiUrl){
+                const apiUrl = `${baseUrl}/${studentId}`;
+            }
+            
+
+            const headers = {
+                'Accept': format === 'json' ? 'application/json' : 'application/xml'
+            };
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'GET',
+                    headers: headers
+                });
+
+                if (response.ok) {
+                    const contentType = response.headers.get('Content-Type');
+                    let result;
+
+                    if (contentType.includes('application/json')) {
+                        result = await response.json();
+                    } else if (contentType.includes('application/xml')) {
+                        const xmlText = await response.text();
+                        result = xmlText;
+                    }
+
+                    document.getElementById('student-response').textContent = JSON.stringify(result, null, 2);
+                } else {
+                    const errorMsg = await response.text();
+                    document.getElementById('student-response').textContent = `Ошибка: ${errorMsg}`;
+                }
+            } catch (error) {
+                document.getElementById('student-response').textContent = `Произошла ошибка: ${error.message}`;
+            }
+
+        };
+
+    </script>
+
+</body>
+</html>

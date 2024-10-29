@@ -1,0 +1,91 @@
+﻿@model Tuple<IEnumerable<StudentsModel.student>, IEnumerable<StudentsModel.note>>
+
+<h2>Список студентов</h2>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Имя</th>
+        <th>Действия</th>
+    </tr>
+    @foreach (var student in Model.Item1)
+    {
+        <tr>
+            <td>@student.id</td>
+            <td>@student.name</td>
+            <td>
+                <div style="display: flex; align-items: center;">
+                    @using (Html.BeginForm("DeleteStudent", "Home", FormMethod.Post))
+                    {
+                        <input type="hidden" name="id" value="@student.id" />
+                        <input type="submit" value="Удалить" style="margin-right: 5px;" />
+                    }
+
+                    @using (Html.BeginForm("UpdateStudent", "Home", FormMethod.Post))
+                    {
+                        <input type="hidden" name="id" value="@student.id" />
+                        <input type="text" name="studentName" placeholder="Новое имя" style="margin-right: 5px;" />
+                        <input type="submit" value="Обновить" />
+                    }
+                </div>
+            </td>
+        </tr>
+    }
+</table>
+
+<h3>Добавить студента</h3>
+@using (Html.BeginForm("AddStudent", "Home", FormMethod.Post))
+{
+    <input type="text" name="studentName" placeholder="Имя студента" />
+    <input type="submit" value="Добавить" />
+}
+
+@if (ViewBag.ErrorMessage != null)
+{
+    <p style="color:red;">@ViewBag.ErrorMessage</p>
+}
+
+<hr />
+
+<h2>Список оценок</h2>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>ID студента</th>
+        <th>Предмет</th>
+        <th>Оценка</th>
+        <th>Действия</th>
+    </tr>
+    @foreach (var note in Model.Item2)
+    {
+        <tr>
+            <td>@note.id</td>
+            <td>@note.stud_id</td>
+            <td>@note.subject</td>
+            <td>@note.note1</td>
+            <td>
+                @using (Html.BeginForm("DeleteNote", "Home", FormMethod.Post))
+                {
+                    <input type="hidden" name="id" value="@note.id" />
+                    <input type="submit" value="Удалить" />
+                }
+            </td>
+        </tr>
+    }
+</table>
+
+<h3>Добавить оценку</h3>
+@using (Html.BeginForm("AddNote", "Home", FormMethod.Post))
+{
+    <label>Студент:</label>
+    <select name="stud_id">
+        @foreach (var student in Model.Item1)
+        {
+            <option value="@student.id">@student.name</option>
+        }
+    </select>
+    <input type="text" name="subject" placeholder="Предмет" required />
+    <input type="number" name="note1" placeholder="Оценка" required />
+    <input type="submit" value="Добавить" />
+}

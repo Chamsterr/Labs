@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "Syndication Client";
+}
+
+<h2>Syndication Client</h2>
+
+<div>
+    <label for="studentId">Student ID:</label>
+    <input type="text" id="studentId" name="studentId" />
+
+    <label for="format">Format:</label>
+    <select id="format" name="format">
+        <option value="atom">ATOM</option>
+        <option value="rss">RSS</option>
+    </select>
+
+    <button id="getFeedButton">Get Feed</button>
+</div>
+
+<div>
+    <h3>Content:</h3>
+    <pre id="feedContent"></pre>
+    <div id="errorMessage" style="color:red;"></div>
+</div>
+
+@section scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#getFeedButton').click(function () {
+                var studentId = $('#studentId').val();
+                var format = $('#format').val();
+
+                $.ajax({
+                    url: '@Url.Action("GetFeed", "Home")',
+                    type: 'POST',
+                    data: { studentId: studentId, format: format },
+                    success: function (response) {
+                        if (response.error) {
+                            $('#errorMessage').text(response.error);
+                        } else {
+                            $('#feedContent').text(response.content);
+                            $('#errorMessage').text('');
+                        }
+                    },
+                    error: function () {
+                        $('#errorMessage').text('Ошибка при получении данных.');
+                    }
+                });
+            });
+        });
+    </script>
+}

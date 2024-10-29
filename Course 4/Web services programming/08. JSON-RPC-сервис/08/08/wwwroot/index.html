@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html data-theme="dark">
+<head>
+    <meta charset="utf-8" />
+    <title>08</title>
+</head>
+<body>
+    <h1>08</h1>
+    <div class="flex flex-col">
+        <div class="w-40">
+            <div class="form-control">
+                k
+                <input type="text" id="k" class="input input-sm bg-neutral" />
+            </div>
+            <div class="form-control">
+                x
+                <input type="text" id="v" class="input input-sm bg-neutral" />
+            </div>
+        </div>
+        <br />
+        <div>
+            <button onclick="invoke('GetM')">GetM</button>
+            <button onclick="invoke('SetM')">SetM</button>
+            <button onclick="invoke('AddM')">AddM</button>
+            <button onclick="invoke('SubM')">SubM</button>
+            <button onclick="invoke('MulM')">MulM</button>
+            <button onclick="invoke('DivM')">DivM</button>
+            <button onclick="invoke('ErrorExit')">ErrorExit</button>
+        </div>
+
+        <div id="res" class="border rounded w-fit p-5"></div>
+    </div>
+
+    <script>
+        function invoke(methodName) {
+            var k = document.getElementById('k').value;
+            var v = document.getElementById('v').value;
+
+            if (isNaN(v)) {
+                document.getElementById('res').innerHTML = 'Ошибка: Параметр x должен быть числом.';
+                return;
+            }
+
+            var url = 'http://localhost:5009/api/JRService';
+            var json = {
+                "id": 1,
+                "jsonrpc": "2.0",
+                "params": {
+                    "k": k,
+                    "x": parseInt(v, 10)
+                },
+                "method": methodName
+            };
+            console.log(json);
+
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    Accept: 'application/json',
+                    "Content-Type": 'application/json-patch+json',
+                },
+                body: JSON.stringify(json),
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        return response.json().then(err => {
+                            document.getElementById('res').innerHTML = JSON.stringify(err, null, 4);
+                            throw new Error(err.message || 'Ошибка на сервере');
+                        });
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    document.getElementById('res').innerHTML = JSON.stringify(data, null, 4);
+                })
+                .catch(error => {
+                    if (error.message !== 'Ошибка на сервере') {
+                        document.getElementById('res').innerHTML = 'Ошибка: ' + error.message;
+                    }
+                });
+        }
+    </script>
+</body>
+</html>
