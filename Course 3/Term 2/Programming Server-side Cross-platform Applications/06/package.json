@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "@prisma/client": "^5.12.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "ioredis": "^5.3.2",
+    "jsonwebtoken": "^9.0.2",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0",
+    "prisma": "^5.12.1",
+    "redis": "^4.6.13"
+  }
+}

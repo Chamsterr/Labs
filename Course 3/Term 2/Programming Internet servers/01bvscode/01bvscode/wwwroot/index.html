@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>1b</title>
+</head>
+<body>
+    <button id="startButton">Пуск</button>
+    <button id="stopButton">Стоп</button>
+    <ol id="output"></ol>
+    <div id="errorOutput" class="error"></div>
+
+    <script>
+        const startButton = document.getElementById('startButton');
+        const stopButton = document.getElementById('stopButton');
+        const output = document.getElementById('output');
+
+        let socket;
+
+        startButton.addEventListener('click', () => {
+            socket = new WebSocket('ws://localhost:5293/websocket');
+            socket.onopen = () => {
+                errorOutput.textContent = '';
+            };
+            socket.onmessage = (event) => {
+                const message = event.data;
+                output.innerHTML += `<li class="message">${message}</li>`;
+            };
+        });
+
+        stopButton.addEventListener('click', () => {
+            if (socket) {
+                socket.close();
+            }
+        });
+    </script>
+</body>
+</html>

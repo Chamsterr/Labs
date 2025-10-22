@@ -1,0 +1,5 @@
+олучили от центра crt добавили его в mmc
+
+openssl genrsa -out LAB.KEY 2048 -- генерация приватного ключа ресурса
+
+openssl req -new -key LAB.key -out LAB.csr -sha256 -config conf.cfg  -- генерация запроса на серт для рес

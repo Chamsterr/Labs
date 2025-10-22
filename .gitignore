@@ -10,36 +10,76 @@
 *.dll.config
 *.cache
 *.suo
-# Include dlls if they’re in the NuGet packages directory
+*.user
+*.ncb
+*.aps
+*.pch
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.scc
+*.VC.db
+*.VC.VC.opendb
+*.opensdf
+*.sdf
+*.cachefile
+*.ipch
+*.log
+*.tlog
+*.lastbuildstate
+*.unsuccessfulbuild
+*.manifest
+*.manifest.res
+*.intermediate.manifest
+*.embed.manifest
+*.embed.manifest.res
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*.recipe
+
+# Include dlls if they're in the NuGet packages directory
 !/packages/*/lib/*.dll
 !/packages/*/lib/*/*.dll
-# Include dlls if they're in the CommonReferences directory
 !*CommonReferences/*.dll
+
 ####################
 # VS Upgrade stuff #
 ####################
 UpgradeLog.XML
 _UpgradeReport_Files/
+
 ###############
 # Directories #
 ###############
 bin/
 obj/
 TestResults/
+x64/
+x86/
+
 ###################
 # Web publish log #
 ###################
 *.Publish.xml
+
 #############
 # Resharper #
 #############
 /_ReSharper.*
 *.ReSharper.*
+
 ############
 # Packages #
 ############
-# it’s better to unpack these files and commit the raw source
-# git has its own built in compression methods
 *.7z
 *.dmg
 *.gz
@@ -48,29 +88,177 @@ TestResults/
 *.rar
 *.tar
 *.zip
+*.nupkg
+*.ncrunchsolution
+*.dot[Cc]over
+packages/
+NuGet.exe
+_[Ss]cripts
+
 ######################
 # Logs and databases #
 ######################
 *.log
 *.sqlite
+*.sqlite3
+*.db
+logs/
+
 # OS generated files #
 ######################
+.DS_Store
 .DS_Store?
+._*
+.Spotlight-V100
+.Trashes
 ehthumbs.db
 Icon?
 Thumbs.db
-[Bb]in
-[Oo]bj
-[Tt]est[Rr]esults
-*.suo
-*.user
-*.[Cc]ache
-*[Rr]esharper*
-packages
-NuGet.exe
-_[Ss]cripts
-*.exe
+desktop.ini
+
+# IDE and Editor files
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+*.code-workspace
+.history/
+*.vsix
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# Java specific
+*.class
+*.jar
+*.war
+*.ear
+target/
+
+# Python specific
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# C/C++ specific
+*.o
+*.obj
+*.so
+*.dylib
 *.dll
-*.nupkg
-*.ncrunchsolution
-*.dot[Cc]over
+*.exe
+*.out
+*.app
+
+# Coverage reports
+coverage/
+*.lcov
+
+# Dependency directories
+vendor/
+bower_components/
+node_modules/
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Eclipse
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+
+# NetBeans
+/nbproject/private/
+/nbproject/build-impl.xml
+/nbproject/dist/
+/nbproject/nbproject/
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# Flutter/Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+ios/Flutter/.last_build_id
+ios/Flutter/App.framework
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Flutter/Generated.xcconfig
+ios/Flutter/ephemeral/
+ios/Flutter/app.flx
+ios/Flutter/app.zip
+ios/Flutter/flutter_assets/
+ios/ServiceDefinitions.json
+ios/Runner/GeneratedPluginRegistrant.*
+macos/Flutter/GeneratedPluginRegistrant.swift
+android/app/debug
+android/app/profile
+android/app/release
+
+# GIS files (QGIS, ArcGIS, etc.)
+*.qgs
+*.qgz
+*.qml
+*.sld
+*.lyr
+*.mxd
+*.aprx
+*.gdb/
+*.shp
+*.shx
+*.dbf
+*.prj
+*.cpg
+*.sbn
+*.sbx
+*.shp.xml
+*.fme
+*.gpx
+*.kml
+*.kmz
+
+# Ignore course directories
+Course 1/
+Course 2/
+
+# Ignore problematic files with long names
+*AGSKWx*
+*Quizizz*

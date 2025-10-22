@@ -1,0 +1,42 @@
+version: '3.8'
+services:
+  client:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: client2
+    ports:
+      - "${CLIENT_PORT}:${CLIENT_PORT}"
+    environment:
+      - TABLE_NAME=${TABLE_NAME}
+    depends_on:
+      - db
+    volumes:
+      - ./alembic:/app/alembic
+      - ./src:/app/src
+      - ./logs:/app/logs
+    networks:
+      - db_network
+      - shared_network
+
+  db:
+    image: postgres:15-alpine 
+    container_name: postgres_client2
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - db_network
+
+networks:
+  db_network:
+    driver: bridge
+  shared_network:
+    external: true
+
+volumes:
+  postgres_data:
+    driver: local

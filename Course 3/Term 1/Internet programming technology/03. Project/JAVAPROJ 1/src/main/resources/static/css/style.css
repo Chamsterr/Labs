@@ -1,0 +1,52 @@
+* {
+    transition: all 0.5s ease-in-out;
+}
+
+:root {
+    --bg-color: #ffffff;
+    --primary-color: #3755b9;
+    --secondary-color: #2e3a94;
+    --secondary-color-hover: #7085db;
+    --tertiary-color: #203ab2;
+    --light-color: #695ba9;
+}
+
+.bg-color {
+    background-color: var(--bg-color) !important;
+}
+
+.primary-color {
+    background-color: var(--primary-color);
+}
+
+button.primary-color:hover {
+    background-color: var(--secondary-color-hover);
+}
+
+.secondary-color {
+    background-color: var(--secondary-color) !important;
+}
+
+.tertiary-color {
+    background-color: var(--tertiary-color) !important;
+}
+
+.light-color {
+    background-color: var(--light-color) !important;
+}
+
+
+.product:hover {
+    transition: 0.5s;
+    transform: scale(1.02);
+}
+
+.product-link {
+    color: #000 !important;
+    text-decoration: none
+}
+
+.height-width-30 {
+    height: 30px;
+    width: 30px;
+}

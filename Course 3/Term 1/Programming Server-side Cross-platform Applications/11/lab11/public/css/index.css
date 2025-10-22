@@ -1,0 +1,10 @@
+.p-table {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100vh;
+}
+
+.p-table td, .p-table th {
+    /*display: flex;*/
+    /*justify-content: center;*/
+}

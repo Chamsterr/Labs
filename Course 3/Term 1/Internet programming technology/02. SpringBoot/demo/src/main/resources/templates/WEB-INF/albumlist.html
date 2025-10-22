@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Album List</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<h1>Album List</h1>
+<h2> <a  href="addalbum">Add new album</a> </h2>
+<br/><br/>
+
+    <div class="container">
+        <table class ="container" border="1">
+        <tr>
+            <th><h1>Title</h1></th>
+            <th><h1>Author</h1></th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr th:each ="album : ${albums}">
+            <form th:action="@{/updatealbum}" method="post">
+                <input type="hidden" th:name="id" th:value="${album.id}"/>
+                <td><input th:value="${album.title}" th:name="title"></td>
+                <td><input th:value="${album.author}" th:name="author"><button type="submit">Сохранить</button></td>
+            </form>
+            <td>
+                <form th:action="@{/delalbum}" method="post" style="display: inline">
+                    <input type="hidden" th:name="id" th:value="${album.id}"/>
+                    <button type="submit">Удалить</button>
+                </form>
+            </td>
+            <td>
+            </td>
+        </tr>
+    </table>
+</div>
+    <script>
+        function showSaveButton(id) {
+            // Показываем кнопку "Сохранить" при фокусе на поле ввода
+            document.getElementById(id).style.display = "inline-block";
+        }
+    </script>
+</body>
+</html>

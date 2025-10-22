@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - ASCMVC08</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/lab3b.styles.css" asp-append-version="true"/>
+</head>
+<body>
+<header>
+            <div>
+                <div class="flex_nav_menu">    
+                    <div>
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    </div>
+                    
+                    
+                    @if(User.Identity.IsAuthenticated){
+                        if(User.IsInRole("Administrator"))
+                        {
+                        <div class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Index">Admin @User.Identity?.Name</a>
+                        </div>
+                        }
+                    }
+                    
+                    @if (User.IsInRole("Master") || User.IsInRole("Employee"))
+                        {
+                            <div class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Calc"  asp-action="Index">Calc</a>
+                            </div>
+                        }
+                </>
+                <partial name="_LoginPartial"/>
+
+                </div>
+                    @if (User.IsInRole("Master") || User.IsInRole("Employee"))
+                        {
+
+                            @if (User.IsInRole("Master"))
+                            {
+                                <h1 align="center">Master @User.Identity?.Name</h1>
+                            }
+                            @if (User.IsInRole("Employee"))
+                            {
+                                <h1 align="center">Employee @User.Identity?.Name</h1>
+                            }
+                        }
+            </div>
+</header>
+<div class="container">
+    <main role="main" class="pb-3">
+        @RenderBody()
+        @RenderSectionAsync('scripts', required: false)
+    </main>
+</div>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+@await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

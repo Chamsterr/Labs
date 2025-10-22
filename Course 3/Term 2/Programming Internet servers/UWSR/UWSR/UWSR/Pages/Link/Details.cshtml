@@ -1,0 +1,86 @@
+﻿@page
+@model UWSR.Pages.Link.DetailsModel
+@using UWSR.Utils
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<a>
+    <h4>Link</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Link.Url)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Link.Url)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Link.Description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Link.Description)
+        </dd>
+    </dl>
+        <h1>Raiting</h1>
+        <div class="col-sm-10">
+            @Html.DisplayNameFor(model => model.Link.Minus)
+            @Html.DisplayFor(model => model.Link.Minus)
+            @if (Security.CheckIsAdmin(this.HttpContext))
+            {
+                <form method="post">
+                    <button type="submit" asp-page-handler="OnMinus" asp-route-id="@Model.Link.Id" class="btn btn-primary m-10" style="margin-top: 10px;">-</button>
+                </form>
+            }
+        </div>
+        <div class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Link.Plus)<span>:</span>
+            @Html.DisplayFor(model => model.Link.Plus)
+            @if (Security.CheckIsAdmin(this.HttpContext))
+            {
+                <form method="post">
+                    <button type="submit" asp-page-handler="OnPlus" asp-route-id="@Model.Link.Id" class="btn btn-primary m-10" style="margin-top: 10px;">+</button>
+                </form>
+            }
+        </div>
+
+    <div class="row">
+        <h2>Comments</h2>
+        </div>
+            <div>
+        </div>
+        @foreach (var item in Model.Link.Comments)
+        {
+            <div style="border: 1px solid black; margin-bottom: 5px; padding: 5px;">
+                <table class="column" style="width: 100%;">
+                    <tr>
+                        <td style="width: 150px;">
+                            @Html.DisplayFor(modelItem => item.SessionId)
+                        </td>
+                        <td style="width: 75px;">
+                            @Html.DisplayFor(modelItem => item.Stamp)
+                        </td>
+                        <td style="padding-left: 15px;">
+                            @Html.DisplayFor(modelItem => item.Text)
+                        </td>
+                        <td style="text-align: right;">
+                            @if (Security.CheckIsCommentUser(this.HttpContext, item))
+                            {
+                                <a asp-page="../Comment/Edit" asp-route-id="@item.Id" class="btn btn-primary">Edit</a>
+                                <a asp-page="../Comment/Delete" asp-route-id="@item.Id" class="btn btn-primary">Delete</a>
+                            }
+                            <a asp-page="../Comment/Details" asp-route-id="@item.Id" class="btn btn-primary">Details</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        }
+
+</div>
+    <div style="margin-left:120px">
+    <a asp-page="../Comment/Create" asp-route-id="@Model.Link?.Id" class="btn btn-primary m-10">Create comment</a>
+    <a asp-page="./Index" class="btn btn-primary m-10">Back to List</a>
+</div>

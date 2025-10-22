@@ -12,7 +12,7 @@ const createTcpServer = (port) => {
     });
   
     setInterval(() => socket.write(sum.toString()), 5000);
-    setInterval(() => console.log(logs.join("\n")), 10000);
+    setInterval(() => console.log(logs.join("\n")), 5000);
   });
 
   server.listen(port, () => {

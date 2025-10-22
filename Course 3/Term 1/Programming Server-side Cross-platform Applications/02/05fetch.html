@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="fio">1</h1>
+</body>
+<script>
+    let h1 = document.getElementById("fio")
+    async function fetchData() {
+        try {
+            let url = 'http://127.0.0.1:3000/api/name';
+            let response = await fetch(url);
+
+            if (response.ok) {
+                let test = await response.text();
+                h1.textContent = test
+                alert(test)
+            } else {
+                throw new Error(`Ошибка ${response.status}: ${response.statusText}`);
+            }
+        } catch (error) {
+            alert(error);
+        }
+    }
+
+    fetchData();
+</script>
+
+</html>

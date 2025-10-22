@@ -1,0 +1,22 @@
+
+@hostname=localhost
+@port=5125
+GET http://{{hostname}}:{{port}}/StartFirst/Index
+###
+GET http://{{hostname}}:{{port}}/StartFirst/One
+###
+GET http://{{hostname}}:{{port}}/StartFirst/Two
+###
+GET http://{{hostname}}:{{port}}/StartFirst/Three
+###
+POST http://{{hostname}}:{{port}}/StartFirst/Index 
+###
+POST http://{{hostname}}:{{port}}/StartFirst/One
+###
+POST http://{{hostname}}:{{port}}/StartFirst/Two
+###
+POST http://{{hostname}}:{{port}}/StartFirst/Three
+
+GET https://www.belstu.by
+### 
+GET http://{{hostname}}:{{port}}/Danila/

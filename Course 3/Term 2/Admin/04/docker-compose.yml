@@ -1,0 +1,19 @@
+version: '3'
+services:
+  nginx1:
+    build: ./nginx
+    ports:
+      - 80:80
+  php:
+    build: ./php
+  apache:  # Убедитесь, что этот сервис назван "apache"
+    build: ./apache
+  wordpress:
+    build: ./wordpress
+    depends_on:
+      - db
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: wordpress

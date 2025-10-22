@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <a>Логин</a>
+        <input type="email" name="" id="sender">  
+    </div>
+    <div>
+        <a>Пароль</a>
+        <input type="password" value="" id="password"></br>
+    </div>
+    </div>
+    <div>
+        <a>Получатель</a>
+        <input type="email" name="" id="reciver"></br>
+    </div>
+    <div>
+        <a>Сообщение</a>
+        <input type="text" value="123" id="message"></br>
+        <button onclick="SendMessage()">Send</button>
+    </div>
+
+</body>
+<script>
+    function SendMessage() {
+        console.log('POST');
+        fetch('http://localhost:5000/', {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify(
+                {
+                    sender: sender.value,
+                    password: password.value,
+                    reciver: reciver.value,
+                    message: message.value
+                })
+        })
+            .then(response => { return response })
+            .then((pdata) => { console.log(pdata); })
+    }
+</script>
+
+</html>

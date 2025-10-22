@@ -1,0 +1,52 @@
+datasource db {
+  provider = "sqlserver"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "windows"]
+}
+
+model Faculty {
+  FACULTY       String   @id @db.VarChar(10)
+  FACULTY_NAME  String?  @db.VarChar(50)
+  Pulpit        Pulpit[]
+}
+
+model Pulpit {
+  PULPIT       String   @id @db.VarChar(10)
+  PULPIT_NAME  String?  @db.VarChar(100)
+  FACULTY      String   @db.VarChar(10)
+  Faculty      Faculty  @relation(fields: [FACULTY], references: [FACULTY])
+  Teacher      Teacher[]
+  Subject      Subject[]
+}
+
+model Teacher {
+  TEACHER       String  @id @db.VarChar(10)
+  TEACHER_NAME  String? @db.VarChar(50)
+  PULPIT        String  @db.VarChar(10)
+  Pulpit        Pulpit  @relation(fields: [PULPIT], references: [PULPIT])
+}
+
+model Subject {
+  SUBJECT       String  @id @db.VarChar(10)
+  SUBJECT_NAME  String  @db.VarChar(50)
+  PULPIT        String  @db.VarChar(10)
+  Pulpit        Pulpit  @relation(fields: [PULPIT], references: [PULPIT])
+}
+
+model AuditoriumType {
+  AUDITORIUM_TYPE       String       @id @db.VarChar(10)
+  AUDITORIUM_TYPENAME   String       @db.VarChar(30)
+  Auditorium            Auditorium[]
+}
+
+model Auditorium {
+  AUDITORIUM           String          @id @db.VarChar(10)
+  AUDITORIUM_NAME      String?         @db.VarChar(200)
+  AUDITORIUM_CAPACITY  Int?
+  AUDITORIUM_TYPE      String          @db.VarChar(10)
+  AuditoriumType       AuditoriumType  @relation(fields: [AUDITORIUM_TYPE], references: [AUDITORIUM_TYPE])
+}

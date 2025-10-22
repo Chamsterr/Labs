@@ -1,0 +1,9 @@
+{
+  "type": "module",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.0",
+    "webdav": "^5.5.0"
+  }
+}

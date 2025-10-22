@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+<h1>Login</h1>
+
+<form asp-controller="Admin" asp-action="SignIn" method="post">
+    <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" class="form-control" required>
+    </div>
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" class="form-control" required>
+    </div>
+    <div>
+        <input type="checkbox" id="rememberMe" name="rememberMe" hidden>
+    </div>
+    <button class="btn btn-primary" style="margin-top: 10px;" type="submit">Login</button>
+</form>

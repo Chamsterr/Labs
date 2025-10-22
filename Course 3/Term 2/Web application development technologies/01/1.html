@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab1</title>
+</head>
+<body>
+    <h1>Лабораторная работа №1</h1>
+    <p><a href="https://www.belstu.by/">БГТУ</a></p>
+    <button onclick="showBrowserInfo()">Информация о браузере</button>
+</body>
+    <script>
+        function showBrowserInfo() {
+            var info = document.createTextNode("Информация о браузере: " + navigator.userAgent);
+            var appCodeName = document.createTextNode("appCodeName: " + navigator.appCodeName);
+            var appName = document.createTextNode("appName: " + navigator.appName);
+            var appVersion = document.createTextNode("appVersion: " + navigator.appVersion);
+            var newLine = document.createElement('br');
+            document.body.appendChild(newLine);
+            document.body.appendChild(info);
+            document.body.appendChild(newLine.cloneNode());
+            document.body.appendChild(appCodeName);
+            document.body.appendChild(newLine.cloneNode());
+            document.body.appendChild(appName);
+            document.body.appendChild(newLine.cloneNode());
+            document.body.appendChild(appVersion);
+            console.log("Hello World");
+        }
+    </script>
+</html>

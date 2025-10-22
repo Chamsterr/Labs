@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <input id="n" type="number" placeholder="Введите значение n">
+    <button onclick="sendRequest()">Отправить</button>
+    <p id="result"></p>
+
+    <script>
+        function sendRequest() {
+            const n = document.getElementById('n').value;
+
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', 'http://localhost:3000/generate', true);
+            xhr.setRequestHeader('X-Rand-N', n);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    const numbers = JSON.parse(xhr.responseText);
+                    document.getElementById('result').innerText = 'Результат: ' + numbers.join(', ');
+                }
+            }
+            xhr.send();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>API Handler</title>
+    <script>
+        let currentPage = 1;
+        const itemsPerPage = 10;
+
+        function getPulpits() {
+            fetch(`/api/pulpits?page=${currentPage}&limit=${itemsPerPage}`)
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    document.getElementById('result').textContent = JSON.stringify(data, null, 2);
+                    document.getElementById('page').textContent = "Страница: " + currentPage;
+                    if (data.length < itemsPerPage) {
+                        document.getElementById('nextPage').style.display = 'none';
+                    } else {
+                        document.getElementById('nextPage').style.display = 'inline';
+                    }
+                    // Если текущая страница равна 1, скрываем кнопку "Previous Page"
+                    if (currentPage === 1) {
+                        document.getElementById('prevPage').style.display = 'none';
+                    } else {
+                        document.getElementById('prevPage').style.display = 'inline';
+                    }
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+        }
+
+        function nextPage() {
+            currentPage++;
+            getPulpits();
+        }
+
+        function prevPage() {
+            if (currentPage > 1) {
+                currentPage--;
+                getPulpits();
+            }
+        }
+
+        window.onload = getPulpits;
+    </script>
+</head>
+
+<body>
+    <p id="page"></p>
+    <pre id="result"></pre>
+    
+    <button id="prevPage" onclick="prevPage()">Previous Page</button>
+    <button id="nextPage" onclick="nextPage()">Next Page</button>
+</body>
+
+</html>

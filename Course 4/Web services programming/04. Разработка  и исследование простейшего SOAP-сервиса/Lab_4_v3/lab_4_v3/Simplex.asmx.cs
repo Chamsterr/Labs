@@ -10,7 +10,7 @@ namespace _04
     /// <summary>
     /// Summary description for Simplex
     /// </summary>
-    [WebService(Namespace = "http://knv/", Description = "<h1>Lab4 Kovkel Nikita</h1>")]
+    [WebService(Namespace = "http://knv/", Description = "<h1>Lab4 hamster Glavnyi</h1>")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.Web.Script.Services.ScriptService]
     public class Simplex : System.Web.Services.WebService

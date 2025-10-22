@@ -1,9 +1,7 @@
 @echo off
-REM 866
-echo --имя этого бат-файла: %~nx0
-
-for %%A in ("%~dp0.") do set "creation_date=%%~tA"
-echo --этот бат-файл создан: %creation_date%
-
-
-echo --путь бат-файла: %~dp0
+cls
+echo -- имя этого bat-файла: %~n0
+for /f "skip=5 tokens=1-2" %%a in ('dir %~n0.bat /T:C') do echo -- этот bat-файл создан: %%a %%b & goto :STOP
+:STOP
+echo -- путь bat-файла: %~0
+pause

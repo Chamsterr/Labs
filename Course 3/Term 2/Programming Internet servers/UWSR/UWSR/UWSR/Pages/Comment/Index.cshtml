@@ -1,0 +1,55 @@
+﻿@page
+@model UWSR.Pages.Comment.IndexModel
+@using UWSR.Utils
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Message</h1>
+@if (Security.CheckIsAdmin(this.HttpContext))
+{
+    <form method="post">
+        <button type="submit" class="btn btn-primary" asp-page-handler="ClearCookies">Logout</button>
+    </form>
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Comment[0].SessionId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Comment[0].Stamp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Comment[0].Text)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    
+    <tbody>
+        
+@foreach (var item in Model.Comment) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SessionId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Stamp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Text)
+            </td>
+            <td>
+                    @if (Security.CheckIsAdmin(this.HttpContext) || Security.CheckIsCommentUser(this.HttpContext, item))
+                    {
+                        <a asp-page="./Edit" class="btn btn-primary" asp-route-id="@item.Id">Edit</a>;
+                        <a asp-page="./Delete" class="btn btn-primary" asp-route-id="@item.Id">Delete</a>;
+                    }
+                <a asp-page="./Details" class="btn btn-primary" asp-route-id="@item.Id">Details</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

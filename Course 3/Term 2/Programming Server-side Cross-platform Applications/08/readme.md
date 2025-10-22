@@ -1,0 +1,21 @@
+# requirements
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=789775QWE+" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2022-latest
+
+docker pull mcr.microsoft.com/mssql-tools
+docker run -it mcr.microsoft.com/mssql-tools
+
+
+# get ip adress of mssql server
+@Chamsterr ➜ /workspaces/nodejs (main) $ docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' ef4a02420eb6
+172.17.0.2
+
+# connect to mcr.microsoft.com/mssql-tools
+root@c5599f16628d:/# sqlcmd -S 172.17.0.2 -U sa -P 789775QWE+;
+
+
+insert into FACULTY (FACULTY, FACULTY_NAME, createdAt, updatedAt)
+values (N'ИДиП', N'Издателькое дело и полиграфия', GETDATE(), GETDATE());
+
+
+#prism
+sudo npx prisma migrate dev --name init
